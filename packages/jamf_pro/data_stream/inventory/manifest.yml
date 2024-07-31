@@ -25,13 +25,102 @@ streams:
         required: false
         show_user: false
         description: The request tracer logs requests and responses to the agent's local file-system for debugging configurations. Enabling this request tracing compromises security and should only be used for debugging. See [documentation](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-input-httpjson.html#_request_tracer_filename) for details.
-      - name: processors
-        type: yaml
-        title: Processors
-        multi: false
-        required: false
+      - name: GENERAL
+        type: bool
         show_user: false
-        description: Processors are used to reduce the number of fields in the exported event or to enhance the event with metadata. This executes in the agent before the logs are parsed. See [Processors](https://www.elastic.co/guide/en/beats/filebeat/current/filtering-and-enhancing-data.html) for details.
+        default: true
+      - name: DISK_ENCRYPTION
+        type: bool
+        show_user: false
+        default: false
+      - name: PURCHASING
+        type: bool
+        show_user: false
+        default: false
+      - name: APPLICATIONS
+        type: bool
+        show_user: false
+        default: false
+      - name: STORAGE
+        type: bool
+        show_user: false
+        default: false
+      - name: USER_AND_LOCATION
+        type: bool
+        show_user: false
+        default: false
+      - name: CONFIGURATION_PROFILES
+        type: bool
+        show_user: false
+        default: false
+      - name: PRINTERS
+        type: bool
+        show_user: false
+        default: false
+      - name: SERVICES
+        type: bool
+        show_user: false
+        default: false
+      - name: HARDWARE
+        type: bool
+        show_user: false
+        default: true
+      - name: LOCAL_USER_ACCOUNTS
+        type: bool
+        show_user: false
+        default: false
+      - name: CERTIFICATES
+        type: bool
+        show_user: false
+        default: false
+      - name: ATTACHMENTS
+        type: bool
+        show_user: false
+        default: false
+      - name: PLUGINS
+        type: bool
+        show_user: false
+        default: false
+      - name: PACKAGE_RECEIPTS
+        type: bool
+        show_user: false
+        default: false
+      - name: FONTS
+        type: bool
+        show_user: false
+        default: false
+      - name: SECURITY
+        type: bool
+        show_user: false
+        default: false
+      - name: OPERATING_SYSTEM
+        type: bool
+        show_user: false
+        default: true
+      - name: LICENSED_SOFTWARE
+        type: bool
+        show_user: false
+        default: false
+      - name: IBEACONS
+        type: bool
+        show_user: false
+        default: false
+      - name: SOFTWARE_UPDATES
+        type: bool
+        show_user: false
+        default: false
+      - name: EXTENSION_ATTRIBUTES
+        type: bool
+        show_user: false
+        default: false
+      - name: CONTENT_CACHING
+        type: bool
+        show_user: false
+        default: false
+      - name: GROUP_MEMBERSHIP
+        type: bool
+        show_user: false
+        default: false
     template_path: cel.yml.hbs
     title: inventory_data
     description: Inventory requests settings
