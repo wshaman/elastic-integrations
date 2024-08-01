@@ -10,51 +10,16 @@
                 "ignoreValidations": false
             },
             "panelsJSON": {
-                "21c6da4d-cc5c-471f-a89e-e49729d3d08c": {
-                    "explicitInput": {
-                        "enhancements": {},
-                        "existsSelected": true,
-                        "fieldName": "message.operatingSystem.name",
-                        "grow": true,
-                        "id": "21c6da4d-cc5c-471f-a89e-e49729d3d08c",
-                        "searchTechnique": "prefix",
-                        "selectedOptions": [],
-                        "title": "message.operatingSystem.name",
-                        "width": "medium"
-                    },
-                    "grow": true,
-                    "order": 1,
-                    "type": "optionsListControl",
-                    "width": "medium"
-                },
-                "7b47d8b4-bc2c-42f5-b7b9-2cf358c75a0e": {
-                    "explicitInput": {
-                        "enhancements": {},
-                        "exclude": false,
-                        "existsSelected": false,
-                        "fieldName": "message.general.name",
-                        "grow": true,
-                        "id": "7b47d8b4-bc2c-42f5-b7b9-2cf358c75a0e",
-                        "searchTechnique": "prefix",
-                        "selectedOptions": [],
-                        "title": "message.general.name",
-                        "width": "medium"
-                    },
-                    "grow": true,
-                    "order": 0,
-                    "type": "optionsListControl",
-                    "width": "medium"
-                },
-                "bb7b9e31-cbbb-493e-9b65-9fbfb5416afa": {
+                "0e097965-08e1-44c0-89f0-2b278a0ca1fd": {
                     "explicitInput": {
                         "enhancements": {},
                         "existsSelected": false,
-                        "fieldName": "message.hardware.model",
+                        "fieldName": "jamf_pro.inventory.hardware.model",
                         "grow": true,
-                        "id": "bb7b9e31-cbbb-493e-9b65-9fbfb5416afa",
+                        "id": "0e097965-08e1-44c0-89f0-2b278a0ca1fd",
                         "searchTechnique": "prefix",
                         "selectedOptions": [],
-                        "title": "message.hardware.model",
+                        "title": "Hardware Model",
                         "width": "medium"
                     },
                     "grow": true,
@@ -62,16 +27,51 @@
                     "type": "optionsListControl",
                     "width": "medium"
                 },
-                "d595ab62-dc7f-4d95-bc69-c8734bd53220": {
+                "5d2fda3f-76c9-4a04-8b8f-1ab9efdd0269": {
+                    "explicitInput": {
+                        "enhancements": {},
+                        "exclude": false,
+                        "existsSelected": false,
+                        "fieldName": "jamf_pro.inventory.general.name",
+                        "grow": true,
+                        "id": "5d2fda3f-76c9-4a04-8b8f-1ab9efdd0269",
+                        "searchTechnique": "prefix",
+                        "selectedOptions": [],
+                        "title": "Computer Name",
+                        "width": "medium"
+                    },
+                    "grow": true,
+                    "order": 0,
+                    "type": "optionsListControl",
+                    "width": "medium"
+                },
+                "cf6a10ef-1a60-488d-8a3c-1e14b2db4488": {
                     "explicitInput": {
                         "enhancements": {},
                         "existsSelected": true,
-                        "fieldName": "message.general.platform",
+                        "fieldName": "jamf_pro.inventory.operating_system.name",
                         "grow": true,
-                        "id": "d595ab62-dc7f-4d95-bc69-c8734bd53220",
+                        "id": "cf6a10ef-1a60-488d-8a3c-1e14b2db4488",
                         "searchTechnique": "prefix",
                         "selectedOptions": [],
-                        "title": "message.general.platform",
+                        "title": "OS",
+                        "width": "medium"
+                    },
+                    "grow": true,
+                    "order": 1,
+                    "type": "optionsListControl",
+                    "width": "medium"
+                },
+                "f5b141aa-1e50-4372-ab05-ba9e20078e84": {
+                    "explicitInput": {
+                        "enhancements": {},
+                        "existsSelected": true,
+                        "fieldName": "jamf_pro.inventory.general.platform",
+                        "grow": true,
+                        "id": "f5b141aa-1e50-4372-ab05-ba9e20078e84",
+                        "searchTechnique": "prefix",
+                        "selectedOptions": [],
+                        "title": "Platform",
                         "width": "medium"
                     },
                     "grow": true,
@@ -107,6 +107,42 @@
                                 "event.dataset": "jamf_pro.inventory"
                             }
                         }
+                    },
+                    {
+                        "$state": {
+                            "store": "appState"
+                        },
+                        "meta": {
+                            "alias": null,
+                            "disabled": false,
+                            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.filter[1].meta.index",
+                            "key": "jamf_pro.inventory.operating_system.name",
+                            "negate": false,
+                            "type": "exists"
+                        },
+                        "query": {
+                            "exists": {
+                                "field": "jamf_pro.inventory.operating_system.name"
+                            }
+                        }
+                    },
+                    {
+                        "$state": {
+                            "store": "appState"
+                        },
+                        "meta": {
+                            "alias": null,
+                            "disabled": false,
+                            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.filter[2].meta.index",
+                            "key": "jamf_pro.inventory.general.platform",
+                            "negate": false,
+                            "type": "exists"
+                        },
+                        "query": {
+                            "exists": {
+                                "field": "jamf_pro.inventory.general.platform"
+                            }
+                        }
                     }
                 ],
                 "query": {
@@ -125,10 +161,46 @@
         "panelsJSON": [
             {
                 "embeddableConfig": {
+                    "enhancements": {},
+                    "savedVis": {
+                        "data": {
+                            "aggs": [],
+                            "searchSource": {
+                                "filter": [],
+                                "query": {
+                                    "language": "kuery",
+                                    "query": ""
+                                }
+                            }
+                        },
+                        "description": "",
+                        "id": "",
+                        "params": {
+                            "fontSize": 12,
+                            "markdown": "[Jamf Pro Overview](#/dashboard/jamf_pro-dce729cf-07cc-4e62-a3e3-bc6e233c3ad1),\n[Jamf Pro Software Inventory Overview](#/dashboard/jamf_pro-57258dde-40cc-4f6a-844f-27abe076c58f)\n",
+                            "openLinksInNewTab": false
+                        },
+                        "title": "Jamf Pro Dashboards [Overview]",
+                        "type": "markdown",
+                        "uiState": {}
+                    }
+                },
+                "gridData": {
+                    "h": 4,
+                    "i": "013e277b-6f6c-4e79-b942-6ef71b0c2b52",
+                    "w": 48,
+                    "x": 0,
+                    "y": 0
+                },
+                "panelIndex": "013e277b-6f6c-4e79-b942-6ef71b0c2b52",
+                "type": "visualization"
+            },
+            {
+                "embeddableConfig": {
                     "attributes": {
                         "references": [
                             {
-                                "id": "logs-*",
+                                "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
                                 "name": "indexpattern-datasource-layer-e067b79f-3de8-4804-a2c0-9001fed34d42",
                                 "type": "index-pattern"
                             }
@@ -159,7 +231,7 @@
                                                                 "decimals": 0
                                                             }
                                                         },
-                                                        "formula": "unique_count(message.general.name)",
+                                                        "formula": "unique_count(jamf_pro.inventory.general.name)",
                                                         "isFormulaBroken": false
                                                     },
                                                     "references": [
@@ -177,7 +249,7 @@
                                                         "emptyAsNull": false
                                                     },
                                                     "scale": "ratio",
-                                                    "sourceField": "message.general.name"
+                                                    "sourceField": "jamf_pro.inventory.general.name"
                                                 }
                                             },
                                             "ignoreGlobalFilters": false,
@@ -216,12 +288,12 @@
                 },
                 "gridData": {
                     "h": 15,
-                    "i": "81edecb1-fa7c-44c0-828c-c062cd4deb6f",
+                    "i": "212da9fb-5451-4584-8823-b041ebd999a3",
                     "w": 24,
                     "x": 0,
-                    "y": 0
+                    "y": 4
                 },
-                "panelIndex": "81edecb1-fa7c-44c0-828c-c062cd4deb6f",
+                "panelIndex": "212da9fb-5451-4584-8823-b041ebd999a3",
                 "title": "MacOS count",
                 "type": "lens"
             },
@@ -230,7 +302,139 @@
                     "attributes": {
                         "references": [
                             {
-                                "id": "logs-*",
+                                "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                "name": "indexpattern-datasource-layer-d8ccfd14-54c1-490d-9873-f59dd5aecfd7",
+                                "type": "index-pattern"
+                            }
+                        ],
+                        "state": {
+                            "adHocDataViews": {},
+                            "datasourceStates": {
+                                "formBased": {
+                                    "layers": {
+                                        "d8ccfd14-54c1-490d-9873-f59dd5aecfd7": {
+                                            "columnOrder": [
+                                                "5798c438-4669-4983-9320-fbb780e73bba",
+                                                "c3936861-5bc3-4ec1-b39f-966fba32599c"
+                                            ],
+                                            "columns": {
+                                                "5798c438-4669-4983-9320-fbb780e73bba": {
+                                                    "dataType": "string",
+                                                    "isBucketed": true,
+                                                    "label": "Top 100 values of jamf_pro.inventory.hardware.model",
+                                                    "operationType": "terms",
+                                                    "params": {
+                                                        "exclude": [],
+                                                        "excludeIsRegex": false,
+                                                        "include": [],
+                                                        "includeIsRegex": false,
+                                                        "missingBucket": true,
+                                                        "orderBy": {
+                                                            "fallback": false,
+                                                            "type": "alphabetical"
+                                                        },
+                                                        "orderDirection": "asc",
+                                                        "otherBucket": true,
+                                                        "parentFormat": {
+                                                            "id": "terms"
+                                                        },
+                                                        "size": 100
+                                                    },
+                                                    "scale": "ordinal",
+                                                    "sourceField": "jamf_pro.inventory.hardware.model"
+                                                },
+                                                "c3936861-5bc3-4ec1-b39f-966fba32599c": {
+                                                    "dataType": "number",
+                                                    "isBucketed": false,
+                                                    "label": "Unique count of jamf_pro.inventory.general.name",
+                                                    "operationType": "unique_count",
+                                                    "params": {
+                                                        "emptyAsNull": true
+                                                    },
+                                                    "scale": "ratio",
+                                                    "sourceField": "jamf_pro.inventory.general.name"
+                                                }
+                                            },
+                                            "ignoreGlobalFilters": false,
+                                            "incompleteColumns": {},
+                                            "sampling": 1
+                                        }
+                                    }
+                                },
+                                "indexpattern": {
+                                    "layers": {}
+                                },
+                                "textBased": {
+                                    "layers": {}
+                                }
+                            },
+                            "filters": [],
+                            "internalReferences": [],
+                            "query": {
+                                "language": "kuery",
+                                "query": ""
+                            },
+                            "visualization": {
+                                "layers": [
+                                    {
+                                        "categoryDisplay": "default",
+                                        "colorMapping": {
+                                            "assignments": [],
+                                            "colorMode": {
+                                                "type": "categorical"
+                                            },
+                                            "paletteId": "eui_amsterdam_color_blind",
+                                            "specialAssignments": [
+                                                {
+                                                    "color": {
+                                                        "type": "loop"
+                                                    },
+                                                    "rule": {
+                                                        "type": "other"
+                                                    },
+                                                    "touched": false
+                                                }
+                                            ]
+                                        },
+                                        "layerId": "d8ccfd14-54c1-490d-9873-f59dd5aecfd7",
+                                        "layerType": "data",
+                                        "legendDisplay": "default",
+                                        "metrics": [
+                                            "c3936861-5bc3-4ec1-b39f-966fba32599c"
+                                        ],
+                                        "nestedLegend": false,
+                                        "numberDisplay": "percent",
+                                        "primaryGroups": [
+                                            "5798c438-4669-4983-9320-fbb780e73bba"
+                                        ]
+                                    }
+                                ],
+                                "shape": "pie"
+                            }
+                        },
+                        "title": "",
+                        "type": "lens",
+                        "visualizationType": "lnsPie"
+                    },
+                    "enhancements": {}
+                },
+                "gridData": {
+                    "h": 15,
+                    "i": "f0d185d9-9ef0-41dc-ac25-6c667f418f39",
+                    "w": 24,
+                    "x": 24,
+                    "y": 4
+                },
+                "panelIndex": "f0d185d9-9ef0-41dc-ac25-6c667f418f39",
+                "title": "Number of macOS Computers by Hardware Model and Category",
+                "type": "lens"
+            },
+            {
+                "embeddableConfig": {
+                    "attributes": {
+                        "references": [
+                            {
+                                "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
                                 "name": "indexpattern-datasource-layer-9b2a202e-591a-4de4-8392-0118d3274083",
                                 "type": "index-pattern"
                             }
@@ -257,7 +461,7 @@
                                                         "emptyAsNull": true
                                                     },
                                                     "scale": "ratio",
-                                                    "sourceField": "message.general.remoteManagement.managed"
+                                                    "sourceField": "jamf_pro.inventory.general.remote_management.managed"
                                                 },
                                                 "98066462-d72c-4512-a6ab-394542b12534": {
                                                     "customLabel": true,
@@ -284,7 +488,7 @@
                                                         "size": 100
                                                     },
                                                     "scale": "ordinal",
-                                                    "sourceField": "message.general.remoteManagement.managed"
+                                                    "sourceField": "jamf_pro.inventory.general.remote_management.managed"
                                                 }
                                             },
                                             "ignoreGlobalFilters": false,
@@ -374,12 +578,12 @@
                 },
                 "gridData": {
                     "h": 15,
-                    "i": "f6134e92-4937-482f-a662-d3779f69bd53",
+                    "i": "c8422002-70a2-4f1e-87f0-d162d07fc38e",
                     "w": 24,
-                    "x": 24,
-                    "y": 0
+                    "x": 0,
+                    "y": 19
                 },
-                "panelIndex": "f6134e92-4937-482f-a662-d3779f69bd53",
+                "panelIndex": "c8422002-70a2-4f1e-87f0-d162d07fc38e",
                 "title": "Remote Managed Computers",
                 "type": "lens"
             },
@@ -388,139 +592,7 @@
                     "attributes": {
                         "references": [
                             {
-                                "id": "logs-*",
-                                "name": "indexpattern-datasource-layer-d8ccfd14-54c1-490d-9873-f59dd5aecfd7",
-                                "type": "index-pattern"
-                            }
-                        ],
-                        "state": {
-                            "adHocDataViews": {},
-                            "datasourceStates": {
-                                "formBased": {
-                                    "layers": {
-                                        "d8ccfd14-54c1-490d-9873-f59dd5aecfd7": {
-                                            "columnOrder": [
-                                                "5798c438-4669-4983-9320-fbb780e73bba",
-                                                "c3936861-5bc3-4ec1-b39f-966fba32599c"
-                                            ],
-                                            "columns": {
-                                                "5798c438-4669-4983-9320-fbb780e73bba": {
-                                                    "dataType": "string",
-                                                    "isBucketed": true,
-                                                    "label": "Top 100 values of message.hardware.model",
-                                                    "operationType": "terms",
-                                                    "params": {
-                                                        "exclude": [],
-                                                        "excludeIsRegex": false,
-                                                        "include": [],
-                                                        "includeIsRegex": false,
-                                                        "missingBucket": true,
-                                                        "orderBy": {
-                                                            "fallback": false,
-                                                            "type": "alphabetical"
-                                                        },
-                                                        "orderDirection": "asc",
-                                                        "otherBucket": true,
-                                                        "parentFormat": {
-                                                            "id": "terms"
-                                                        },
-                                                        "size": 100
-                                                    },
-                                                    "scale": "ordinal",
-                                                    "sourceField": "message.hardware.model"
-                                                },
-                                                "c3936861-5bc3-4ec1-b39f-966fba32599c": {
-                                                    "dataType": "number",
-                                                    "isBucketed": false,
-                                                    "label": "Unique count of message.general.name",
-                                                    "operationType": "unique_count",
-                                                    "params": {
-                                                        "emptyAsNull": true
-                                                    },
-                                                    "scale": "ratio",
-                                                    "sourceField": "message.general.name"
-                                                }
-                                            },
-                                            "ignoreGlobalFilters": false,
-                                            "incompleteColumns": {},
-                                            "sampling": 1
-                                        }
-                                    }
-                                },
-                                "indexpattern": {
-                                    "layers": {}
-                                },
-                                "textBased": {
-                                    "layers": {}
-                                }
-                            },
-                            "filters": [],
-                            "internalReferences": [],
-                            "query": {
-                                "language": "kuery",
-                                "query": ""
-                            },
-                            "visualization": {
-                                "layers": [
-                                    {
-                                        "categoryDisplay": "default",
-                                        "colorMapping": {
-                                            "assignments": [],
-                                            "colorMode": {
-                                                "type": "categorical"
-                                            },
-                                            "paletteId": "eui_amsterdam_color_blind",
-                                            "specialAssignments": [
-                                                {
-                                                    "color": {
-                                                        "type": "loop"
-                                                    },
-                                                    "rule": {
-                                                        "type": "other"
-                                                    },
-                                                    "touched": false
-                                                }
-                                            ]
-                                        },
-                                        "layerId": "d8ccfd14-54c1-490d-9873-f59dd5aecfd7",
-                                        "layerType": "data",
-                                        "legendDisplay": "default",
-                                        "metrics": [
-                                            "c3936861-5bc3-4ec1-b39f-966fba32599c"
-                                        ],
-                                        "nestedLegend": false,
-                                        "numberDisplay": "percent",
-                                        "primaryGroups": [
-                                            "5798c438-4669-4983-9320-fbb780e73bba"
-                                        ]
-                                    }
-                                ],
-                                "shape": "pie"
-                            }
-                        },
-                        "title": "",
-                        "type": "lens",
-                        "visualizationType": "lnsPie"
-                    },
-                    "enhancements": {}
-                },
-                "gridData": {
-                    "h": 15,
-                    "i": "0a8b4ec2-68dc-4990-9e56-c854a9275889",
-                    "w": 24,
-                    "x": 0,
-                    "y": 15
-                },
-                "panelIndex": "0a8b4ec2-68dc-4990-9e56-c854a9275889",
-                "title": "Number of macOS Computers by Hardware Model and Category",
-                "type": "lens"
-            },
-            {
-                "embeddableConfig": {
-                    "attributes": {
-                        "references": [
-                            {
-                                "id": "logs-*",
+                                "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
                                 "name": "indexpattern-datasource-layer-0d524bec-a0f8-49a7-9f7e-282afce3437c",
                                 "type": "index-pattern"
                             }
@@ -563,7 +635,7 @@
                                                         "size": 100
                                                     },
                                                     "scale": "ordinal",
-                                                    "sourceField": "message.general.supervised"
+                                                    "sourceField": "jamf_pro.inventory.general.supervised"
                                                 },
                                                 "2c9e9f1f-4c50-486a-acec-ab14162aa875": {
                                                     "customLabel": true,
@@ -589,7 +661,7 @@
                                                         "size": 100
                                                     },
                                                     "scale": "ordinal",
-                                                    "sourceField": "message.general.enrolledViaAutomatedDeviceEnrollment"
+                                                    "sourceField": "jamf_pro.inventory.general.enrolled_via_automated_device_enrollment"
                                                 },
                                                 "6142b46c-3a9b-49d8-84d1-2d114ad02ab2": {
                                                     "customLabel": true,
@@ -615,7 +687,7 @@
                                                         "size": 100
                                                     },
                                                     "scale": "ordinal",
-                                                    "sourceField": "message.general.name"
+                                                    "sourceField": "jamf_pro.inventory.general.name"
                                                 },
                                                 "7002e541-146a-4713-b7fe-3eac9725cd32": {
                                                     "customLabel": true,
@@ -641,18 +713,18 @@
                                                         "size": 100
                                                     },
                                                     "scale": "ordinal",
-                                                    "sourceField": "message.general.mdmCapable.capable"
+                                                    "sourceField": "jamf_pro.inventory.general.mdm_capable.capable"
                                                 },
                                                 "f973b2fa-1791-4ef8-99e9-760a983aa8e6": {
                                                     "dataType": "number",
                                                     "isBucketed": false,
-                                                    "label": "Unique count of message.general.name",
+                                                    "label": "Unique count of jamf_pro.inventory.general.name",
                                                     "operationType": "unique_count",
                                                     "params": {
                                                         "emptyAsNull": true
                                                     },
                                                     "scale": "ratio",
-                                                    "sourceField": "message.general.name"
+                                                    "sourceField": "jamf_pro.inventory.general.name"
                                                 }
                                             },
                                             "incompleteColumns": {},
@@ -714,12 +786,12 @@
                 },
                 "gridData": {
                     "h": 15,
-                    "i": "7ae23fa3-8e1d-4c79-a2ca-bad3f6017f8b",
+                    "i": "06876334-7fd5-4d66-8deb-f32be74f0062",
                     "w": 24,
                     "x": 24,
-                    "y": 15
+                    "y": 19
                 },
-                "panelIndex": "7ae23fa3-8e1d-4c79-a2ca-bad3f6017f8b",
+                "panelIndex": "06876334-7fd5-4d66-8deb-f32be74f0062",
                 "title": "Status Of Capabilities, Supervision, and Enrollment Types",
                 "type": "lens"
             },
@@ -729,7 +801,7 @@
                         "description": "",
                         "references": [
                             {
-                                "id": "logs-*",
+                                "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
                                 "name": "indexpattern-datasource-layer-c26de017-938c-4c32-b64c-c218b845edf3",
                                 "type": "index-pattern"
                             }
@@ -772,18 +844,18 @@
                                                         "size": 100
                                                     },
                                                     "scale": "ordinal",
-                                                    "sourceField": "message.general.name"
+                                                    "sourceField": "jamf_pro.inventory.general.name"
                                                 },
                                                 "7168146d-4136-4c91-b63d-3651e952116f": {
                                                     "dataType": "number",
                                                     "isBucketed": false,
-                                                    "label": "Unique count of message.general.name",
+                                                    "label": "Unique count of jamf_pro.inventory.general.name",
                                                     "operationType": "unique_count",
                                                     "params": {
                                                         "emptyAsNull": true
                                                     },
                                                     "scale": "ratio",
-                                                    "sourceField": "message.general.name"
+                                                    "sourceField": "jamf_pro.inventory.general.name"
                                                 },
                                                 "af70766e-e661-4cd8-bd50-6a9df1a3c667": {
                                                     "customLabel": true,
@@ -810,7 +882,7 @@
                                                         "size": 100
                                                     },
                                                     "scale": "ordinal",
-                                                    "sourceField": "message.general.lastContactTime"
+                                                    "sourceField": "jamf_pro.inventory.general.last_contact_time"
                                                 },
                                                 "bafbae70-7b43-4f2b-99d7-9aca3603dc4d": {
                                                     "customLabel": true,
@@ -836,7 +908,7 @@
                                                         "size": 100
                                                     },
                                                     "scale": "ordinal",
-                                                    "sourceField": "message.general.lastEnrolledDate"
+                                                    "sourceField": "jamf_pro.inventory.general.last_enrolled_date"
                                                 }
                                             },
                                             "ignoreGlobalFilters": false,
@@ -856,7 +928,7 @@
                             "internalReferences": [],
                             "query": {
                                 "language": "kuery",
-                                "query": "event.dataset : \"jamf_pro.inventory\" and message.general.name : * "
+                                "query": "event.dataset : \"jamf_pro.inventory\" and jamf_pro.inventory.general.name : * "
                             },
                             "visualization": {
                                 "columns": [
@@ -896,230 +968,94 @@
                 },
                 "gridData": {
                     "h": 15,
-                    "i": "4709e6c6-f942-4296-80d1-457aed1f9574",
+                    "i": "a7be525b-2635-4e62-ace8-bf2ad880841f",
                     "w": 24,
                     "x": 0,
-                    "y": 30
+                    "y": 34
                 },
-                "panelIndex": "4709e6c6-f942-4296-80d1-457aed1f9574",
-                "type": "lens"
-            },
-            {
-                "embeddableConfig": {
-                    "attributes": {
-                        "references": [
-                            {
-                                "id": "logs-*",
-                                "name": "indexpattern-datasource-layer-76355c6c-5bc4-4c31-8362-0e40db5029f6",
-                                "type": "index-pattern"
-                            }
-                        ],
-                        "state": {
-                            "adHocDataViews": {},
-                            "datasourceStates": {
-                                "formBased": {
-                                    "layers": {
-                                        "76355c6c-5bc4-4c31-8362-0e40db5029f6": {
-                                            "columnOrder": [
-                                                "7112d07d-fa9a-4eeb-ae5a-873b9189d4ec",
-                                                "2d5f3969-05c2-4ef8-9367-26276d22072b"
-                                            ],
-                                            "columns": {
-                                                "2d5f3969-05c2-4ef8-9367-26276d22072b": {
-                                                    "dataType": "number",
-                                                    "isBucketed": false,
-                                                    "label": "Unique count of message.general.name",
-                                                    "operationType": "unique_count",
-                                                    "params": {
-                                                        "emptyAsNull": true
-                                                    },
-                                                    "scale": "ratio",
-                                                    "sourceField": "message.general.name"
-                                                },
-                                                "7112d07d-fa9a-4eeb-ae5a-873b9189d4ec": {
-                                                    "dataType": "string",
-                                                    "isBucketed": true,
-                                                    "label": "Filters",
-                                                    "operationType": "filters",
-                                                    "params": {
-                                                        "filters": [
-                                                            {
-                                                                "input": {
-                                                                    "language": "kuery",
-                                                                    "query": "message.general.lastReportedIp : 10*"
-                                                                },
-                                                                "label": "10* location"
-                                                            },
-                                                            {
-                                                                "input": {
-                                                                    "language": "kuery",
-                                                                    "query": "message.general.lastReportedIp : 192*"
-                                                                },
-                                                                "label": "192* Location"
-                                                            }
-                                                        ]
-                                                    },
-                                                    "scale": "ordinal"
-                                                }
-                                            },
-                                            "ignoreGlobalFilters": false,
-                                            "incompleteColumns": {},
-                                            "sampling": 1
-                                        }
-                                    }
-                                },
-                                "indexpattern": {
-                                    "layers": {}
-                                },
-                                "textBased": {
-                                    "layers": {}
-                                }
-                            },
-                            "filters": [],
-                            "internalReferences": [],
-                            "query": {
-                                "language": "kuery",
-                                "query": "event.dataset : \"jamf_pro.inventory\""
-                            },
-                            "visualization": {
-                                "axisTitlesVisibilitySettings": {
-                                    "x": true,
-                                    "yLeft": true,
-                                    "yRight": true
-                                },
-                                "fittingFunction": "None",
-                                "gridlinesVisibilitySettings": {
-                                    "x": true,
-                                    "yLeft": true,
-                                    "yRight": true
-                                },
-                                "labelsOrientation": {
-                                    "x": 0,
-                                    "yLeft": 0,
-                                    "yRight": 0
-                                },
-                                "layers": [
-                                    {
-                                        "accessors": [
-                                            "2d5f3969-05c2-4ef8-9367-26276d22072b"
-                                        ],
-                                        "colorMapping": {
-                                            "assignments": [],
-                                            "colorMode": {
-                                                "type": "categorical"
-                                            },
-                                            "paletteId": "eui_amsterdam_color_blind",
-                                            "specialAssignments": [
-                                                {
-                                                    "color": {
-                                                        "type": "loop"
-                                                    },
-                                                    "rule": {
-                                                        "type": "other"
-                                                    },
-                                                    "touched": false
-                                                }
-                                            ]
-                                        },
-                                        "layerId": "76355c6c-5bc4-4c31-8362-0e40db5029f6",
-                                        "layerType": "data",
-                                        "seriesType": "bar",
-                                        "xAccessor": "7112d07d-fa9a-4eeb-ae5a-873b9189d4ec"
-                                    }
-                                ],
-                                "legend": {
-                                    "isVisible": true,
-                                    "position": "right"
-                                },
-                                "preferredSeriesType": "bar",
-                                "tickLabelsVisibilitySettings": {
-                                    "x": true,
-                                    "yLeft": true,
-                                    "yRight": true
-                                },
-                                "valueLabels": "hide"
-                            }
-                        },
-                        "visualizationType": "lnsXY"
-                    },
-                    "enhancements": {}
-                },
-                "gridData": {
-                    "h": 15,
-                    "i": "a9030883-4083-4aca-8fc0-19584995e12b",
-                    "w": 24,
-                    "x": 24,
-                    "y": 30
-                },
-                "panelIndex": "a9030883-4083-4aca-8fc0-19584995e12b",
-                "title": "Location of Computer Based on Reported IP Address",
+                "panelIndex": "a7be525b-2635-4e62-ace8-bf2ad880841f",
                 "type": "lens"
             }
         ],
         "timeRestore": false,
-        "title": "Jamf Pro Dashboard V2",
+        "title": "[Jamf Pro] Overview",
         "version": 2
     },
     "coreMigrationVersion": "8.8.0",
-    "created_at": "2024-07-31T06:56:45.483Z",
+    "created_at": "2024-08-01T15:28:15.722Z",
     "created_by": "u_mGBROF_q5bmFCATbLXAcCwKa0k8JvONAwSruelyKA5E_0",
-    "id": "jamf_pro-4060592b-47e0-4183-895d-a7a4e4f4a66f",
+    "id": "jamf_pro-dce729cf-07cc-4e62-a3e3-bc6e233c3ad1",
     "managed": false,
     "references": [
         {
-            "id": "logs-*",
+            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
             "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
             "type": "index-pattern"
         },
         {
-            "id": "logs-*",
-            "name": "81edecb1-fa7c-44c0-828c-c062cd4deb6f:indexpattern-datasource-layer-e067b79f-3de8-4804-a2c0-9001fed34d42",
+            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[1].meta.index",
             "type": "index-pattern"
         },
         {
-            "id": "logs-*",
-            "name": "f6134e92-4937-482f-a662-d3779f69bd53:indexpattern-datasource-layer-9b2a202e-591a-4de4-8392-0118d3274083",
+            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[2].meta.index",
             "type": "index-pattern"
         },
         {
-            "id": "logs-*",
-            "name": "0a8b4ec2-68dc-4990-9e56-c854a9275889:indexpattern-datasource-layer-d8ccfd14-54c1-490d-9873-f59dd5aecfd7",
+            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "name": "212da9fb-5451-4584-8823-b041ebd999a3:indexpattern-datasource-layer-e067b79f-3de8-4804-a2c0-9001fed34d42",
             "type": "index-pattern"
         },
         {
-            "id": "logs-*",
-            "name": "7ae23fa3-8e1d-4c79-a2ca-bad3f6017f8b:indexpattern-datasource-layer-0d524bec-a0f8-49a7-9f7e-282afce3437c",
+            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "name": "f0d185d9-9ef0-41dc-ac25-6c667f418f39:indexpattern-datasource-layer-d8ccfd14-54c1-490d-9873-f59dd5aecfd7",
             "type": "index-pattern"
         },
         {
-            "id": "logs-*",
-            "name": "4709e6c6-f942-4296-80d1-457aed1f9574:indexpattern-datasource-layer-c26de017-938c-4c32-b64c-c218b845edf3",
+            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "name": "c8422002-70a2-4f1e-87f0-d162d07fc38e:indexpattern-datasource-layer-9b2a202e-591a-4de4-8392-0118d3274083",
             "type": "index-pattern"
         },
         {
-            "id": "logs-*",
-            "name": "a9030883-4083-4aca-8fc0-19584995e12b:indexpattern-datasource-layer-76355c6c-5bc4-4c31-8362-0e40db5029f6",
+            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "name": "06876334-7fd5-4d66-8deb-f32be74f0062:indexpattern-datasource-layer-0d524bec-a0f8-49a7-9f7e-282afce3437c",
             "type": "index-pattern"
         },
         {
-            "id": "logs-*",
-            "name": "controlGroup_7b47d8b4-bc2c-42f5-b7b9-2cf358c75a0e:optionsListDataView",
+            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "name": "a7be525b-2635-4e62-ace8-bf2ad880841f:indexpattern-datasource-layer-c26de017-938c-4c32-b64c-c218b845edf3",
             "type": "index-pattern"
         },
         {
-            "id": "logs-*",
-            "name": "controlGroup_21c6da4d-cc5c-471f-a89e-e49729d3d08c:optionsListDataView",
+            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "name": "controlGroup_cf6a10ef-1a60-488d-8a3c-1e14b2db4488:optionsListDataView",
             "type": "index-pattern"
         },
         {
-            "id": "logs-*",
-            "name": "controlGroup_d595ab62-dc7f-4d95-bc69-c8734bd53220:optionsListDataView",
+            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "name": "controlGroup_5d2fda3f-76c9-4a04-8b8f-1ab9efdd0269:optionsListDataView",
             "type": "index-pattern"
         },
         {
-            "id": "logs-*",
-            "name": "controlGroup_bb7b9e31-cbbb-493e-9b65-9fbfb5416afa:optionsListDataView",
+            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "name": "controlGroup_0e097965-08e1-44c0-89f0-2b278a0ca1fd:optionsListDataView",
             "type": "index-pattern"
+        },
+        {
+            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "name": "controlGroup_f5b141aa-1e50-4372-ab05-ba9e20078e84:optionsListDataView",
+            "type": "index-pattern"
+        },
+        {
+            "id": "jamf_pro-84b5564f-8b2f-4029-b796-7a8ab9438520",
+            "name": "tag-ref-84b5564f-8b2f-4029-b796-7a8ab9438520",
+            "type": "tag"
+        },
+        {
+            "id": "jamf_pro-5630d1ac-28a6-4c7f-a0e5-3dcb289340bb",
+            "name": "tag-ref-5630d1ac-28a6-4c7f-a0e5-3dcb289340bb",
+            "type": "tag"
         }
     ],
     "type": "dashboard",
