@@ -320,6 +320,7 @@
                             "adHocDataViews": {},
                             "datasourceStates": {
                                 "formBased": {
+                                    "currentIndexPatternId": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
                                     "layers": {
                                         "8bb21fa5-8cdd-4163-9f24-e3f3bee8d4bb": {
                                             "columnOrder": [
@@ -340,9 +341,10 @@
                                                     "sourceField": "jamf_pro.inventory.general.name"
                                                 },
                                                 "b045d7f0-4d8d-4c46-9167-cbaf26593598": {
+                                                    "customLabel": true,
                                                     "dataType": "string",
                                                     "isBucketed": true,
-                                                    "label": "Top 100 values of jamf_pro.inventory.hardware.model",
+                                                    "label": "Hardware Model",
                                                     "operationType": "terms",
                                                     "params": {
                                                         "exclude": [],
@@ -366,6 +368,7 @@
                                                 }
                                             },
                                             "incompleteColumns": {},
+                                            "indexPatternId": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
                                             "sampling": 1
                                         }
                                     }
@@ -453,7 +456,7 @@
                 "gridData": {
                     "h": 20,
                     "i": "d61e70b1-32f2-4a61-9797-126ffb7d8edd",
-                    "w": 27,
+                    "w": 28,
                     "x": 20,
                     "y": 4
                 },
@@ -510,11 +513,6 @@
             "id": "logs-*",
             "name": "controlGroup_2d74af0c-56a5-4584-86a7-014955b030b0:optionsListDataView",
             "type": "index-pattern"
-        },
-        {
-            "id": "jamf_pro-5630d1ac-28a6-4c7f-a0e5-3dcb289340bb",
-            "name": "tag-ref-5630d1ac-28a6-4c7f-a0e5-3dcb289340bb",
-            "type": "tag"
         }
     ],
     "type": "dashboard",

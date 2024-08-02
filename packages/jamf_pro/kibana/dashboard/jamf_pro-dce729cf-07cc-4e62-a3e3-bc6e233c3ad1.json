@@ -862,16 +862,6 @@
             "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
             "name": "controlGroup_f5b141aa-1e50-4372-ab05-ba9e20078e84:optionsListDataView",
             "type": "index-pattern"
-        },
-        {
-            "id": "jamf_pro-84b5564f-8b2f-4029-b796-7a8ab9438520",
-            "name": "tag-ref-84b5564f-8b2f-4029-b796-7a8ab9438520",
-            "type": "tag"
-        },
-        {
-            "id": "jamf_pro-5630d1ac-28a6-4c7f-a0e5-3dcb289340bb",
-            "name": "tag-ref-5630d1ac-28a6-4c7f-a0e5-3dcb289340bb",
-            "type": "tag"
         }
     ],
     "type": "dashboard",

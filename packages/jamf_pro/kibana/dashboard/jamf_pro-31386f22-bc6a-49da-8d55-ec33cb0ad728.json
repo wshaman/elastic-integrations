@@ -294,11 +294,6 @@
             "id": "logs-*",
             "name": "controlGroup_32e0f558-9708-4689-874a-3388b278c80f:optionsListDataView",
             "type": "index-pattern"
-        },
-        {
-            "id": "jamf_pro-5630d1ac-28a6-4c7f-a0e5-3dcb289340bb",
-            "name": "tag-ref-5630d1ac-28a6-4c7f-a0e5-3dcb289340bb",
-            "type": "tag"
         }
     ],
     "type": "dashboard",
