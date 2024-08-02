@@ -31,7 +31,7 @@
                     "explicitInput": {
                         "enhancements": {},
                         "exclude": false,
-                        "existsSelected": false,
+                        "existsSelected": true,
                         "fieldName": "jamf_pro.inventory.general.name",
                         "grow": true,
                         "id": "5d2fda3f-76c9-4a04-8b8f-1ab9efdd0269",
@@ -187,14 +187,53 @@
                     }
                 },
                 "gridData": {
-                    "h": 4,
+                    "h": 5,
                     "i": "013e277b-6f6c-4e79-b942-6ef71b0c2b52",
-                    "w": 48,
+                    "w": 24,
                     "x": 0,
                     "y": 0
                 },
                 "panelIndex": "013e277b-6f6c-4e79-b942-6ef71b0c2b52",
                 "title": "[Jamf Pro] Overview",
+                "type": "visualization"
+            },
+            {
+                "embeddableConfig": {
+                    "description": "",
+                    "enhancements": {},
+                    "hidePanelTitles": true,
+                    "savedVis": {
+                        "data": {
+                            "aggs": [],
+                            "searchSource": {
+                                "filter": [],
+                                "query": {
+                                    "language": "kuery",
+                                    "query": ""
+                                }
+                            }
+                        },
+                        "description": "",
+                        "id": "",
+                        "params": {
+                            "fontSize": 12,
+                            "markdown": "### JAMF PRO Overview Dashboard\n\nThis dashboard provides a concise view of all computers monitored by JAMF PRO, featuring key metrics and visualisations.\n",
+                            "openLinksInNewTab": false
+                        },
+                        "title": "",
+                        "type": "markdown",
+                        "uiState": {}
+                    }
+                },
+                "gridData": {
+                    "h": 6,
+                    "i": "50820358-b035-41bf-8d0e-d93088e1ccd8",
+                    "w": 24,
+                    "x": 24,
+                    "y": 0
+                },
+                "panelIndex": "50820358-b035-41bf-8d0e-d93088e1ccd8",
+                "title": "Description",
                 "type": "visualization"
             },
             {
@@ -293,7 +332,7 @@
                     "i": "212da9fb-5451-4584-8823-b041ebd999a3",
                     "w": 24,
                     "x": 0,
-                    "y": 4
+                    "y": 5
                 },
                 "panelIndex": "212da9fb-5451-4584-8823-b041ebd999a3",
                 "title": "MacOS count",
@@ -425,7 +464,7 @@
                     "i": "f0d185d9-9ef0-41dc-ac25-6c667f418f39",
                     "w": 24,
                     "x": 24,
-                    "y": 4
+                    "y": 6
                 },
                 "panelIndex": "f0d185d9-9ef0-41dc-ac25-6c667f418f39",
                 "title": "Number of macOS Computers by Hardware Model and Category",
@@ -583,7 +622,7 @@
                     "i": "c8422002-70a2-4f1e-87f0-d162d07fc38e",
                     "w": 24,
                     "x": 0,
-                    "y": 19
+                    "y": 20
                 },
                 "panelIndex": "c8422002-70a2-4f1e-87f0-d162d07fc38e",
                 "title": "Remote Managed Computers",
@@ -787,11 +826,11 @@
                     "enhancements": {}
                 },
                 "gridData": {
-                    "h": 15,
+                    "h": 14,
                     "i": "06876334-7fd5-4d66-8deb-f32be74f0062",
                     "w": 24,
                     "x": 24,
-                    "y": 19
+                    "y": 21
                 },
                 "panelIndex": "06876334-7fd5-4d66-8deb-f32be74f0062",
                 "title": "Status Of Capabilities, Supervision, and Enrollment Types",

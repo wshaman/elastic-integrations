@@ -142,14 +142,53 @@
                     }
                 },
                 "gridData": {
-                    "h": 4,
+                    "h": 6,
                     "i": "c16e70a5-bac9-4efd-95bb-b4114f2d4ef6",
-                    "w": 48,
+                    "w": 24,
                     "x": 0,
                     "y": 0
                 },
                 "panelIndex": "c16e70a5-bac9-4efd-95bb-b4114f2d4ef6",
                 "title": "Locations",
+                "type": "visualization"
+            },
+            {
+                "embeddableConfig": {
+                    "description": "",
+                    "enhancements": {},
+                    "hidePanelTitles": true,
+                    "savedVis": {
+                        "data": {
+                            "aggs": [],
+                            "searchSource": {
+                                "filter": [],
+                                "query": {
+                                    "language": "kuery",
+                                    "query": ""
+                                }
+                            }
+                        },
+                        "description": "",
+                        "id": "",
+                        "params": {
+                            "fontSize": 12,
+                            "markdown": "### JAMF PRO Location Dashboard\n\nThis dashboard provides a concise view of all computers monitored by JAMF PRO and there distribution across the globe.\n",
+                            "openLinksInNewTab": false
+                        },
+                        "title": "",
+                        "type": "markdown",
+                        "uiState": {}
+                    }
+                },
+                "gridData": {
+                    "h": 6,
+                    "i": "9b26d079-ddac-4de3-a09c-9a68c0db6ae8",
+                    "w": 24,
+                    "x": 24,
+                    "y": 0
+                },
+                "panelIndex": "9b26d079-ddac-4de3-a09c-9a68c0db6ae8",
+                "title": "",
                 "type": "visualization"
             },
             {
@@ -254,7 +293,7 @@
                     "i": "9607a3f1-5f81-4e34-ad86-7bd64463af00",
                     "w": 47,
                     "x": 0,
-                    "y": 4
+                    "y": 6
                 },
                 "panelIndex": "9607a3f1-5f81-4e34-ad86-7bd64463af00",
                 "type": "map"

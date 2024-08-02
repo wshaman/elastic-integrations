@@ -142,14 +142,53 @@
                     }
                 },
                 "gridData": {
-                    "h": 4,
+                    "h": 5,
                     "i": "257a59cd-3d2a-4648-8832-ff5a94766a9e",
-                    "w": 48,
+                    "w": 24,
                     "x": 0,
                     "y": 0
                 },
                 "panelIndex": "257a59cd-3d2a-4648-8832-ff5a94766a9e",
                 "title": "OS Information",
+                "type": "visualization"
+            },
+            {
+                "embeddableConfig": {
+                    "description": "",
+                    "enhancements": {},
+                    "hidePanelTitles": true,
+                    "savedVis": {
+                        "data": {
+                            "aggs": [],
+                            "searchSource": {
+                                "filter": [],
+                                "query": {
+                                    "language": "kuery",
+                                    "query": ""
+                                }
+                            }
+                        },
+                        "description": "",
+                        "id": "",
+                        "params": {
+                            "fontSize": 12,
+                            "markdown": "### JAMF PRO OS Dashboard\n\nThis dashboard provides a concise view of all computers monitored by JAMF PRO and there OS related information.",
+                            "openLinksInNewTab": false
+                        },
+                        "title": "",
+                        "type": "markdown",
+                        "uiState": {}
+                    }
+                },
+                "gridData": {
+                    "h": 5,
+                    "i": "971dc018-a432-4f3e-89b6-772dea275168",
+                    "w": 24,
+                    "x": 24,
+                    "y": 0
+                },
+                "panelIndex": "971dc018-a432-4f3e-89b6-772dea275168",
+                "title": "",
                 "type": "visualization"
             },
             {
@@ -332,7 +371,7 @@
                     "i": "1ee24cae-bff0-4851-b7cb-64784136ddbf",
                     "w": 24,
                     "x": 0,
-                    "y": 4
+                    "y": 5
                 },
                 "panelIndex": "1ee24cae-bff0-4851-b7cb-64784136ddbf",
                 "title": "OS version Distribution",
@@ -493,7 +532,7 @@
                     "i": "0ae986d8-8d24-4c6e-92fb-11f6aa547c8f",
                     "w": 24,
                     "x": 24,
-                    "y": 4
+                    "y": 5
                 },
                 "panelIndex": "0ae986d8-8d24-4c6e-92fb-11f6aa547c8f",
                 "title": "OS",

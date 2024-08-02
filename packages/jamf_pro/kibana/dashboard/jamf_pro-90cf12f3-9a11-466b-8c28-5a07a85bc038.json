@@ -163,14 +163,53 @@
                     }
                 },
                 "gridData": {
-                    "h": 4,
+                    "h": 5,
                     "i": "3fb62ca5-948f-4713-a237-6d6ceebb8ab1",
-                    "w": 48,
+                    "w": 24,
                     "x": 0,
                     "y": 0
                 },
                 "panelIndex": "3fb62ca5-948f-4713-a237-6d6ceebb8ab1",
                 "title": "Hardware Information",
+                "type": "visualization"
+            },
+            {
+                "embeddableConfig": {
+                    "description": "",
+                    "enhancements": {},
+                    "hidePanelTitles": true,
+                    "savedVis": {
+                        "data": {
+                            "aggs": [],
+                            "searchSource": {
+                                "filter": [],
+                                "query": {
+                                    "language": "kuery",
+                                    "query": ""
+                                }
+                            }
+                        },
+                        "description": "",
+                        "id": "",
+                        "params": {
+                            "fontSize": 12,
+                            "markdown": "### JAMF PRO Hardware Dashboard\n\nThis dashboard provides a concise view of all computers monitored by JAMF PRO and Hardware Info.",
+                            "openLinksInNewTab": false
+                        },
+                        "title": "",
+                        "type": "markdown",
+                        "uiState": {}
+                    }
+                },
+                "gridData": {
+                    "h": 5,
+                    "i": "47d50cb7-7a8e-41d7-bfbb-35054742de84",
+                    "w": 24,
+                    "x": 24,
+                    "y": 0
+                },
+                "panelIndex": "47d50cb7-7a8e-41d7-bfbb-35054742de84",
+                "title": "",
                 "type": "visualization"
             },
             {
@@ -300,7 +339,7 @@
                     "i": "dbd8b8b5-36e9-4118-9d00-3000fec1fb9e",
                     "w": 20,
                     "x": 0,
-                    "y": 4
+                    "y": 5
                 },
                 "panelIndex": "dbd8b8b5-36e9-4118-9d00-3000fec1fb9e",
                 "title": "Hardware Make",
@@ -458,9 +497,312 @@
                     "i": "d61e70b1-32f2-4a61-9797-126ffb7d8edd",
                     "w": 28,
                     "x": 20,
-                    "y": 4
+                    "y": 5
                 },
                 "panelIndex": "d61e70b1-32f2-4a61-9797-126ffb7d8edd",
+                "title": "Hardware Model",
+                "type": "lens"
+            },
+            {
+                "embeddableConfig": {
+                    "attributes": {
+                        "references": [
+                            {
+                                "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                "name": "indexpattern-datasource-layer-8df82c1f-9c1d-44b2-9fef-78c67ee4df1d",
+                                "type": "index-pattern"
+                            }
+                        ],
+                        "state": {
+                            "adHocDataViews": {},
+                            "datasourceStates": {
+                                "formBased": {
+                                    "currentIndexPatternId": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                    "layers": {
+                                        "8df82c1f-9c1d-44b2-9fef-78c67ee4df1d": {
+                                            "columnOrder": [
+                                                "3b2851af-cbee-4748-988d-46908ee73fb5",
+                                                "5d5528a3-1b6d-4551-9494-33f9c23581d9",
+                                                "f33b7522-077a-451e-9ec0-aee20005ceb1"
+                                            ],
+                                            "columns": {
+                                                "3b2851af-cbee-4748-988d-46908ee73fb5": {
+                                                    "customLabel": true,
+                                                    "dataType": "string",
+                                                    "isBucketed": true,
+                                                    "label": "Computer Name",
+                                                    "operationType": "terms",
+                                                    "params": {
+                                                        "exclude": [],
+                                                        "excludeIsRegex": false,
+                                                        "include": [],
+                                                        "includeIsRegex": false,
+                                                        "missingBucket": true,
+                                                        "orderBy": {
+                                                            "columnId": "f33b7522-077a-451e-9ec0-aee20005ceb1",
+                                                            "type": "column"
+                                                        },
+                                                        "orderDirection": "desc",
+                                                        "otherBucket": true,
+                                                        "parentFormat": {
+                                                            "id": "terms"
+                                                        },
+                                                        "size": 100
+                                                    },
+                                                    "scale": "ordinal",
+                                                    "sourceField": "jamf_pro.inventory.general.name"
+                                                },
+                                                "5d5528a3-1b6d-4551-9494-33f9c23581d9": {
+                                                    "customLabel": true,
+                                                    "dataType": "string",
+                                                    "isBucketed": true,
+                                                    "label": "Mac Address",
+                                                    "operationType": "terms",
+                                                    "params": {
+                                                        "exclude": [],
+                                                        "excludeIsRegex": false,
+                                                        "include": [],
+                                                        "includeIsRegex": false,
+                                                        "missingBucket": true,
+                                                        "orderBy": {
+                                                            "columnId": "f33b7522-077a-451e-9ec0-aee20005ceb1",
+                                                            "type": "column"
+                                                        },
+                                                        "orderDirection": "desc",
+                                                        "otherBucket": true,
+                                                        "parentFormat": {
+                                                            "id": "terms"
+                                                        },
+                                                        "size": 100
+                                                    },
+                                                    "scale": "ordinal",
+                                                    "sourceField": "jamf_pro.inventory.hardware.mac_address"
+                                                },
+                                                "f33b7522-077a-451e-9ec0-aee20005ceb1": {
+                                                    "dataType": "number",
+                                                    "isBucketed": false,
+                                                    "label": "Unique count of jamf_pro.inventory.general.name",
+                                                    "operationType": "unique_count",
+                                                    "params": {
+                                                        "emptyAsNull": true
+                                                    },
+                                                    "scale": "ratio",
+                                                    "sourceField": "jamf_pro.inventory.general.name"
+                                                }
+                                            },
+                                            "incompleteColumns": {},
+                                            "indexPatternId": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                            "sampling": 1
+                                        }
+                                    }
+                                },
+                                "indexpattern": {
+                                    "layers": {}
+                                },
+                                "textBased": {
+                                    "layers": {}
+                                }
+                            },
+                            "filters": [],
+                            "internalReferences": [],
+                            "query": {
+                                "language": "kuery",
+                                "query": ""
+                            },
+                            "visualization": {
+                                "columns": [
+                                    {
+                                        "columnId": "5d5528a3-1b6d-4551-9494-33f9c23581d9",
+                                        "isMetric": false,
+                                        "isTransposed": false
+                                    },
+                                    {
+                                        "columnId": "f33b7522-077a-451e-9ec0-aee20005ceb1",
+                                        "hidden": true
+                                    },
+                                    {
+                                        "columnId": "3b2851af-cbee-4748-988d-46908ee73fb5",
+                                        "isMetric": false,
+                                        "isTransposed": false
+                                    }
+                                ],
+                                "layerId": "8df82c1f-9c1d-44b2-9fef-78c67ee4df1d",
+                                "layerType": "data"
+                            }
+                        },
+                        "title": "",
+                        "type": "lens",
+                        "visualizationType": "lnsDatatable"
+                    },
+                    "enhancements": {}
+                },
+                "gridData": {
+                    "h": 14,
+                    "i": "c6b91b26-559f-4ef8-bbbe-6f551109182c",
+                    "w": 20,
+                    "x": 0,
+                    "y": 25
+                },
+                "panelIndex": "c6b91b26-559f-4ef8-bbbe-6f551109182c",
+                "title": "Mac Addresses",
+                "type": "lens"
+            },
+            {
+                "embeddableConfig": {
+                    "attributes": {
+                        "references": [
+                            {
+                                "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                "name": "indexpattern-datasource-layer-e31a9c95-5572-4e0a-b9d7-a014f7a34517",
+                                "type": "index-pattern"
+                            }
+                        ],
+                        "state": {
+                            "adHocDataViews": {},
+                            "datasourceStates": {
+                                "formBased": {
+                                    "layers": {
+                                        "e31a9c95-5572-4e0a-b9d7-a014f7a34517": {
+                                            "columnOrder": [
+                                                "1dcd153a-2094-4169-bc04-7ea5966ba1e3",
+                                                "796af7c2-6263-4e85-879e-8ec4284a1081",
+                                                "8ca04924-214a-426f-8884-f7c63b106158"
+                                            ],
+                                            "columns": {
+                                                "1dcd153a-2094-4169-bc04-7ea5966ba1e3": {
+                                                    "dataType": "number",
+                                                    "isBucketed": true,
+                                                    "label": "Top 100 values of jamf_pro.inventory.hardware.core_count",
+                                                    "operationType": "terms",
+                                                    "params": {
+                                                        "exclude": [],
+                                                        "excludeIsRegex": false,
+                                                        "include": [],
+                                                        "includeIsRegex": false,
+                                                        "missingBucket": false,
+                                                        "orderBy": {
+                                                            "columnId": "8ca04924-214a-426f-8884-f7c63b106158",
+                                                            "type": "column"
+                                                        },
+                                                        "orderDirection": "desc",
+                                                        "otherBucket": true,
+                                                        "parentFormat": {
+                                                            "id": "terms"
+                                                        },
+                                                        "size": 100
+                                                    },
+                                                    "scale": "ordinal",
+                                                    "sourceField": "jamf_pro.inventory.hardware.core_count"
+                                                },
+                                                "796af7c2-6263-4e85-879e-8ec4284a1081": {
+                                                    "dataType": "string",
+                                                    "isBucketed": true,
+                                                    "label": "Top 100 values of jamf_pro.inventory.general.name",
+                                                    "operationType": "terms",
+                                                    "params": {
+                                                        "exclude": [],
+                                                        "excludeIsRegex": false,
+                                                        "include": [],
+                                                        "includeIsRegex": false,
+                                                        "missingBucket": false,
+                                                        "orderBy": {
+                                                            "columnId": "8ca04924-214a-426f-8884-f7c63b106158",
+                                                            "type": "column"
+                                                        },
+                                                        "orderDirection": "desc",
+                                                        "otherBucket": false,
+                                                        "parentFormat": {
+                                                            "id": "terms"
+                                                        },
+                                                        "size": 100
+                                                    },
+                                                    "scale": "ordinal",
+                                                    "sourceField": "jamf_pro.inventory.general.name"
+                                                },
+                                                "8ca04924-214a-426f-8884-f7c63b106158": {
+                                                    "dataType": "number",
+                                                    "isBucketed": false,
+                                                    "label": "Unique count of jamf_pro.inventory.general.name",
+                                                    "operationType": "unique_count",
+                                                    "params": {
+                                                        "emptyAsNull": true
+                                                    },
+                                                    "scale": "ratio",
+                                                    "sourceField": "jamf_pro.inventory.general.name"
+                                                }
+                                            },
+                                            "incompleteColumns": {},
+                                            "sampling": 1
+                                        }
+                                    }
+                                },
+                                "indexpattern": {
+                                    "layers": {}
+                                },
+                                "textBased": {
+                                    "layers": {}
+                                }
+                            },
+                            "filters": [],
+                            "internalReferences": [],
+                            "query": {
+                                "language": "kuery",
+                                "query": ""
+                            },
+                            "visualization": {
+                                "layers": [
+                                    {
+                                        "categoryDisplay": "default",
+                                        "colorMapping": {
+                                            "assignments": [],
+                                            "colorMode": {
+                                                "type": "categorical"
+                                            },
+                                            "paletteId": "eui_amsterdam_color_blind",
+                                            "specialAssignments": [
+                                                {
+                                                    "color": {
+                                                        "type": "loop"
+                                                    },
+                                                    "rule": {
+                                                        "type": "other"
+                                                    },
+                                                    "touched": false
+                                                }
+                                            ]
+                                        },
+                                        "layerId": "e31a9c95-5572-4e0a-b9d7-a014f7a34517",
+                                        "layerType": "data",
+                                        "legendDisplay": "default",
+                                        "metrics": [
+                                            "8ca04924-214a-426f-8884-f7c63b106158"
+                                        ],
+                                        "nestedLegend": false,
+                                        "numberDisplay": "percent",
+                                        "primaryGroups": [
+                                            "1dcd153a-2094-4169-bc04-7ea5966ba1e3",
+                                            "796af7c2-6263-4e85-879e-8ec4284a1081"
+                                        ]
+                                    }
+                                ],
+                                "shape": "pie"
+                            }
+                        },
+                        "title": "",
+                        "type": "lens",
+                        "visualizationType": "lnsPie"
+                    },
+                    "enhancements": {}
+                },
+                "gridData": {
+                    "h": 14,
+                    "i": "9f7b6404-55f0-4a98-9959-60a8a4caa9df",
+                    "w": 28,
+                    "x": 20,
+                    "y": 25
+                },
+                "panelIndex": "9f7b6404-55f0-4a98-9959-60a8a4caa9df",
+                "title": "CPU Cores Information",
                 "type": "lens"
             }
         ],
@@ -492,6 +834,16 @@
         {
             "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
             "name": "d61e70b1-32f2-4a61-9797-126ffb7d8edd:indexpattern-datasource-layer-8bb21fa5-8cdd-4163-9f24-e3f3bee8d4bb",
+            "type": "index-pattern"
+        },
+        {
+            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "name": "c6b91b26-559f-4ef8-bbbe-6f551109182c:indexpattern-datasource-layer-8df82c1f-9c1d-44b2-9fef-78c67ee4df1d",
+            "type": "index-pattern"
+        },
+        {
+            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "name": "9f7b6404-55f0-4a98-9959-60a8a4caa9df:indexpattern-datasource-layer-e31a9c95-5572-4e0a-b9d7-a014f7a34517",
             "type": "index-pattern"
         },
         {
