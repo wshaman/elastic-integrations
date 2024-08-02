@@ -1,277 +1,394 @@
-- name: id
-  type: keyword
-- name: udid
-  type: keyword
-- name: general
+- name: jamf_pro
   type: group
+  description: "Fields related to Jamf Pro inventory."
   fields:
-    - name: name
-      type: keyword
-    - name: last_ip_address
-      type: ip
-    - name: last_reported_ip
-      type: ip
-    - name: jamf_binary_version
-      type: keyword
-    - name: platform
-      type: keyword
-    - name: asset_tag
-      type: keyword
-      description: Asset tag of the device
-    - name: barcode1
-      type: keyword
-      description: First barcode value
-    - name: barcode2
-      type: keyword
-      description: Second barcode value
-    - name: distribution_point
-      type: keyword
-      description: Distribution point for the device
-    - name: enrollment_method
-      type: keyword
-      description: Method used for enrolling the device
-    - name: extension_attributes
-      type: nested
-      description: Nested structure for extension attributes
-    - name: last_cloud_backup_date
-      type: date
-      description: Date of the last cloud backup
-    - name: mdm_profile_expiration
-      type: date
-      description: Expiration date of the MDM profile
-    - name: remote_management
+    - name: inventory
       type: group
-      fields:
-        - name: managed
-          type: boolean
-        - name: management_username
-          type: keyword
-    - name: supervised
-      type: boolean
-    - name: mdm_capable
-      type: group
-      fields:
-        - name: capable
-          type: boolean
-        - name: capable_users
-          type: text
-    - name: report_date
-      type: date
-    - name: last_contact_time
-      type: date
-    - name: last_enrolled_date
-      type: date
-    - name: initial_entry_date
-      type: date
-    - name: site
-      type: group
+      description: "Details about the inventory."
       fields:
         - name: id
           type: keyword
-        - name: name
+          description: "Unique identifier for the inventory item."
+
+        - name: udid
           type: keyword
-    - name: itunes_store_account_active
-      type: boolean
-    - name: enrolled_via_automated_device_enrollment
-      type: boolean
-    - name: user_approved_mdm
-      type: boolean
-    - name: declarative_device_management_enabled
-      type: boolean
-    - name: management_id
-      type: keyword
-- name: disk_encryption
-  type: group
-  fields:
-    - name: individual_recovery_key_validity_status
-      type: keyword
-    - name: institutional_recovery_key_present
-      type: boolean
-    - name: file_vault2_enabled_usernames
-      type: keyword
-- name: local_user_accounts
-  type: nested
-  fields:
-    - name: uid
-      type: keyword
-    - name: username
-      type: keyword
-    - name: fullname
-      type: keyword
-    - name: admin
-      type: boolean
+          description: "Unique Device Identifier."
 
-- name: purchasing
-  type: group
-  fields:
-    - name: purchased
-      type: boolean
-    - name: leased
-      type: boolean
-- name: storage
-  type: group
-  fields:
-    - name: boot_drive_available_space_megabytes
-      type: long
-    - name: disks
-      type: nested
-      fields:
-        - name: id
-          type: keyword
-        - name: device
-          type: keyword
-        - name: model
-          type: keyword
-- name: applications
-  type: nested
-  fields:
-    - name: name
-      type: keyword
-    - name: path
-      type: keyword
-    - name: version
-      type: keyword
-- name: user_and_location
-  type: group
-  fields:
-    - name: username
-      type: keyword
-    - name: realname
-      type: keyword
-    - name: email
-      type: keyword
-    - name: position
-      type: keyword
-    - name: phone
-      type: keyword
-- name: hardware
-  type: group
-  fields:
-    - name: make
-      type: keyword
-    - name: model
-      type: keyword
-    - name: model_identifier
-      type: keyword
-    - name: serial_number
-      type: keyword
-    - name: processor_speedMhz
-      type: long
-    - name: processor_count
-      type: integer
-    - name: core_count
-      type: integer
-    - name: processor_type
-      type: keyword
-    - name: processor_architecture
-      type: keyword
-    - name: bus_speed_mhz
-      type: long
-    - name: cache_size_kilobytes
-      type: long
-    - name: network_adapter_type
-      type: keyword
-    - name: macAddress
-      type: keyword
-    - name: alt_network_adapter_type
-      type: keyword
-    - name: alt_mac_address
-      type: keyword
-    - name: total_ram_megabytes
-      type: long
-    - name: open_ram_slots
-      type: integer
-    - name: battery_capacity_percent
-      type: integer
-    - name: smc_version
-      type: keyword
-    - name: nic_speed
-      type: keyword
-    - name: optical_drive
-      type: keyword
-    - name: boot_rom
-      type: keyword
-    - name: ble_capable
-      type: boolean
-    - name: supports_ios_app_installs
-      type: boolean
-    - name: apple_silicon
-      type: boolean
-    - name: extension_attributes
-      type: nested
-- name: security
-  type: group
-  fields:
-    - name: sip_status
-      type: keyword
-    - name: gatekeeper_status
-      type: keyword
-- name: operating_system
-  type: group
-  fields:
-    - name: name
-      type: keyword
-    - name: version
-      type: keyword
-    - name: build
-      type: keyword
-- name: software_updates
-  type: nested
-  fields:
-    - name: name
-      type: keyword
-    - name: package_name
-      type: keyword
-    - name: version
-      type: keyword
-- name: attachments
-  type: nested
-  description: Detailed information about attachments
+        - name: general
+          type: group
+          description: "General information about the device."
+          fields:
+            - name: barcode1
+              type: keyword
+              description: "First barcode value."
 
-- name: certificates
-  type: nested
-  description: Information related to certificates
+            - name: declarative_device_management_enabled
+              type: boolean
+              description: "Whether declarative device management is enabled."
 
-- name: configuration_profiles
-  type: nested
-  description: Configuration profiles applied to the device
+            - name: enrolled_via_automated_device_enrollment
+              type: boolean
+              description: "Indicates if enrolled via automated device enrollment."
 
-- name: content_caching
-  type: group
-  description: Details about content caching on the device
+            - name: extension_attributes
+              type: nested
+              description: "Custom attributes added to the device."
 
-- name: extension_attributes
-  type: nested
-  description: Custom attributes added to the device
+            - name: initial_entry_date
+              type: date
+              description: "Initial entry date into the inventory system."
 
-- name: fonts
-  type: nested
-  description: Fonts installed on the device
+            - name: itunes_store_account_active
+              type: boolean
+              description: "Indicates if iTunes store account is active."
 
-- name: group_memberships
-  type: nested
-  description: Group memberships of the device
+            - name: jamf_binary_version
+              type: keyword
+              description: "Version of the JAMF binary installed on the device."
 
-- name: ibeacons
-  type: nested
-  description: iBeacons associated with the device
+            - name: last_contact_time
+              type: date
+              description: "Last time the device made contact with the server."
 
-- name: licensed_software
-  type: nested
-  description: Software licenses associated with the device
+            - name: last_enrolled_date
+              type: date
+              description: "Date when the device was last enrolled."
 
-- name: package_receipts
-  type: nested
-  description: Receipts for packages installed on the device
+            - name: last_ip_address
+              type: ip
+              description: "Last known IP address of the device."
 
-- name: plugins
-  type: nested
-  description: Plugins installed on the device
+            - name: last_reported_ip
+              type: ip
+              description: "Last reported IP address by the device."
 
-- name: printers
-  type: nested
-  description: Printers configured on the device
+            - name: management_id
+              type: keyword
+              description: "Management identifier."
 
-- name: services
-  type: nested
-  description: Services running on the device
+            - name: mdm_capable
+              type: group
+              description: "MDM capability information."
+              fields:
+                - name: capable
+                  type: boolean
+                  description: "Whether the device is MDM capable."
+
+                - name: capable_users
+                  type: nested
+                  description: "List of users capable of MDM."
+
+            - name: name
+              type: keyword
+              description: "Name of the device."
+
+            - name: platform
+              type: keyword
+              description: "Platform of the device."
+
+            - name: remote_management
+              type: group
+              description: "Remote management details."
+              fields:
+                - name: managed
+                  type: boolean
+                  description: "Whether the device is managed remotely."
+
+            - name: report_date
+              type: date
+              description: "Date of the last report."
+
+            - name: site
+              type: group
+              description: "Site information."
+              fields:
+                - name: id
+                  type: keyword
+                  description: "Site identifier."
+
+                - name: name
+                  type: keyword
+                  description: "Name of the site."
+
+            - name: supervised
+              type: boolean
+              description: "Whether the device is supervised."
+
+            - name: user_approved_mdm
+              type: boolean
+              description: "Whether the MDM is approved by the user."
+
+            - name: name
+              type: keyword
+            - name: last_ip_address
+              type: ip
+            - name: last_reported_ip
+              type: ip
+            - name: jamf_binary_version
+              type: keyword
+            - name: platform
+              type: keyword
+            - name: asset_tag
+              type: keyword
+              description: Asset tag of the device
+            - name: barcode1
+              type: keyword
+              description: First barcode value
+            - name: barcode2
+              type: keyword
+              description: Second barcode value
+            - name: distribution_point
+              type: keyword
+              description: Distribution point for the device
+            - name: enrollment_method
+              type: keyword
+              description: Method used for enrolling the device
+            - name: extension_attributes
+              type: nested
+              description: Nested structure for extension attributes
+            - name: last_cloud_backup_date
+              type: date
+              description: Date of the last cloud backup
+            - name: mdm_profile_expiration
+              type: date
+              description: Expiration date of the MDM profile
+            - name: remote_management
+              type: group
+              fields:
+                - name: managed
+                  type: boolean
+                - name: management_username
+                  type: keyword
+            - name: supervised
+              type: boolean
+            - name: mdm_capable
+              type: group
+              fields:
+                - name: capable
+                  type: boolean
+                - name: capable_users
+                  type: text
+            - name: report_date
+              type: date
+            - name: last_contact_time
+              type: date
+            - name: last_enrolled_date
+              type: date
+            - name: initial_entry_date
+              type: date
+            - name: site
+              type: group
+              fields:
+                - name: id
+                  type: keyword
+                - name: name
+                  type: keyword
+            - name: itunes_store_account_active
+              type: boolean
+            - name: enrolled_via_automated_device_enrollment
+              type: boolean
+            - name: user_approved_mdm
+              type: boolean
+            - name: declarative_device_management_enabled
+              type: boolean
+            - name: management_id
+              type: keyword
+        - name: disk_encryption
+          type: group
+          fields:
+            - name: individual_recovery_key_validity_status
+              type: keyword
+            - name: institutional_recovery_key_present
+              type: boolean
+            - name: file_vault2_enabled_usernames
+              type: keyword
+        - name: local_user_accounts
+          type: nested
+          fields:
+            - name: uid
+              type: keyword
+            - name: username
+              type: keyword
+            - name: fullname
+              type: keyword
+            - name: admin
+              type: boolean
+
+        - name: purchasing
+          type: group
+          fields:
+            - name: purchased
+              type: boolean
+            - name: leased
+              type: boolean
+        - name: storage
+          type: group
+          fields:
+            - name: boot_drive_available_space_megabytes
+              type: long
+            - name: disks
+              type: nested
+              fields:
+                - name: id
+                  type: keyword
+                - name: device
+                  type: keyword
+                - name: model
+                  type: keyword
+        - name: applications
+          type: nested
+          fields:
+            - name: name
+              type: keyword
+            - name: path
+              type: keyword
+            - name: version
+              type: keyword
+        - name: user_and_location
+          type: group
+          fields:
+            - name: username
+              type: keyword
+            - name: realname
+              type: keyword
+            - name: email
+              type: keyword
+            - name: position
+              type: keyword
+            - name: phone
+              type: keyword
+        - name: hardware
+          type: group
+          fields:
+            - name: make
+              type: keyword
+            - name: model
+              type: keyword
+            - name: model_identifier
+              type: keyword
+            - name: serial_number
+              type: keyword
+            - name: processor_speedMhz
+              type: long
+            - name: processor_count
+              type: integer
+            - name: core_count
+              type: integer
+            - name: processor_type
+              type: keyword
+            - name: processor_architecture
+              type: keyword
+            - name: bus_speed_mhz
+              type: long
+            - name: cache_size_kilobytes
+              type: long
+            - name: network_adapter_type
+              type: keyword
+            - name: macAddress
+              type: keyword
+            - name: alt_network_adapter_type
+              type: keyword
+            - name: alt_mac_address
+              type: keyword
+            - name: total_ram_megabytes
+              type: long
+            - name: open_ram_slots
+              type: integer
+            - name: battery_capacity_percent
+              type: integer
+            - name: smc_version
+              type: keyword
+            - name: nic_speed
+              type: keyword
+            - name: optical_drive
+              type: keyword
+            - name: boot_rom
+              type: keyword
+            - name: ble_capable
+              type: boolean
+            - name: supports_ios_app_installs
+              type: boolean
+            - name: apple_silicon
+              type: boolean
+            - name: extension_attributes
+              type: nested
+        - name: security
+          type: group
+          fields:
+            - name: sip_status
+              type: keyword
+            - name: gatekeeper_status
+              type: keyword
+        - name: operating_system
+          type: group
+          fields:
+            - name: name
+              type: keyword
+            - name: version
+              type: keyword
+            - name: build
+              type: keyword
+        - name: software_updates
+          type: nested
+          fields:
+            - name: name
+              type: keyword
+            - name: package_name
+              type: keyword
+            - name: version
+              type: keyword
+        - name: attachments
+          type: nested
+          description: Detailed information about attachments
+
+        - name: certificates
+          type: nested
+          description: Information related to certificates
+
+        - name: configuration_profiles
+          type: nested
+          description: Configuration profiles applied to the device
+
+        - name: content_caching
+          type: group
+          description: Details about content caching on the device
+
+        - name: extension_attributes
+          type: nested
+          description: Custom attributes added to the device
+
+        - name: fonts
+          type: nested
+          description: Fonts installed on the device
+
+        - name: group_memberships
+          type: nested
+          description: Group memberships of the device
+
+        - name: ibeacons
+          type: nested
+          description: iBeacons associated with the device
+
+        - name: licensed_software
+          type: nested
+          description: Software licenses associated with the device
+
+        - name: package_receipts
+          type: nested
+          description: Receipts for packages installed on the device
+
+        - name: plugins
+          type: nested
+          description: Plugins installed on the device
+
+        - name: printers
+          type: nested
+          description: Printers configured on the device
+
+        - name: services
+          type: nested
+          description: Services running on the device
+
+        - name: user_and_location
+          type: group
+          description: "User and location details associated with the device."
