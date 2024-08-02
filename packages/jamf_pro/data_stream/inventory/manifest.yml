@@ -31,6 +31,18 @@ streams:
         default: true
         title: "General"
         description: "Enable or disable general settings for the API responce."
+      - name: enable_section_hardware
+        type: bool
+        show_user: false
+        default: true
+        title: "Hardware"
+        description: "Settings to control hardware access and usage."
+      - name: enable_section_operating_system
+        type: bool
+        show_user: false
+        default: true
+        title: "Operating System"
+        description: "Settings related to operating system behaviors and updates."
       - name: enable_section_disk_encryption
         type: bool
         show_user: false
@@ -79,12 +91,6 @@ streams:
         default: false
         title: "Services"
         description: "Settings for managing various system services."
-      - name: enable_section_hardware
-        type: bool
-        show_user: false
-        default: true
-        title: "Hardware"
-        description: "Settings to control hardware access and usage."
       - name: enable_section_local_user_accounts
         type: bool
         show_user: false
@@ -127,12 +133,6 @@ streams:
         default: false
         title: "Security"
         description: "General security settings for the system."
-      - name: enable_section_operating_system
-        type: bool
-        show_user: false
-        default: true
-        title: "Operating System"
-        description: "Settings related to operating system behaviors and updates."
       - name: enable_section_licensed_software
         type: bool
         show_user: false
