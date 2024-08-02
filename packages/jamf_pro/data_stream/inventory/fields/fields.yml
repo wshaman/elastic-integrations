@@ -15,6 +15,30 @@
       type: keyword
     - name: platform
       type: keyword
+    - name: asset_tag
+      type: keyword
+      description: Asset tag of the device
+    - name: barcode1
+      type: keyword
+      description: First barcode value
+    - name: barcode2
+      type: keyword
+      description: Second barcode value
+    - name: distribution_point
+      type: keyword
+      description: Distribution point for the device
+    - name: enrollment_method
+      type: keyword
+      description: Method used for enrolling the device
+    - name: extension_attributes
+      type: nested
+      description: Nested structure for extension attributes
+    - name: last_cloud_backup_date
+      type: date
+      description: Date of the last cloud backup
+    - name: mdm_profile_expiration
+      type: date
+      description: Expiration date of the MDM profile
     - name: remote_management
       type: group
       fields:
@@ -200,3 +224,54 @@
       type: keyword
     - name: version
       type: keyword
+- name: attachments
+  type: nested
+  description: Detailed information about attachments
+
+- name: certificates
+  type: nested
+  description: Information related to certificates
+
+- name: configuration_profiles
+  type: nested
+  description: Configuration profiles applied to the device
+
+- name: content_caching
+  type: group
+  description: Details about content caching on the device
+
+- name: extension_attributes
+  type: nested
+  description: Custom attributes added to the device
+
+- name: fonts
+  type: nested
+  description: Fonts installed on the device
+
+- name: group_memberships
+  type: nested
+  description: Group memberships of the device
+
+- name: ibeacons
+  type: nested
+  description: iBeacons associated with the device
+
+- name: licensed_software
+  type: nested
+  description: Software licenses associated with the device
+
+- name: package_receipts
+  type: nested
+  description: Receipts for packages installed on the device
+
+- name: plugins
+  type: nested
+  description: Plugins installed on the device
+
+- name: printers
+  type: nested
+  description: Printers configured on the device
+
+- name: services
+  type: nested
+  description: Services running on the device
