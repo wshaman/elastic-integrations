@@ -1,0 +1,522 @@
+{
+    "attributes": {
+        "controlGroupInput": {
+            "chainingSystem": "HIERARCHICAL",
+            "controlStyle": "oneLine",
+            "ignoreParentSettingsJSON": {
+                "ignoreFilters": false,
+                "ignoreQuery": false,
+                "ignoreTimerange": false,
+                "ignoreValidations": false
+            },
+            "panelsJSON": {
+                "17a9f333-2a87-4261-b0a1-c328d14f7757": {
+                    "explicitInput": {
+                        "enhancements": {},
+                        "fieldName": "jamf_pro.inventory.general.name",
+                        "grow": true,
+                        "id": "17a9f333-2a87-4261-b0a1-c328d14f7757",
+                        "searchTechnique": "prefix",
+                        "title": "Compter Name",
+                        "width": "medium"
+                    },
+                    "grow": true,
+                    "order": 0,
+                    "type": "optionsListControl",
+                    "width": "medium"
+                },
+                "2d74af0c-56a5-4584-86a7-014955b030b0": {
+                    "explicitInput": {
+                        "enhancements": {},
+                        "fieldName": "jamf_pro.inventory.hardware.model",
+                        "grow": true,
+                        "id": "2d74af0c-56a5-4584-86a7-014955b030b0",
+                        "searchTechnique": "prefix",
+                        "title": "Hardware Model",
+                        "width": "medium"
+                    },
+                    "grow": true,
+                    "order": 3,
+                    "type": "optionsListControl",
+                    "width": "medium"
+                },
+                "cd7d1760-4e4e-4a69-b92c-dc58ed811925": {
+                    "explicitInput": {
+                        "enhancements": {},
+                        "fieldName": "jamf_pro.inventory.operating_system.name",
+                        "grow": true,
+                        "id": "cd7d1760-4e4e-4a69-b92c-dc58ed811925",
+                        "searchTechnique": "prefix",
+                        "title": "OS",
+                        "width": "medium"
+                    },
+                    "grow": true,
+                    "order": 1,
+                    "type": "optionsListControl",
+                    "width": "medium"
+                },
+                "f05381c5-0b86-4a39-9635-8f3318a82752": {
+                    "explicitInput": {
+                        "enhancements": {},
+                        "fieldName": "jamf_pro.inventory.general.platform",
+                        "grow": true,
+                        "id": "f05381c5-0b86-4a39-9635-8f3318a82752",
+                        "searchTechnique": "prefix",
+                        "title": "Platform",
+                        "width": "medium"
+                    },
+                    "grow": true,
+                    "order": 2,
+                    "type": "optionsListControl",
+                    "width": "medium"
+                }
+            },
+            "showApplySelections": false
+        },
+        "description": "Dashboard for hardware information",
+        "kibanaSavedObjectMeta": {
+            "searchSourceJSON": {
+                "filter": [
+                    {
+                        "$state": {
+                            "store": "appState"
+                        },
+                        "meta": {
+                            "alias": null,
+                            "disabled": false,
+                            "field": "event.dataset",
+                            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                            "key": "event.dataset",
+                            "negate": false,
+                            "params": {
+                                "query": "jamf_pro.inventory"
+                            },
+                            "type": "phrase"
+                        },
+                        "query": {
+                            "match_phrase": {
+                                "event.dataset": "jamf_pro.inventory"
+                            }
+                        }
+                    },
+                    {
+                        "$state": {
+                            "store": "appState"
+                        },
+                        "meta": {
+                            "alias": null,
+                            "disabled": false,
+                            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.filter[1].meta.index",
+                            "key": "jamf_pro.inventory.hardware.make",
+                            "negate": false,
+                            "params": {
+                                "query": "Apple"
+                            },
+                            "type": "phrase"
+                        },
+                        "query": {
+                            "match_phrase": {
+                                "jamf_pro.inventory.hardware.make": "Apple"
+                            }
+                        }
+                    }
+                ],
+                "query": {
+                    "language": "kuery",
+                    "query": ""
+                }
+            }
+        },
+        "optionsJSON": {
+            "hidePanelTitles": false,
+            "syncColors": false,
+            "syncCursor": true,
+            "syncTooltips": false,
+            "useMargins": true
+        },
+        "panelsJSON": [
+            {
+                "embeddableConfig": {
+                    "description": "",
+                    "enhancements": {},
+                    "savedVis": {
+                        "data": {
+                            "aggs": [],
+                            "searchSource": {
+                                "filter": [],
+                                "query": {
+                                    "language": "kuery",
+                                    "query": ""
+                                }
+                            }
+                        },
+                        "description": "",
+                        "id": "",
+                        "params": {
+                            "fontSize": 12,
+                            "markdown": "[Overview](#/dashboard/jamf_pro-dce729cf-07cc-4e62-a3e3-bc6e233c3ad1),\n[OS Information](#/dashboard/jamf_pro-0c140879-b8ad-418a-bf97-446935ce115b)\n[Hardware Information](#/dashboard/jamf_pro-90cf12f3-9a11-466b-8c28-5a07a85bc038)\n[Locations](#/dashboard/jamf_pro-31386f22-bc6a-49da-8d55-ec33cb0ad728)\n",
+                            "openLinksInNewTab": false
+                        },
+                        "title": "",
+                        "type": "markdown",
+                        "uiState": {}
+                    }
+                },
+                "gridData": {
+                    "h": 4,
+                    "i": "3fb62ca5-948f-4713-a237-6d6ceebb8ab1",
+                    "w": 48,
+                    "x": 0,
+                    "y": 0
+                },
+                "panelIndex": "3fb62ca5-948f-4713-a237-6d6ceebb8ab1",
+                "title": "Hardware Information",
+                "type": "visualization"
+            },
+            {
+                "embeddableConfig": {
+                    "attributes": {
+                        "references": [
+                            {
+                                "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                "name": "indexpattern-datasource-layer-aa8cd56d-8754-4cc8-8c49-5a8346698cc7",
+                                "type": "index-pattern"
+                            }
+                        ],
+                        "state": {
+                            "adHocDataViews": {},
+                            "datasourceStates": {
+                                "formBased": {
+                                    "currentIndexPatternId": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                    "layers": {
+                                        "aa8cd56d-8754-4cc8-8c49-5a8346698cc7": {
+                                            "columnOrder": [
+                                                "bc5c4be3-447f-49a0-a266-c12fed6b40e3",
+                                                "f6d1b2d3-2871-40c6-b0db-c859c9150160"
+                                            ],
+                                            "columns": {
+                                                "bc5c4be3-447f-49a0-a266-c12fed6b40e3": {
+                                                    "dataType": "string",
+                                                    "isBucketed": true,
+                                                    "label": "Top 100 values of jamf_pro.inventory.hardware.make",
+                                                    "operationType": "terms",
+                                                    "params": {
+                                                        "exclude": [],
+                                                        "excludeIsRegex": false,
+                                                        "include": [],
+                                                        "includeIsRegex": false,
+                                                        "missingBucket": true,
+                                                        "orderBy": {
+                                                            "columnId": "f6d1b2d3-2871-40c6-b0db-c859c9150160",
+                                                            "type": "column"
+                                                        },
+                                                        "orderDirection": "desc",
+                                                        "otherBucket": true,
+                                                        "parentFormat": {
+                                                            "id": "terms"
+                                                        },
+                                                        "size": 100
+                                                    },
+                                                    "scale": "ordinal",
+                                                    "sourceField": "jamf_pro.inventory.hardware.make"
+                                                },
+                                                "f6d1b2d3-2871-40c6-b0db-c859c9150160": {
+                                                    "dataType": "number",
+                                                    "isBucketed": false,
+                                                    "label": "Unique count of jamf_pro.inventory.general.name",
+                                                    "operationType": "unique_count",
+                                                    "params": {
+                                                        "emptyAsNull": true
+                                                    },
+                                                    "scale": "ratio",
+                                                    "sourceField": "jamf_pro.inventory.general.name"
+                                                }
+                                            },
+                                            "incompleteColumns": {},
+                                            "indexPatternId": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                            "sampling": 1
+                                        }
+                                    }
+                                },
+                                "indexpattern": {
+                                    "layers": {}
+                                },
+                                "textBased": {
+                                    "layers": {}
+                                }
+                            },
+                            "filters": [],
+                            "internalReferences": [],
+                            "query": {
+                                "language": "kuery",
+                                "query": ""
+                            },
+                            "visualization": {
+                                "layers": [
+                                    {
+                                        "categoryDisplay": "default",
+                                        "colorMapping": {
+                                            "assignments": [],
+                                            "colorMode": {
+                                                "type": "categorical"
+                                            },
+                                            "paletteId": "eui_amsterdam_color_blind",
+                                            "specialAssignments": [
+                                                {
+                                                    "color": {
+                                                        "type": "loop"
+                                                    },
+                                                    "rule": {
+                                                        "type": "other"
+                                                    },
+                                                    "touched": false
+                                                }
+                                            ]
+                                        },
+                                        "layerId": "aa8cd56d-8754-4cc8-8c49-5a8346698cc7",
+                                        "layerType": "data",
+                                        "legendDisplay": "default",
+                                        "metrics": [
+                                            "f6d1b2d3-2871-40c6-b0db-c859c9150160"
+                                        ],
+                                        "nestedLegend": false,
+                                        "numberDisplay": "percent",
+                                        "primaryGroups": [
+                                            "bc5c4be3-447f-49a0-a266-c12fed6b40e3"
+                                        ]
+                                    }
+                                ],
+                                "shape": "pie"
+                            }
+                        },
+                        "title": "",
+                        "type": "lens",
+                        "visualizationType": "lnsPie"
+                    },
+                    "enhancements": {}
+                },
+                "gridData": {
+                    "h": 20,
+                    "i": "dbd8b8b5-36e9-4118-9d00-3000fec1fb9e",
+                    "w": 20,
+                    "x": 0,
+                    "y": 4
+                },
+                "panelIndex": "dbd8b8b5-36e9-4118-9d00-3000fec1fb9e",
+                "title": "Hardware Make",
+                "type": "lens"
+            },
+            {
+                "embeddableConfig": {
+                    "attributes": {
+                        "references": [
+                            {
+                                "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                "name": "indexpattern-datasource-layer-8bb21fa5-8cdd-4163-9f24-e3f3bee8d4bb",
+                                "type": "index-pattern"
+                            }
+                        ],
+                        "state": {
+                            "adHocDataViews": {},
+                            "datasourceStates": {
+                                "formBased": {
+                                    "layers": {
+                                        "8bb21fa5-8cdd-4163-9f24-e3f3bee8d4bb": {
+                                            "columnOrder": [
+                                                "b045d7f0-4d8d-4c46-9167-cbaf26593598",
+                                                "80743531-f2ea-42a4-958d-1e9809608d5b"
+                                            ],
+                                            "columns": {
+                                                "80743531-f2ea-42a4-958d-1e9809608d5b": {
+                                                    "customLabel": true,
+                                                    "dataType": "number",
+                                                    "isBucketed": false,
+                                                    "label": "Number of Computers",
+                                                    "operationType": "unique_count",
+                                                    "params": {
+                                                        "emptyAsNull": true
+                                                    },
+                                                    "scale": "ratio",
+                                                    "sourceField": "jamf_pro.inventory.general.name"
+                                                },
+                                                "b045d7f0-4d8d-4c46-9167-cbaf26593598": {
+                                                    "dataType": "string",
+                                                    "isBucketed": true,
+                                                    "label": "Top 100 values of jamf_pro.inventory.hardware.model",
+                                                    "operationType": "terms",
+                                                    "params": {
+                                                        "exclude": [],
+                                                        "excludeIsRegex": false,
+                                                        "include": [],
+                                                        "includeIsRegex": false,
+                                                        "missingBucket": true,
+                                                        "orderBy": {
+                                                            "columnId": "80743531-f2ea-42a4-958d-1e9809608d5b",
+                                                            "type": "column"
+                                                        },
+                                                        "orderDirection": "desc",
+                                                        "otherBucket": true,
+                                                        "parentFormat": {
+                                                            "id": "terms"
+                                                        },
+                                                        "size": 100
+                                                    },
+                                                    "scale": "ordinal",
+                                                    "sourceField": "jamf_pro.inventory.hardware.model"
+                                                }
+                                            },
+                                            "incompleteColumns": {},
+                                            "sampling": 1
+                                        }
+                                    }
+                                },
+                                "indexpattern": {
+                                    "layers": {}
+                                },
+                                "textBased": {
+                                    "layers": {}
+                                }
+                            },
+                            "filters": [],
+                            "internalReferences": [],
+                            "query": {
+                                "language": "kuery",
+                                "query": ""
+                            },
+                            "visualization": {
+                                "axisTitlesVisibilitySettings": {
+                                    "x": true,
+                                    "yLeft": true,
+                                    "yRight": true
+                                },
+                                "fittingFunction": "None",
+                                "gridlinesVisibilitySettings": {
+                                    "x": true,
+                                    "yLeft": true,
+                                    "yRight": true
+                                },
+                                "labelsOrientation": {
+                                    "x": 0,
+                                    "yLeft": 0,
+                                    "yRight": 0
+                                },
+                                "layers": [
+                                    {
+                                        "accessors": [
+                                            "80743531-f2ea-42a4-958d-1e9809608d5b"
+                                        ],
+                                        "colorMapping": {
+                                            "assignments": [],
+                                            "colorMode": {
+                                                "type": "categorical"
+                                            },
+                                            "paletteId": "eui_amsterdam_color_blind",
+                                            "specialAssignments": [
+                                                {
+                                                    "color": {
+                                                        "type": "loop"
+                                                    },
+                                                    "rule": {
+                                                        "type": "other"
+                                                    },
+                                                    "touched": false
+                                                }
+                                            ]
+                                        },
+                                        "layerId": "8bb21fa5-8cdd-4163-9f24-e3f3bee8d4bb",
+                                        "layerType": "data",
+                                        "position": "top",
+                                        "seriesType": "bar_stacked",
+                                        "showGridlines": false,
+                                        "xAccessor": "b045d7f0-4d8d-4c46-9167-cbaf26593598"
+                                    }
+                                ],
+                                "legend": {
+                                    "isVisible": true,
+                                    "position": "right"
+                                },
+                                "preferredSeriesType": "bar_stacked",
+                                "tickLabelsVisibilitySettings": {
+                                    "x": true,
+                                    "yLeft": true,
+                                    "yRight": true
+                                },
+                                "valueLabels": "hide"
+                            }
+                        },
+                        "title": "",
+                        "type": "lens",
+                        "visualizationType": "lnsXY"
+                    },
+                    "enhancements": {}
+                },
+                "gridData": {
+                    "h": 20,
+                    "i": "d61e70b1-32f2-4a61-9797-126ffb7d8edd",
+                    "w": 27,
+                    "x": 20,
+                    "y": 4
+                },
+                "panelIndex": "d61e70b1-32f2-4a61-9797-126ffb7d8edd",
+                "type": "lens"
+            }
+        ],
+        "timeRestore": false,
+        "title": "[Jamf Pro] Hardware Information",
+        "version": 2
+    },
+    "coreMigrationVersion": "8.8.0",
+    "created_at": "2024-08-02T05:28:03.318Z",
+    "created_by": "u_mGBROF_q5bmFCATbLXAcCwKa0k8JvONAwSruelyKA5E_0",
+    "id": "jamf_pro-90cf12f3-9a11-466b-8c28-5a07a85bc038",
+    "managed": false,
+    "references": [
+        {
+            "id": "logs-*",
+            "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+            "type": "index-pattern"
+        },
+        {
+            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[1].meta.index",
+            "type": "index-pattern"
+        },
+        {
+            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "name": "dbd8b8b5-36e9-4118-9d00-3000fec1fb9e:indexpattern-datasource-layer-aa8cd56d-8754-4cc8-8c49-5a8346698cc7",
+            "type": "index-pattern"
+        },
+        {
+            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "name": "d61e70b1-32f2-4a61-9797-126ffb7d8edd:indexpattern-datasource-layer-8bb21fa5-8cdd-4163-9f24-e3f3bee8d4bb",
+            "type": "index-pattern"
+        },
+        {
+            "id": "logs-*",
+            "name": "controlGroup_17a9f333-2a87-4261-b0a1-c328d14f7757:optionsListDataView",
+            "type": "index-pattern"
+        },
+        {
+            "id": "logs-*",
+            "name": "controlGroup_cd7d1760-4e4e-4a69-b92c-dc58ed811925:optionsListDataView",
+            "type": "index-pattern"
+        },
+        {
+            "id": "logs-*",
+            "name": "controlGroup_f05381c5-0b86-4a39-9635-8f3318a82752:optionsListDataView",
+            "type": "index-pattern"
+        },
+        {
+            "id": "logs-*",
+            "name": "controlGroup_2d74af0c-56a5-4584-86a7-014955b030b0:optionsListDataView",
+            "type": "index-pattern"
+        },
+        {
+            "id": "jamf_pro-5630d1ac-28a6-4c7f-a0e5-3dcb289340bb",
+            "name": "tag-ref-5630d1ac-28a6-4c7f-a0e5-3dcb289340bb",
+            "type": "tag"
+        }
+    ],
+    "type": "dashboard",
+    "typeMigrationVersion": "10.2.0"
+}
