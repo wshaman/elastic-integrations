@@ -15,6 +15,32 @@
       type: keyword
     - name: platform
       type: keyword
+    - name: assetTag
+      type: keyword
+      null_value: "null"
+      ignore_malformed: true
+      description: Asset tag of the device
+    - name: barcode1
+      type: keyword
+      description: First barcode value
+    - name: barcode2
+      type: keyword
+      description: Second barcode value
+    - name: distributionPoint
+      type: keyword
+      description: Distribution point for the device
+    - name: enrollmentMethod
+      type: keyword
+      description: Method used for enrolling the device
+    - name: extensionAttributes
+      type: nested
+      description: Nested structure for extension attributes
+    - name: lastCloudBackupDate
+      type: date
+      description: Date of the last cloud backup
+    - name: mdmProfileExpiration
+      type: date
+      description: Expiration date of the MDM profile
     - name: remoteManagement
       type: group
       fields:
@@ -200,3 +226,60 @@
       type: keyword
     - name: version
       type: keyword
+- name: attachments
+  type: nested
+  description: Detailed information about attachments
+
+- name: certificates
+  type: nested
+  description: Information related to certificates
+
+- name: configurationProfiles
+  type: nested
+  description: Configuration profiles applied to the device
+
+- name: contentCaching
+  type: group
+  description: Details about content caching on the device
+
+- name: extensionAttributes
+  type: nested
+  description: Custom attributes added to the device
+
+- name: fonts
+  type: nested
+  description: Fonts installed on the device
+
+- name: general
+  type: group
+  description: General information about the device
+  fields:
+
+- name: groupMemberships
+  type: nested
+  description: Group memberships of the device
+
+- name: ibeacons
+  type: nested
+  description: iBeacons associated with the device
+
+- name: licensedSoftware
+  type: nested
+  description: Software licenses associated with the device
+
+- name: packageReceipts
+  type: nested
+  description: Receipts for packages installed on the device
+
+- name: plugins
+  type: nested
+  description: Plugins installed on the device
+
+- name: printers
+  type: nested
+  description: Printers configured on the device
+
+- name: services
+  type: nested
+  description: Services running on the device
+
