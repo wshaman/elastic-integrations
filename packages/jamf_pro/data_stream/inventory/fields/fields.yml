@@ -18,10 +18,6 @@
           type: group
           description: "General information about the device."
           fields:
-            - name: barcode1
-              type: keyword
-              description: "First barcode value."
-
             - name: declarative_device_management_enabled
               type: boolean
               description: "Whether declarative device management is enabled."
@@ -29,10 +25,6 @@
             - name: enrolled_via_automated_device_enrollment
               type: boolean
               description: "Indicates if enrolled via automated device enrollment."
-
-            - name: extension_attributes
-              type: nested
-              description: "Custom attributes added to the device."
 
             - name: initial_entry_date
               type: date
@@ -50,18 +42,6 @@
               type: date
               description: "Last time the device made contact with the server."
 
-            - name: last_enrolled_date
-              type: date
-              description: "Date when the device was last enrolled."
-
-            - name: last_ip_address
-              type: ip
-              description: "Last known IP address of the device."
-
-            - name: last_reported_ip
-              type: ip
-              description: "Last reported IP address by the device."
-
             - name: management_id
               type: keyword
               description: "Management identifier."
@@ -78,45 +58,9 @@
                   type: nested
                   description: "List of users capable of MDM."
 
-            - name: name
-              type: keyword
-              description: "Name of the device."
-
             - name: platform
               type: keyword
               description: "Platform of the device."
-
-            - name: remote_management
-              type: group
-              description: "Remote management details."
-              fields:
-                - name: managed
-                  type: boolean
-                  description: "Whether the device is managed remotely."
-
-            - name: report_date
-              type: date
-              description: "Date of the last report."
-
-            - name: site
-              type: group
-              description: "Site information."
-              fields:
-                - name: id
-                  type: keyword
-                  description: "Site identifier."
-
-                - name: name
-                  type: keyword
-                  description: "Name of the site."
-
-            - name: supervised
-              type: boolean
-              description: "Whether the device is supervised."
-
-            - name: user_approved_mdm
-              type: boolean
-              description: "Whether the MDM is approved by the user."
 
             - name: name
               type: keyword
@@ -124,10 +68,6 @@
               type: ip
             - name: last_reported_ip
               type: ip
-            - name: jamf_binary_version
-              type: keyword
-            - name: platform
-              type: keyword
             - name: asset_tag
               type: keyword
               description: Asset tag of the device
@@ -161,20 +101,9 @@
                   type: keyword
             - name: supervised
               type: boolean
-            - name: mdm_capable
-              type: group
-              fields:
-                - name: capable
-                  type: boolean
-                - name: capable_users
-                  type: text
             - name: report_date
               type: date
-            - name: last_contact_time
-              type: date
             - name: last_enrolled_date
-              type: date
-            - name: initial_entry_date
               type: date
             - name: site
               type: group
@@ -183,16 +112,8 @@
                   type: keyword
                 - name: name
                   type: keyword
-            - name: itunes_store_account_active
-              type: boolean
-            - name: enrolled_via_automated_device_enrollment
-              type: boolean
             - name: user_approved_mdm
               type: boolean
-            - name: declarative_device_management_enabled
-              type: boolean
-            - name: management_id
-              type: keyword
         - name: disk_encryption
           type: group
           fields:
@@ -310,8 +231,6 @@
               type: boolean
             - name: apple_silicon
               type: boolean
-            - name: extension_attributes
-              type: nested
         - name: security
           type: group
           fields:
