@@ -7,37 +7,37 @@
   fields:
     - name: name
       type: keyword
-    - name: lastIpAddress
+    - name: last_ip_address
       type: ip
-    - name: lastReportedIp
+    - name: last_reported_ip
       type: ip
-    - name: jamfBinaryVersion
+    - name: jamf_binary_version
       type: keyword
     - name: platform
       type: keyword
-    - name: remoteManagement
+    - name: remote_management
       type: group
       fields:
         - name: managed
           type: boolean
-        - name: managementUsername
+        - name: management_username
           type: keyword
     - name: supervised
       type: boolean
-    - name: mdmCapable
+    - name: mdm_capable
       type: group
       fields:
         - name: capable
           type: boolean
-        - name: capableUsers
+        - name: capable_users
           type: text
-    - name: reportDate
+    - name: report_date
       type: date
-    - name: lastContactTime
+    - name: last_contact_time
       type: date
-    - name: lastEnrolledDate
+    - name: last_enrolled_date
       type: date
-    - name: initialEntryDate
+    - name: initial_entry_date
       type: date
     - name: site
       type: group
@@ -46,33 +46,33 @@
           type: keyword
         - name: name
           type: keyword
-    - name: itunesStoreAccountActive
+    - name: itunes_store_account_active
       type: boolean
-    - name: enrolledViaAutomatedDeviceEnrollment
+    - name: enrolled_via_automated_device_enrollment
       type: boolean
-    - name: userApprovedMdm
+    - name: user_approved_mdm
       type: boolean
-    - name: declarativeDeviceManagementEnabled
+    - name: declarative_device_management_enabled
       type: boolean
-    - name: managementId
+    - name: management_id
       type: keyword
-- name: diskEncryption
+- name: disk_encryption
   type: group
   fields:
-    - name: individualRecoveryKeyValidityStatus
+    - name: individual_recovery_key_validity_status
       type: keyword
-    - name: institutionalRecoveryKeyPresent
+    - name: institutional_recovery_key_present
       type: boolean
-    - name: fileVault2EnabledUserNames
+    - name: file_vault2_enabled_usernames
       type: keyword
-- name: localUserAccounts
+- name: local_user_accounts
   type: nested
   fields:
     - name: uid
       type: keyword
     - name: username
       type: keyword
-    - name: fullName
+    - name: fullname
       type: keyword
     - name: admin
       type: boolean
@@ -87,7 +87,7 @@
 - name: storage
   type: group
   fields:
-    - name: bootDriveAvailableSpaceMegabytes
+    - name: boot_drive_available_space_megabytes
       type: long
     - name: disks
       type: nested
@@ -107,7 +107,7 @@
       type: keyword
     - name: version
       type: keyword
-- name: userAndLocation
+- name: user_and_location
   type: group
   fields:
     - name: username
@@ -127,62 +127,62 @@
       type: keyword
     - name: model
       type: keyword
-    - name: modelIdentifier
+    - name: model_identifier
       type: keyword
-    - name: serialNumber
+    - name: serial_number
       type: keyword
-    - name: processorSpeedMhz
+    - name: processor_speedMhz
       type: long
-    - name: processorCount
+    - name: processor_count
       type: integer
-    - name: coreCount
+    - name: core_count
       type: integer
-    - name: processorType
+    - name: processor_type
       type: keyword
-    - name: processorArchitecture
+    - name: processor_architecture
       type: keyword
-    - name: busSpeedMhz
+    - name: bus_speed_mhz
       type: long
-    - name: cacheSizeKilobytes
+    - name: cache_size_kilobytes
       type: long
-    - name: networkAdapterType
+    - name: network_adapter_type
       type: keyword
     - name: macAddress
       type: keyword
-    - name: altNetworkAdapterType
+    - name: alt_network_adapter_type
       type: keyword
-    - name: altMacAddress
+    - name: alt_mac_address
       type: keyword
-    - name: totalRamMegabytes
+    - name: total_ram_megabytes
       type: long
-    - name: openRamSlots
+    - name: open_ram_slots
       type: integer
-    - name: batteryCapacityPercent
+    - name: battery_capacity_percent
       type: integer
-    - name: smcVersion
+    - name: smc_version
       type: keyword
-    - name: nicSpeed
+    - name: nic_speed
       type: keyword
-    - name: opticalDrive
+    - name: optical_drive
       type: keyword
-    - name: bootRom
+    - name: boot_rom
       type: keyword
-    - name: bleCapable
+    - name: ble_capable
       type: boolean
-    - name: supportsIosAppInstalls
+    - name: supports_ios_app_installs
       type: boolean
-    - name: appleSilicon
+    - name: apple_silicon
       type: boolean
-    - name: extensionAttributes
+    - name: extension_attributes
       type: nested
 - name: security
   type: group
   fields:
-    - name: sipStatus
+    - name: sip_status
       type: keyword
-    - name: gatekeeperStatus
+    - name: gatekeeper_status
       type: keyword
-- name: operatingSystem
+- name: operating_system
   type: group
   fields:
     - name: name
@@ -191,12 +191,12 @@
       type: keyword
     - name: build
       type: keyword
-- name: softwareUpdates
+- name: software_updates
   type: nested
   fields:
     - name: name
       type: keyword
-    - name: packageName
+    - name: package_name
       type: keyword
     - name: version
       type: keyword
