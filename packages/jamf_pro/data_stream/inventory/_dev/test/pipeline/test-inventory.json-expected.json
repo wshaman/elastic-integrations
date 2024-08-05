@@ -1,6 +1,9 @@
 {
     "expected": [
         {
+            "ecs": {
+                "version": "8.11.0"
+            },
             "jamf_pro": {
                 "inventory": {
                     "applications": null,

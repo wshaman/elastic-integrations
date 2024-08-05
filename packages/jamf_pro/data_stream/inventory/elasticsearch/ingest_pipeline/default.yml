@@ -50,6 +50,9 @@ processors:
     field: message
     target_field: jamf_pro.inventory
 
+- set:
+    field: ecs.version
+    value: '8.11.0'
 
 on_failure:
 - set:          
