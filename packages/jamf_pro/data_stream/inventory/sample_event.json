@@ -1,0 +1,161 @@
+ {
+      "agent": {
+        "name": "docker-fleet-agent",
+        "id": "e31e91a6-b28d-490e-9705-b42be200e7fd",
+        "type": "filebeat",
+        "ephemeral_id": "4b658f46-cd06-4ed6-b860-440faf555afb",
+        "version": "8.14.3"
+      },
+      "@timestamp": "2024-08-05T12:26:33.267Z",
+      "data_stream": {
+        "namespace": "default",
+        "type": "logs",
+        "dataset": "jamf_pro.inventory"
+      },
+      "host": {
+        "hostname": "docker-fleet-agent",
+        "os": {
+          "kernel": "6.8.0-39-generic",
+          "codename": "focal",
+          "name": "Ubuntu",
+          "family": "debian",
+          "type": "linux",
+          "version": "20.04.6 LTS (Focal Fossa)",
+          "platform": "ubuntu"
+        },
+        "containerized": false,
+        "ip": [
+          "172.22.0.7"
+        ],
+        "name": "docker-fleet-agent",
+        "id": "d7b94aeb4f9141eaa5f345ec31e65c86",
+        "mac": [
+          "02-42-AC-16-00-07"
+        ],
+        "architecture": "x86_64"
+      },
+      "elastic_agent": {
+        "id": "e31e91a6-b28d-490e-9705-b42be200e7fd",
+        "version": "8.14.3",
+        "snapshot": false
+      },
+      "event": {
+        "agent_id_status": "verified",
+        "ingested": "2024-08-05T12:26:34Z",
+        "dataset": "jamf_pro.inventory"
+      },
+      "jamf_pro": {
+        "inventory": {
+          "attachments": null,
+          "purchasing": null,
+          "plugins": null,
+          "licensed_software": null,
+          "user_and_location": {
+            "building_id": 1,
+            "phone": "acme-phone",
+            "department_id": 1,
+            "extension_attributes": [],
+            "position": "acme",
+            "room": 1,
+            "email": "andria.thompson@acme.demo",
+            "realname": "Andria Thompson",
+            "username": "andria.thompson"
+          },
+          "storage": null,
+          "general": {
+            "mdm_capable": {
+              "capable_users": [],
+              "capable": false
+            },
+            "jamf_binary_version": "11.5.1-t1716233166",
+            "platform": "Mac",
+            "remote_management": {
+              "management_username": "acme-management_username",
+              "managed": true
+            },
+            "declarative_device_management_enabled": false,
+            "enrolled_via_automated_device_enrollment": false,
+            "mdm_profile_expiration": "2024-06-19T15:54:47.471Z",
+            "distribution_point": "acme-distribution_point",
+            "last_contact_time": "2024-06-19T15:54:47.471Z",
+            "last_reported_ip": "192.168.1.85",
+            "last_enrolled_date": "2024-06-19T15:54:47.471Z",
+            "report_date": "2024-06-19T15:54:47.471Z",
+            "management_id": "4a9991e7-dd16-4ba5-bf42-8b7744f5ed84",
+            "asset_tag": "acme-tag",
+            "initial_entry_date": "2024-06-19",
+            "extension_attributes": [],
+            "barcode2": "acme-barcode2",
+            "barcode1": "acme-barcode1",
+            "last_cloud_backup_date": "2024-06-19T15:54:47.471Z",
+            "last_ip_address": "79.80.43.54",
+            "supervised": false,
+            "site": {
+              "name": "None",
+              "id": "-1"
+            },
+            "itunes_store_account_active": false,
+            "enrollment_method": "self",
+            "name": "acme-ZNK5NDTT27",
+            "user_approved_mdm": false
+          },
+          "local_user_accounts": [],
+          "security": [],
+          "fonts": [],
+          "operating_system": {
+            "build": "23D60",
+            "rapid_security_response": "",
+            "name": "macOS",
+            "extension_attributes": [],
+            "supplemental_build_version": "",
+            "software_update_device_id": "",
+            "version": "14.3.1",
+            "active_directory_status": "Not Bound",
+            "file_vault2status": "NOT_APPLICABLE"
+          },
+          "id": "8",
+          "disk_encryption": null,
+          "udid": "819AE2FA-E066-55DC-A959-95FE150AFAA8",
+          "software_updates": null,
+          "hardware": {
+            "network_adapter_type": "Ethernet",
+            "battery_capacity_percent": -1,
+            "processor_type": "Apple M1 (Virtual)",
+            "boot_rom": "10151.81.1",
+            "processor_count": 0,
+            "processor_architecture": "arm64",
+            "optical_drive": "no",
+            "total_ram_megabytes": 6144,
+            "processor_speed_mhz": 0,
+            "alt_network_adapter_type": "Ethernet",
+            "open_ram_slots": 0,
+            "model_identifier": "acme-model_identifier",
+            "mac_address": "1A:47:C2:09:41:0D",
+            "supports_ios_app_installs": false,
+            "apple_silicon": false,
+            "model": "acme-model",
+            "make": "Apple",
+            "core_count": 4,
+            "smc_version": "",
+            "nic_speed": "n/a",
+            "cache_size_kilobytes": 0,
+            "serial_number": "ZNK5NDTT27",
+            "extension_attributes": [],
+            "ble_capable": false,
+            "bus_speed_mhz": 0,
+            "alt_mac_address": "72:CF:8A:DE:26:6E"
+          },
+          "printers": null,
+          "content_caching": null,
+          "extension_attributes": null,
+          "services": null,
+          "package_receipts": null,
+          "certificates": null,
+          "configuration_profiles": null,
+          "ibeacons": null,
+          "group_memberships": null,
+          "applications": null
+        }
+      }
+    }
+  
