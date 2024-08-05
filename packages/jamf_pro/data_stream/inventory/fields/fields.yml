@@ -1,202 +1,249 @@
-- name: id
-  type: keyword
-- name: udid
-  type: keyword
-- name: general
+- name: jamf_pro
   type: group
   fields:
-    - name: name
-      type: keyword
-    - name: lastIpAddress
-      type: ip
-    - name: lastReportedIp
-      type: ip
-    - name: jamfBinaryVersion
-      type: keyword
-    - name: platform
-      type: keyword
-    - name: remoteManagement
-      type: group
-      fields:
-        - name: managed
-          type: boolean
-        - name: managementUsername
-          type: keyword
-    - name: supervised
-      type: boolean
-    - name: mdmCapable
-      type: group
-      fields:
-        - name: capable
-          type: boolean
-        - name: capableUsers
-          type: text
-    - name: reportDate
-      type: date
-    - name: lastContactTime
-      type: date
-    - name: lastEnrolledDate
-      type: date
-    - name: initialEntryDate
-      type: date
-    - name: site
+    - name: inventory
       type: group
       fields:
         - name: id
           type: keyword
-        - name: name
+        - name: udid
           type: keyword
-    - name: itunesStoreAccountActive
-      type: boolean
-    - name: enrolledViaAutomatedDeviceEnrollment
-      type: boolean
-    - name: userApprovedMdm
-      type: boolean
-    - name: declarativeDeviceManagementEnabled
-      type: boolean
-    - name: managementId
-      type: keyword
-- name: diskEncryption
-  type: group
-  fields:
-    - name: individualRecoveryKeyValidityStatus
-      type: keyword
-    - name: institutionalRecoveryKeyPresent
-      type: boolean
-    - name: fileVault2EnabledUserNames
-      type: keyword
-- name: localUserAccounts
-  type: nested
-  fields:
-    - name: uid
-      type: keyword
-    - name: username
-      type: keyword
-    - name: fullName
-      type: keyword
-    - name: admin
-      type: boolean
-
-- name: purchasing
-  type: group
-  fields:
-    - name: purchased
-      type: boolean
-    - name: leased
-      type: boolean
-- name: storage
-  type: group
-  fields:
-    - name: bootDriveAvailableSpaceMegabytes
-      type: long
-    - name: disks
-      type: nested
-      fields:
-        - name: id
-          type: keyword
-        - name: device
-          type: keyword
-        - name: model
-          type: keyword
-- name: applications
-  type: nested
-  fields:
-    - name: name
-      type: keyword
-    - name: path
-      type: keyword
-    - name: version
-      type: keyword
-- name: userAndLocation
-  type: group
-  fields:
-    - name: username
-      type: keyword
-    - name: realname
-      type: keyword
-    - name: email
-      type: keyword
-    - name: position
-      type: keyword
-    - name: phone
-      type: keyword
-- name: hardware
-  type: group
-  fields:
-    - name: make
-      type: keyword
-    - name: model
-      type: keyword
-    - name: modelIdentifier
-      type: keyword
-    - name: serialNumber
-      type: keyword
-    - name: processorSpeedMhz
-      type: long
-    - name: processorCount
-      type: integer
-    - name: coreCount
-      type: integer
-    - name: processorType
-      type: keyword
-    - name: processorArchitecture
-      type: keyword
-    - name: busSpeedMhz
-      type: long
-    - name: cacheSizeKilobytes
-      type: long
-    - name: networkAdapterType
-      type: keyword
-    - name: macAddress
-      type: keyword
-    - name: altNetworkAdapterType
-      type: keyword
-    - name: altMacAddress
-      type: keyword
-    - name: totalRamMegabytes
-      type: long
-    - name: openRamSlots
-      type: integer
-    - name: batteryCapacityPercent
-      type: integer
-    - name: smcVersion
-      type: keyword
-    - name: nicSpeed
-      type: keyword
-    - name: opticalDrive
-      type: keyword
-    - name: bootRom
-      type: keyword
-    - name: bleCapable
-      type: boolean
-    - name: supportsIosAppInstalls
-      type: boolean
-    - name: appleSilicon
-      type: boolean
-    - name: extensionAttributes
-      type: nested
-- name: security
-  type: group
-  fields:
-    - name: sipStatus
-      type: keyword
-    - name: gatekeeperStatus
-      type: keyword
-- name: operatingSystem
-  type: group
-  fields:
-    - name: name
-      type: keyword
-    - name: version
-      type: keyword
-    - name: build
-      type: keyword
-- name: softwareUpdates
-  type: nested
-  fields:
-    - name: name
-      type: keyword
-    - name: packageName
-      type: keyword
-    - name: version
-      type: keyword
+        - name: general
+          type: group
+          fields:
+            - name: declarative_device_management_enabled
+              type: boolean
+            - name: enrolled_via_automated_device_enrollment
+              type: boolean
+            - name: initial_entry_date
+              type: date
+            - name: itunes_store_account_active
+              type: boolean
+            - name: jamf_binary_version
+              type: keyword
+            - name: last_contact_time
+              type: date
+            - name: management_id
+              type: keyword
+            - name: mdm_capable
+              type: group
+              fields:
+                - name: capable
+                  type: boolean
+                - name: capable_users
+                  type: nested
+            - name: platform
+              type: keyword
+            - name: name
+              type: keyword
+            - name: last_ip_address
+              type: ip
+            - name: last_reported_ip
+              type: ip
+            - name: asset_tag
+              type: keyword
+            - name: barcode1
+              type: keyword
+            - name: barcode2
+              type: keyword
+            - name: distribution_point
+              type: keyword
+            - name: enrollment_method
+              type: keyword
+            - name: extension_attributes
+              type: nested
+            - name: last_cloud_backup_date
+              type: date
+            - name: mdm_profile_expiration
+              type: date
+            - name: remote_management
+              type: group
+              fields:
+                - name: managed
+                  type: boolean
+                - name: management_username
+                  type: keyword
+            - name: supervised
+              type: boolean
+            - name: report_date
+              type: date
+            - name: last_enrolled_date
+              type: date
+            - name: site
+              type: group
+              fields:
+                - name: id
+                  type: keyword
+                - name: name
+                  type: keyword
+            - name: user_approved_mdm
+              type: boolean
+        - name: disk_encryption
+          type: group
+          fields:
+            - name: individual_recovery_key_validity_status
+              type: keyword
+            - name: institutional_recovery_key_present
+              type: boolean
+            - name: file_vault2_enabled_usernames
+              type: keyword
+        - name: local_user_accounts
+          type: nested
+          fields:
+            - name: uid
+              type: keyword
+            - name: username
+              type: keyword
+            - name: fullname
+              type: keyword
+            - name: admin
+              type: boolean
+        - name: purchasing
+          type: group
+          fields:
+            - name: purchased
+              type: boolean
+            - name: leased
+              type: boolean
+        - name: storage
+          type: group
+          fields:
+            - name: boot_drive_available_space_megabytes
+              type: long
+            - name: disks
+              type: nested
+              fields:
+                - name: id
+                  type: keyword
+                - name: device
+                  type: keyword
+                - name: model
+                  type: keyword
+        - name: applications
+          type: nested
+          fields:
+            - name: name
+              type: keyword
+            - name: path
+              type: keyword
+            - name: version
+              type: keyword
+        - name: user_and_location
+          type: group
+          fields:
+            - name: username
+              type: keyword
+            - name: realname
+              type: keyword
+            - name: email
+              type: keyword
+            - name: position
+              type: keyword
+            - name: phone
+              type: keyword
+        - name: hardware
+          type: group
+          fields:
+            - name: make
+              type: keyword
+            - name: model
+              type: keyword
+            - name: model_identifier
+              type: keyword
+            - name: serial_number
+              type: keyword
+            - name: processor_speedMhz
+              type: long
+            - name: processor_count
+              type: integer
+            - name: core_count
+              type: integer
+            - name: processor_type
+              type: keyword
+            - name: processor_architecture
+              type: keyword
+            - name: bus_speed_mhz
+              type: long
+            - name: cache_size_kilobytes
+              type: long
+            - name: network_adapter_type
+              type: keyword
+            - name: macAddress
+              type: keyword
+            - name: alt_network_adapter_type
+              type: keyword
+            - name: alt_mac_address
+              type: keyword
+            - name: total_ram_megabytes
+              type: long
+            - name: open_ram_slots
+              type: integer
+            - name: battery_capacity_percent
+              type: integer
+            - name: smc_version
+              type: keyword
+            - name: nic_speed
+              type: keyword
+            - name: optical_drive
+              type: keyword
+            - name: boot_rom
+              type: keyword
+            - name: ble_capable
+              type: boolean
+            - name: supports_ios_app_installs
+              type: boolean
+            - name: apple_silicon
+              type: boolean
+        - name: security
+          type: group
+          fields:
+            - name: sip_status
+              type: keyword
+            - name: gatekeeper_status
+              type: keyword
+        - name: operating_system
+          type: group
+          fields:
+            - name: name
+              type: keyword
+            - name: version
+              type: keyword
+            - name: build
+              type: keyword
+        - name: software_updates
+          type: nested
+          fields:
+            - name: name
+              type: keyword
+            - name: package_name
+              type: keyword
+            - name: version
+              type: keyword
+        - name: attachments
+          type: nested
+        - name: certificates
+          type: nested
+        - name: configuration_profiles
+          type: nested
+        - name: content_caching
+          type: group
+        - name: extension_attributes
+          type: nested
+        - name: fonts
+          type: nested
+        - name: group_memberships
+          type: nested
+        - name: ibeacons
+          type: nested
+        - name: licensed_software
+          type: nested
+        - name: package_receipts
+          type: nested
+        - name: plugins
+          type: nested
+        - name: printers
+          type: nested
+        - name: services
+          type: nested
+        - name: user_and_location
+          type: group

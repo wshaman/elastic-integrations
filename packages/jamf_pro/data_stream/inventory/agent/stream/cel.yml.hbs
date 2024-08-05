@@ -25,11 +25,6 @@ tags:
 publisher_pipeline.disable_host: true
 {{/contains}}
 
-{{#if processors}}
-processors:
-{{processors}}
-{{/if}}
-
 keep_null: true
 program: |
   request(
@@ -66,6 +61,8 @@ state:
   page_size: {{page_size}}
   sections: [
   {{#if enable_section_general }} "GENERAL", {{/if}}
+  {{#if enable_section_hardware }} "HARDWARE", {{/if}}
+  {{#if enable_section_operating_system }} "OPERATING_SYSTEM", {{/if}}
   {{#if enable_section_disk_encryption }} "DISK_ENCRYPTION", {{/if}}
   {{#if enable_section_purchasing }} "PURCHASING", {{/if}}
   {{#if enable_section_applications }} "APPLICATIONS", {{/if}}
@@ -74,7 +71,6 @@ state:
   {{#if enable_section_configuration_profiles }} "CONFIGURATION_PROFILES", {{/if}}
   {{#if enable_section_printers }} "PRINTERS", {{/if}}
   {{#if enable_section_services }} "SERVICES", {{/if}}
-  {{#if enable_section_hardware }} "HARDWARE", {{/if}}
   {{#if enable_section_local_user_accounts }} "LOCAL_USER_ACCOUNTS", {{/if}}
   {{#if enable_section_certificates }} "CERTIFICATES", {{/if}}
   {{#if enable_section_attachments }} "ATTACHMENTS", {{/if}}
@@ -82,7 +78,6 @@ state:
   {{#if enable_section_package_receipts }} "PACKAGE_RECEIPTS", {{/if}}
   {{#if enable_section_fonts }} "FONTS", {{/if}}
   {{#if enable_section_security }} "SECURITY", {{/if}}
-  {{#if enable_section_operating_system }} "OPERATING_SYSTEM", {{/if}}
   {{#if enable_section_licensed_software }} "LICENSED_SOFTWARE", {{/if}}
   {{#if enable_section_ibeacons }} "IBEACONS", {{/if}}
   {{#if enable_section_software_updates }} "SOFTWARE_UPDATES", {{/if}}
