@@ -78,6 +78,28 @@
                   type: keyword
             - name: user_approved_mdm
               type: boolean
+            - name: last_reported_ip_geo
+              type: group
+              fields:
+                - name: city_name
+                  type: keyword
+                - name: continent_name
+                  type: keyword
+                - name: country_iso_code
+                  type: keyword
+                - name: country_name
+                  type: keyword
+                - name: location
+                  type: group
+                  fields:
+                    - name: lat
+                      type: float
+                    - name: lon
+                      type: float
+                - name: region_iso_code
+                  type: keyword
+                - name: region_name
+                  type: keyword
         - name: disk_encryption
           type: group
           fields:
