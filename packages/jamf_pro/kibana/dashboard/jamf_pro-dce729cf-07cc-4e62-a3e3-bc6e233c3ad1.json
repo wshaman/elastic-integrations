@@ -13,12 +13,10 @@
                 "0e097965-08e1-44c0-89f0-2b278a0ca1fd": {
                     "explicitInput": {
                         "enhancements": {},
-                        "existsSelected": false,
                         "fieldName": "jamf_pro.inventory.hardware.model",
                         "grow": true,
                         "id": "0e097965-08e1-44c0-89f0-2b278a0ca1fd",
                         "searchTechnique": "prefix",
-                        "selectedOptions": [],
                         "title": "Hardware Model",
                         "width": "medium"
                     },
@@ -30,13 +28,10 @@
                 "5d2fda3f-76c9-4a04-8b8f-1ab9efdd0269": {
                     "explicitInput": {
                         "enhancements": {},
-                        "exclude": false,
-                        "existsSelected": true,
                         "fieldName": "jamf_pro.inventory.general.name",
                         "grow": true,
                         "id": "5d2fda3f-76c9-4a04-8b8f-1ab9efdd0269",
                         "searchTechnique": "prefix",
-                        "selectedOptions": [],
                         "title": "Computer Name",
                         "width": "medium"
                     },
@@ -48,12 +43,10 @@
                 "cf6a10ef-1a60-488d-8a3c-1e14b2db4488": {
                     "explicitInput": {
                         "enhancements": {},
-                        "existsSelected": true,
                         "fieldName": "jamf_pro.inventory.operating_system.name",
                         "grow": true,
                         "id": "cf6a10ef-1a60-488d-8a3c-1e14b2db4488",
                         "searchTechnique": "prefix",
-                        "selectedOptions": [],
                         "title": "OS",
                         "width": "medium"
                     },
@@ -65,12 +58,10 @@
                 "f5b141aa-1e50-4372-ab05-ba9e20078e84": {
                     "explicitInput": {
                         "enhancements": {},
-                        "existsSelected": true,
                         "fieldName": "jamf_pro.inventory.general.platform",
                         "grow": true,
                         "id": "f5b141aa-1e50-4372-ab05-ba9e20078e84",
                         "searchTechnique": "prefix",
-                        "selectedOptions": [],
                         "title": "Platform",
                         "width": "medium"
                     },
@@ -105,42 +96,6 @@
                         "query": {
                             "match_phrase": {
                                 "event.dataset": "jamf_pro.inventory"
-                            }
-                        }
-                    },
-                    {
-                        "$state": {
-                            "store": "appState"
-                        },
-                        "meta": {
-                            "alias": null,
-                            "disabled": false,
-                            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.filter[1].meta.index",
-                            "key": "jamf_pro.inventory.operating_system.name",
-                            "negate": false,
-                            "type": "exists"
-                        },
-                        "query": {
-                            "exists": {
-                                "field": "jamf_pro.inventory.operating_system.name"
-                            }
-                        }
-                    },
-                    {
-                        "$state": {
-                            "store": "appState"
-                        },
-                        "meta": {
-                            "alias": null,
-                            "disabled": false,
-                            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.filter[2].meta.index",
-                            "key": "jamf_pro.inventory.general.platform",
-                            "negate": false,
-                            "type": "exists"
-                        },
-                        "query": {
-                            "exists": {
-                                "field": "jamf_pro.inventory.general.platform"
                             }
                         }
                     }
@@ -241,7 +196,7 @@
                     "attributes": {
                         "references": [
                             {
-                                "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                "id": "logs-*",
                                 "name": "indexpattern-datasource-layer-e067b79f-3de8-4804-a2c0-9001fed34d42",
                                 "type": "index-pattern"
                             }
@@ -343,7 +298,7 @@
                     "attributes": {
                         "references": [
                             {
-                                "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                "id": "logs-*",
                                 "name": "indexpattern-datasource-layer-d8ccfd14-54c1-490d-9873-f59dd5aecfd7",
                                 "type": "index-pattern"
                             }
@@ -352,6 +307,7 @@
                             "adHocDataViews": {},
                             "datasourceStates": {
                                 "formBased": {
+                                    "currentIndexPatternId": "logs-*",
                                     "layers": {
                                         "d8ccfd14-54c1-490d-9873-f59dd5aecfd7": {
                                             "columnOrder": [
@@ -398,6 +354,7 @@
                                             },
                                             "ignoreGlobalFilters": false,
                                             "incompleteColumns": {},
+                                            "indexPatternId": "logs-*",
                                             "sampling": 1
                                         }
                                     }
@@ -475,7 +432,7 @@
                     "attributes": {
                         "references": [
                             {
-                                "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                "id": "logs-*",
                                 "name": "indexpattern-datasource-layer-9b2a202e-591a-4de4-8392-0118d3274083",
                                 "type": "index-pattern"
                             }
@@ -633,7 +590,7 @@
                     "attributes": {
                         "references": [
                             {
-                                "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                "id": "logs-*",
                                 "name": "indexpattern-datasource-layer-0d524bec-a0f8-49a7-9f7e-282afce3437c",
                                 "type": "index-pattern"
                             }
@@ -642,6 +599,7 @@
                             "adHocDataViews": {},
                             "datasourceStates": {
                                 "formBased": {
+                                    "currentIndexPatternId": "logs-*",
                                     "layers": {
                                         "0d524bec-a0f8-49a7-9f7e-282afce3437c": {
                                             "columnOrder": [
@@ -769,6 +727,7 @@
                                                 }
                                             },
                                             "incompleteColumns": {},
+                                            "indexPatternId": "logs-*",
                                             "sampling": 1
                                         }
                                     }
@@ -848,57 +807,47 @@
     "managed": false,
     "references": [
         {
-            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "id": "logs-*",
             "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
             "type": "index-pattern"
         },
         {
-            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
-            "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[1].meta.index",
-            "type": "index-pattern"
-        },
-        {
-            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
-            "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[2].meta.index",
-            "type": "index-pattern"
-        },
-        {
-            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "id": "logs-*",
             "name": "212da9fb-5451-4584-8823-b041ebd999a3:indexpattern-datasource-layer-e067b79f-3de8-4804-a2c0-9001fed34d42",
             "type": "index-pattern"
         },
         {
-            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "id": "logs-*",
             "name": "f0d185d9-9ef0-41dc-ac25-6c667f418f39:indexpattern-datasource-layer-d8ccfd14-54c1-490d-9873-f59dd5aecfd7",
             "type": "index-pattern"
         },
         {
-            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "id": "logs-*",
             "name": "c8422002-70a2-4f1e-87f0-d162d07fc38e:indexpattern-datasource-layer-9b2a202e-591a-4de4-8392-0118d3274083",
             "type": "index-pattern"
         },
         {
-            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "id": "logs-*",
             "name": "06876334-7fd5-4d66-8deb-f32be74f0062:indexpattern-datasource-layer-0d524bec-a0f8-49a7-9f7e-282afce3437c",
             "type": "index-pattern"
         },
         {
-            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "id": "logs-*",
             "name": "controlGroup_cf6a10ef-1a60-488d-8a3c-1e14b2db4488:optionsListDataView",
             "type": "index-pattern"
         },
         {
-            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "id": "logs-*",
             "name": "controlGroup_5d2fda3f-76c9-4a04-8b8f-1ab9efdd0269:optionsListDataView",
             "type": "index-pattern"
         },
         {
-            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "id": "logs-*",
             "name": "controlGroup_0e097965-08e1-44c0-89f0-2b278a0ca1fd:optionsListDataView",
             "type": "index-pattern"
         },
         {
-            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "id": "logs-*",
             "name": "controlGroup_f5b141aa-1e50-4372-ab05-ba9e20078e84:optionsListDataView",
             "type": "index-pattern"
         }

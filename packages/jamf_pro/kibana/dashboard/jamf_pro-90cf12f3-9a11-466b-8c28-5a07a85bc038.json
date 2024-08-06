@@ -217,7 +217,7 @@
                     "attributes": {
                         "references": [
                             {
-                                "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                "id": "logs-*",
                                 "name": "indexpattern-datasource-layer-aa8cd56d-8754-4cc8-8c49-5a8346698cc7",
                                 "type": "index-pattern"
                             }
@@ -226,7 +226,7 @@
                             "adHocDataViews": {},
                             "datasourceStates": {
                                 "formBased": {
-                                    "currentIndexPatternId": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                    "currentIndexPatternId": "logs-*",
                                     "layers": {
                                         "aa8cd56d-8754-4cc8-8c49-5a8346698cc7": {
                                             "columnOrder": [
@@ -272,7 +272,7 @@
                                                 }
                                             },
                                             "incompleteColumns": {},
-                                            "indexPatternId": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                            "indexPatternId": "logs-*",
                                             "sampling": 1
                                         }
                                     }
@@ -350,7 +350,7 @@
                     "attributes": {
                         "references": [
                             {
-                                "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                "id": "logs-*",
                                 "name": "indexpattern-datasource-layer-8bb21fa5-8cdd-4163-9f24-e3f3bee8d4bb",
                                 "type": "index-pattern"
                             }
@@ -359,7 +359,7 @@
                             "adHocDataViews": {},
                             "datasourceStates": {
                                 "formBased": {
-                                    "currentIndexPatternId": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                    "currentIndexPatternId": "logs-*",
                                     "layers": {
                                         "8bb21fa5-8cdd-4163-9f24-e3f3bee8d4bb": {
                                             "columnOrder": [
@@ -407,7 +407,7 @@
                                                 }
                                             },
                                             "incompleteColumns": {},
-                                            "indexPatternId": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                            "indexPatternId": "logs-*",
                                             "sampling": 1
                                         }
                                     }
@@ -508,7 +508,7 @@
                     "attributes": {
                         "references": [
                             {
-                                "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                "id": "logs-*",
                                 "name": "indexpattern-datasource-layer-8df82c1f-9c1d-44b2-9fef-78c67ee4df1d",
                                 "type": "index-pattern"
                             }
@@ -517,7 +517,7 @@
                             "adHocDataViews": {},
                             "datasourceStates": {
                                 "formBased": {
-                                    "currentIndexPatternId": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                    "currentIndexPatternId": "logs-*",
                                     "layers": {
                                         "8df82c1f-9c1d-44b2-9fef-78c67ee4df1d": {
                                             "columnOrder": [
@@ -591,7 +591,7 @@
                                                 }
                                             },
                                             "incompleteColumns": {},
-                                            "indexPatternId": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                            "indexPatternId": "logs-*",
                                             "sampling": 1
                                         }
                                     }
@@ -652,7 +652,7 @@
                     "attributes": {
                         "references": [
                             {
-                                "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+                                "id": "logs-*",
                                 "name": "indexpattern-datasource-layer-e31a9c95-5572-4e0a-b9d7-a014f7a34517",
                                 "type": "index-pattern"
                             }
@@ -661,6 +661,7 @@
                             "adHocDataViews": {},
                             "datasourceStates": {
                                 "formBased": {
+                                    "currentIndexPatternId": "logs-*",
                                     "layers": {
                                         "e31a9c95-5572-4e0a-b9d7-a014f7a34517": {
                                             "columnOrder": [
@@ -732,6 +733,7 @@
                                                 }
                                             },
                                             "incompleteColumns": {},
+                                            "indexPatternId": "logs-*",
                                             "sampling": 1
                                         }
                                     }
@@ -822,27 +824,27 @@
             "type": "index-pattern"
         },
         {
-            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "id": "logs-*",
             "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[1].meta.index",
             "type": "index-pattern"
         },
         {
-            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "id": "logs-*",
             "name": "dbd8b8b5-36e9-4118-9d00-3000fec1fb9e:indexpattern-datasource-layer-aa8cd56d-8754-4cc8-8c49-5a8346698cc7",
             "type": "index-pattern"
         },
         {
-            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "id": "logs-*",
             "name": "d61e70b1-32f2-4a61-9797-126ffb7d8edd:indexpattern-datasource-layer-8bb21fa5-8cdd-4163-9f24-e3f3bee8d4bb",
             "type": "index-pattern"
         },
         {
-            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "id": "logs-*",
             "name": "c6b91b26-559f-4ef8-bbbe-6f551109182c:indexpattern-datasource-layer-8df82c1f-9c1d-44b2-9fef-78c67ee4df1d",
             "type": "index-pattern"
         },
         {
-            "id": "1c1477fd-ec8a-45bc-9976-3f9e6e45c0e2",
+            "id": "logs-*",
             "name": "9f7b6404-55f0-4a98-9959-60a8a4caa9df:indexpattern-datasource-layer-e31a9c95-5572-4e0a-b9d7-a014f7a34517",
             "type": "index-pattern"
         },
