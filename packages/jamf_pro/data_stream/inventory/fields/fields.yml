@@ -1,0 +1,89 @@
+- name: client
+  type: group
+  fields:
+    - name: geo
+      type: group
+      description: "Geolocation details for the last reported IP address."
+      fields:
+        - name: city_name
+          type: keyword
+        - name: continent_name
+          type: keyword
+        - name: country_iso_code
+          type: keyword
+        - name: country_name
+          type: keyword
+        - name: region_iso_code
+          type: keyword
+        - name: region_name
+          type: keyword
+        - name: location
+          type: geo_point
+- name: jamf_pro
+  type: group
+  fields:
+    - name: inventory
+      type: group
+      fields:
+        - name: id
+          type: keyword
+        - name: udid
+          type: keyword
+        - name: local_user_accounts
+          type: nested
+          fields:
+            - name: uid
+              type: keyword
+            - name: username
+              type: keyword
+            - name: fullname
+              type: keyword
+            - name: admin
+              type: boolean
+        - name: purchasing
+          type: group
+          fields:
+            - name: purchased
+              type: boolean
+            - name: leased
+              type: boolean
+        - name: security
+          type: group
+          fields:
+            - name: sip_status
+              type: keyword
+            - name: gatekeeper_status
+              type: keyword
+        - name: package_receipts
+          type: group
+          fields:
+            - name: cached
+              type: flattened
+            - name: installed_by_installer_swu
+              type: flattened
+            - name: installed_by_jamf_pro
+              type: flattened
+        - name: attachments
+          type: nested
+        - name: certificates
+          type: nested
+        - name: configuration_profiles
+          type: nested
+        - name: content_caching
+          type: group
+        - name: extension_attributes
+          type: nested
+        - name: fonts
+          type: nested
+        - name: group_memberships
+          type: nested
+        - name: ibeacons
+          type: nested
+        - name: licensed_software
+          type: nested
+        - name: plugins
+          type: nested
+        - name: printers
+          type: nested
+        - name: services
+          type: nested
