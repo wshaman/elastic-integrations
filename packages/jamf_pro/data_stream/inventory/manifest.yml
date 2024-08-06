@@ -1,0 +1,174 @@
+title: "Inventory data"
+type: logs
+streams:
+  - input: cel
+    vars:
+      - name: period
+        type: text
+        required: true
+        title: Period
+        default: 24h
+        show_user: true
+        description: Period of fetching metrics, i.e. 1s/1m/1h.
+      - name: page_size
+        type: integer
+        required: false
+        title: Inventory call page size
+        show_user: false
+        description: Set page size for computers-inventory API Call. 100 max, should be adjusted if size of request is growing to reduce parsing time
+        default: 100
+      - name: enable_request_tracer
+        type: bool
+        title: Enable request tracing
+        default: false
+        multi: false
+        required: false
+        show_user: false
+        description: The request tracer logs requests and responses to the agent's local file-system for debugging configurations. Enabling this request tracing compromises security and should only be used for debugging. See [documentation](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-input-httpjson.html#_request_tracer_filename) for details.
+      - name: enable_section_general
+        type: bool
+        show_user: false
+        default: true
+        title: "General"
+        description: "Enable or disable general settings for the API responce."
+      - name: enable_section_hardware
+        type: bool
+        show_user: false
+        default: true
+        title: "Hardware"
+        description: "Settings to control hardware access and usage."
+      - name: enable_section_operating_system
+        type: bool
+        show_user: false
+        default: true
+        title: "Operating System"
+        description: "Settings related to operating system behaviors and updates."
+      - name: enable_section_disk_encryption
+        type: bool
+        show_user: false
+        default: false
+        title: "Disk Encryption"
+        description: "Controls whether disk encryption is enforced."
+      - name: enable_section_purchasing
+        type: bool
+        show_user: false
+        default: false
+        title: "Purchasing"
+        description: "Enable or disable purchasing settings."
+      - name: enable_section_applications
+        type: bool
+        show_user: false
+        default: false
+        title: "Applications"
+        description: "Manage settings related to application deployment and restrictions."
+      - name: enable_section_storage
+        type: bool
+        show_user: false
+        default: false
+        title: "Storage"
+        description: "Settings to control data storage and usage."
+      - name: enable_section_user_and_location
+        type: bool
+        show_user: false
+        default: false
+        title: "User and Location"
+        description: "Settings related to user accounts and location tracking."
+      - name: enable_section_configuration_profiles
+        type: bool
+        show_user: false
+        default: false
+        title: "Configuration Profiles"
+        description: "Defines profiles for configuring device settings."
+      - name: enable_section_printers
+        type: bool
+        show_user: false
+        default: false
+        title: "Printers"
+        description: "Manage settings for printer configurations and access."
+      - name: enable_section_services
+        type: bool
+        show_user: false
+        default: false
+        title: "Services"
+        description: "Settings for managing various system services."
+      - name: enable_section_local_user_accounts
+        type: bool
+        show_user: false
+        default: false
+        title: "Local User Accounts"
+        description: "Manage settings for local user account creations and permissions."
+      - name: enable_section_certificates
+        type: bool
+        show_user: false
+        default: false
+        title: "Certificates"
+        description: "Settings related to security certificates for authentication and encryption."
+      - name: enable_section_attachments
+        type: bool
+        show_user: false
+        default: false
+        title: "Attachments"
+        description: "Controls attachments handling and policies."
+      - name: enable_section_plugins
+        type: bool
+        show_user: false
+        default: false
+        title: "Plugins"
+        description: "Settings for managing software plugins and extensions."
+      - name: enable_section_package_receipts
+        type: bool
+        show_user: false
+        default: false
+        title: "Package Receipts"
+        description: "Monitor and control how package receipts are handled."
+      - name: enable_section_fonts
+        type: bool
+        show_user: false
+        default: false
+        title: "Fonts"
+        description: "Settings for font management including installations and restrictions."
+      - name: enable_section_security
+        type: bool
+        show_user: false
+        default: false
+        title: "Security"
+        description: "General security settings for the system."
+      - name: enable_section_licensed_software
+        type: bool
+        show_user: false
+        default: false
+        title: "Licensed Software"
+        description: "Manage licensed software configurations and compliance."
+      - name: enable_section_ibeacons
+        type: bool
+        show_user: false
+        default: false
+        title: "Ibeacons"
+        description: "Settings for iBeacon deployment and management."
+      - name: enable_section_software_updates
+        type: bool
+        show_user: false
+        default: false
+        title: "Software Updates"
+        description: "Control software update policies and schedules."
+      - name: enable_section_extension_attributes
+        type: bool
+        show_user: false
+        default: false
+        title: "Extension Attributes"
+        description: "Manage custom attributes for user extensions."
+      - name: CONTENT_CACHING
+        type: bool
+        show_user: false
+        default: false
+        title: "Content Caching"
+        description: "Settings to manage local content caching for optimizing performance."
+      - name: enable_section_group_membership
+        type: bool
+        show_user: false
+        default: false
+        title: "Group Membership"
+        description: "Define group memberships and access control based on user profiles."
+    template_path: cel.yml.hbs
+    title: inventory_data
+    description: Inventory requests settings

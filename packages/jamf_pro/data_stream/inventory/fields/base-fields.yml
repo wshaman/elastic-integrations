@@ -1,0 +1,26 @@
+- name: data_stream.type
+  type: constant_keyword
+  description: Data stream type.
+- name: data_stream.dataset
+  type: constant_keyword
+  description: Data stream dataset.
+- name: data_stream.namespace
+  type: constant_keyword
+  description: Data stream namespace.
+- name: '@timestamp'
+  type: date
+  description: Event timestamp.
+- name: input.type
+  type: keyword
+  description: Input type
+- name: ecs.version
+  type: keyword
+  description: ECS Version
+- name: event.dataset
+  type: constant_keyword
+  description: Name of the dataset.
+  value: jamf_pro.inventory
+- name: event.module
+  type: constant_keyword
+  description: Event module.
+  value: jamf_pro
