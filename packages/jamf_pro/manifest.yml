@@ -15,17 +15,21 @@ conditions:
   elastic:
     subscription: "basic"
 screenshots:
-  - src: /img/screenshot_os.png
-    title: OS
-    size: 1920x962
+  - src: /img/jamfpro_overview.png
+    title: Overview
+    size: 1920x964
     type: image/png
-  - src: /img/screenshot_map.png
-    title: OS
-    size: 1920x962
+  - src: /img/jamfpro_remote.png
+    title: Remote
+    size: 1920x964
+    type: image/png
+  - src: /img/jamfpro_map.png
+    title: Map
+    size: 1920x964
     type: image/png
 icons:
   - src: /img/logo.png
-    title: Sample logo
+    title: Jamf Pro logo
     size: 128x128
     type: image/svg+xml
 policy_templates:

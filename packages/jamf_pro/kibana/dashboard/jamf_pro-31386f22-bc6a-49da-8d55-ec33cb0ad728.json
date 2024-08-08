@@ -132,7 +132,7 @@
                         "id": "",
                         "params": {
                             "fontSize": 12,
-                            "markdown": "[Overview](#/dashboard/jamf_pro-dce729cf-07cc-4e62-a3e3-bc6e233c3ad1) [OS Information](#/dashboard/jamf_pro-0c140879-b8ad-418a-bf97-446935ce115b) [Hardware Information](#/dashboard/jamf_pro-90cf12f3-9a11-466b-8c28-5a07a85bc038) [Locations](#/dashboard/jamf_pro-31386f22-bc6a-49da-8d55-ec33cb0ad728)",
+                            "markdown": "[Overview](#/dashboard/jamf_pro-dce729cf-07cc-4e62-a3e3-bc6e233c3ad1) [Remote Status](#/dashboard/jamf_pro-81cc13af-7134-45d3-b43f-d50f63071759) [Hardware Information](#/dashboard/jamf_pro-90cf12f3-9a11-466b-8c28-5a07a85bc038) [Locations](#/dashboard/jamf_pro-31386f22-bc6a-49da-8d55-ec33cb0ad728)",
                             "openLinksInNewTab": false
                         },
                         "title": "",
@@ -420,7 +420,7 @@
         "version": 2
     },
     "coreMigrationVersion": "8.8.0",
-    "created_at": "2024-08-07T11:25:12.553Z",
+    "created_at": "2024-08-08T06:49:37.185Z",
     "id": "jamf_pro-31386f22-bc6a-49da-8d55-ec33cb0ad728",
     "managed": false,
     "references": [
