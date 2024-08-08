@@ -1,94 +1,1178 @@
 {
-  "events":[
-
+  "events": [
     {
-      "message":
-        {
-          "id": "6",
-          "udid": "D6DD5611-B15A-5AA1-B498-52A4CB17D18D",
-          "general": null,
-          "diskEncryption": null,
-          "localUserAccounts": null,
-          "purchasing": {
-            "purchased": true,
-            "leased": false,
-            "poNumber": "21",
-            "lifeExpectancy": 0,
-            "purchasePrice": 100,
-            "purchasingAccount": "acme-purchasingAccount",
-            "purchasingContact": "acme-purchasingContact",
-            "appleCareId": "acme-appleCareId",
-            "vendor": "acme-vendor",
-            "leaseDate": "2024-06-19T15:54:37.692Z",
-            "poDate": "2024-06-19T15:54:37.692Z",
-            "warrantyDate": "2024-06-19T15:54:37.692Z",
-            "extensionAttributes": []
+      "message": {
+        "id": "3",
+        "udid": "5982CE36-4526-580B-B4B9-ECC6782535BC",
+        "general": {
+          "name": "acme-C07DM3AZQ6NV",
+          "lastIpAddress": "216.160.83.56",
+          "lastReportedIp": "10.122.26.87",
+          "jamfBinaryVersion": "11.4.1-t1712591696",
+          "platform": "Mac",
+          "barcode1": "barcode1",
+          "barcode2": "barcode2",
+          "assetTag": "assetTag",
+          "remoteManagement": {
+            "managed": true,
+            "managementUsername": "JohnDoe"
           },
-          "printers": null,
-          "storage": null,
-          "applications": [
-            {
-              "name": "Slack.app",
-              "path": "/Applications/Slack.app",
-              "version": "4.38.125",
-              "macAppStore": false,
-              "sizeMegabytes": 0,
-              "bundleId": "acme-bundleId",
-              "updateAvailable": false,
-              "externalVersionId": "0"
-            },
-            {
-              "name": "Siri.app",
-              "path": "/System/Applications/Siri.app",
-              "version": "1.0",
-              "macAppStore": false,
-              "sizeMegabytes": 0,
-              "bundleId": "acme-bundleId",
-              "updateAvailable": false,
-              "externalVersionId": "0"
-            }
-          ],
-          "userAndLocation": null,
-          "configurationProfiles": null,
-          "services": null,
-          "plugins": [],
-          "hardware": null,
-          "certificates": null,
-          "attachments": null,
-          "packageReceipts": {
-            "installedByJamfPro": [],
-            "installedByInstallerSwu": [],
-            "cached": []
+          "supervised": false,
+          "mdmCapable": {
+            "capable": false,
+            "capableUsers": []
           },
-          "fonts": [],
-          "security": null,
-          "operatingSystem": null,
-          "licensedSoftware": null,
-          "softwareUpdates": [
-            {
-              "name": "macOS Sonoma 14.4.1",
-              "packageName": "macOS Sonoma 14.4.1-23E224",
-              "version": "14.4.1"
-            }
+          "reportDate": "2024-06-19T15:54:37.692Z",
+          "lastContactTime": "2024-04-18T14:26:51.514Z",
+          "lastCloudBackupDate": "2024-06-19T08:43:09.621Z",
+          "lastEnrolledDate": "2023-02-22T10:46:17.199Z",
+          "mdmProfileExpiration": "2024-06-19T08:43:09.621Z",
+          "initialEntryDate": "2024-06-19",
+          "distributionPoint": "distributionPoint",
+          "site": {
+            "id": "-1",
+            "name": "None"
+          },
+          "itunesStoreAccountActive": false,
+          "enrolledViaAutomatedDeviceEnrollment": false,
+          "userApprovedMdm": false,
+          "enrollmentMethod": "enrollmentMethod",
+          "declarativeDeviceManagementEnabled": false,
+          "managementId": "1a59c510-b3a9-41cb-8afa-3d4187ac60d0",
+          "extensionAttributes": []
+        },
+        "diskEncryption": {
+          "individualRecoveryKeyValidityStatus": "UNKNOWN",
+          "institutionalRecoveryKeyPresent": false,
+          "diskEncryptionConfigurationName": "UNKNOWN",
+          "fileVault2EligibilityMessage": "fileVault2EligibilityMessage",
+          "fileVault2EnabledUserNames": [
+            "jamfadmin"
           ],
-          "groupMemberships": [
-            {
-              "groupId": "1",
-              "groupName": "All Managed Clients",
-              "smartGroup": true
-            },
-            {
-              "groupId": "4",
-              "groupName": "Computers with updates",
-              "smartGroup": true
-            }
-          ],
-          "extensionAttributes": [],
-          "contentCaching": null,
-          "ibeacons": null
-        }
+          "bootPartitionEncryptionDetails": {
+            "partitionName": "Macintosh HD (Boot Partition)",
+            "partitionFileVault2State": "UNENCRYPTED",
+            "partitionFileVault2Percent": 0
+          }
+        },
+        "localUserAccounts": null,
+        "purchasing": null,
+        "printers": null,
+        "storage": null,
+        "applications": null,
+        "userAndLocation": {
+          "username": "john.doe",
+          "realname": "John Doe",
+          "email": "john.doe@jamf.com",
+          "position": "Unknown Developer",
+          "phone": "+3112345678",
+          "departmentId": "1",
+          "buildingId": "1",
+          "room": "2",
+          "extensionAttributes": []
+        },
+        "configurationProfiles": null,
+        "services": null,
+        "plugins": null,
+        "hardware": {
+          "make": "Apple",
+          "model": "Mac mini (M1, 2020)",
+          "modelIdentifier": "Macmini9,1",
+          "serialNumber": "C07DM3AZQ6NV",
+          "processorSpeedMhz": 0,
+          "processorCount": 1,
+          "coreCount": 8,
+          "processorType": "Apple M1",
+          "processorArchitecture": "arm64",
+          "busSpeedMhz": 0,
+          "cacheSizeKilobytes": 0,
+          "networkAdapterType": "Ethernet",
+          "macAddress": "64:0B:D7:AA:E4:B2",
+          "altNetworkAdapterType": "IEEE80211",
+          "altMacAddress": "64:0B:D7:AA:21:7B",
+          "totalRamMegabytes": 8192,
+          "openRamSlots": 0,
+          "batteryCapacityPercent": 0,
+          "smcVersion": "smcVersion",
+          "nicSpeed": "n/a",
+          "opticalDrive": "opticalDrive",
+          "bootRom": "10151.41.12",
+          "bleCapable": false,
+          "supportsIosAppInstalls": false,
+          "appleSilicon": false,
+          "extensionAttributes": []
+        },
+        "certificates": null,
+        "attachments": null,
+        "packageReceipts": null,
+        "fonts": null,
+        "security": {
+          "sipStatus": "ENABLED",
+          "gatekeeperStatus": "APP_STORE_AND_IDENTIFIED_DEVELOPERS",
+          "xprotectVersion": "2191",
+          "autoLoginDisabled": true,
+          "remoteDesktopEnabled": false,
+          "activationLockEnabled": false,
+          "secureBootLevel": "UNKNOWN",
+          "externalBootLevel": "UNKNOWN",
+          "bootstrapTokenAllowed": null,
+          "bootstrapTokenEscrowedStatus": "NOT_ESCROWED",
+          "recoveryLockEnabled": false,
+          "firewallEnabled": false
+        },
+        "operatingSystem": {
+          "name": "macOS",
+          "version": "14.0",
+          "build": "23A344",
+          "supplementalBuildVersion": "ver",
+          "rapidSecurityResponse": "rapidSecurityResponse",
+          "activeDirectoryStatus": "Not Bound",
+          "fileVault2Status": "NOT_ENCRYPTED",
+          "softwareUpdateDeviceId": "id",
+          "extensionAttributes": []
+        },
+        "licensedSoftware": null,
+        "softwareUpdates": null,
+        "groupMemberships": null,
+        "extensionAttributes": null,
+        "contentCaching": null,
+        "ibeacons": null
+      }
     },
-
+    {
+      "message": {
+        "id": "4",
+        "udid": "DBAEF5A6-82D5-5327-A480-A904F42F3F98",
+        "general": {
+          "name": "acme-C07FV0S9PJJ9 (2)",
+          "lastIpAddress": "216.160.83.56",
+          "lastReportedIp": "10.122.27.70",
+          "jamfBinaryVersion": "11.4.2-t1713554080",
+          "platform": "Mac",
+          "barcode1": "barcode1",
+          "barcode2": "barcode2",
+          "assetTag": "assetTag",
+          "remoteManagement": {
+            "managed": true,
+            "managementUsername": "JohnDoe"
+          },
+          "supervised": false,
+          "mdmCapable": {
+            "capable": false,
+            "capableUsers": []
+          },
+          "reportDate": "2024-06-19T15:54:39.687Z",
+          "lastContactTime": "2024-05-24T19:45:10.165Z",
+          "lastCloudBackupDate": "2024-06-19T08:43:09.621Z",
+          "lastEnrolledDate": "2023-02-21T12:38:32.143Z",
+          "mdmProfileExpiration": "2024-06-19T08:43:09.621Z",
+          "initialEntryDate": "2024-06-19",
+          "distributionPoint": "distributionPoint",
+          "site": {
+            "id": "-1",
+            "name": "None"
+          },
+          "itunesStoreAccountActive": false,
+          "enrolledViaAutomatedDeviceEnrollment": false,
+          "userApprovedMdm": false,
+          "enrollmentMethod": "enrollmentMethod",
+          "declarativeDeviceManagementEnabled": false,
+          "managementId": "fc859c99-8fec-4ae7-9021-ba8b9b535553",
+          "extensionAttributes": []
+        },
+        "diskEncryption": {
+          "individualRecoveryKeyValidityStatus": "UNKNOWN",
+          "institutionalRecoveryKeyPresent": false,
+          "diskEncryptionConfigurationName": "UNKNOWN",
+          "fileVault2EligibilityMessage": "fileVault2EligibilityMessage",
+          "fileVault2EnabledUserNames": [
+            "jamfadmin"
+          ],
+          "bootPartitionEncryptionDetails": {
+            "partitionName": "Macintosh HD (Boot Partition)",
+            "partitionFileVault2State": "UNENCRYPTED",
+            "partitionFileVault2Percent": 0
+          }
+        },
+        "localUserAccounts": null,
+        "purchasing": null,
+        "printers": null,
+        "storage": null,
+        "applications": null,
+        "userAndLocation": {
+          "username": "jane.doe",
+          "realname": "Jane Doe",
+          "email": "jane.doe@jamf.com",
+          "position": "Contractor",
+          "phone": "+123345827276",
+          "departmentId": "1",
+          "buildingId": "1",
+          "room": "2",
+          "extensionAttributes": []
+        },
+        "configurationProfiles": null,
+        "services": null,
+        "plugins": null,
+        "hardware": {
+          "make": "Apple",
+          "model": "Mac mini (2018)",
+          "modelIdentifier": "Macmini8,1",
+          "serialNumber": "C07FV0S9PJJ9",
+          "processorSpeedMhz": 3000,
+          "processorCount": 1,
+          "coreCount": 6,
+          "processorType": "6-Core Intel Core i5",
+          "processorArchitecture": "x86_64",
+          "busSpeedMhz": 0,
+          "cacheSizeKilobytes": 9216,
+          "networkAdapterType": "Ethernet",
+          "macAddress": "14:9D:99:83:DC:01",
+          "altNetworkAdapterType": "IEEE80211",
+          "altMacAddress": "88:66:5A:30:98:3C",
+          "totalRamMegabytes": 16384,
+          "openRamSlots": 0,
+          "batteryCapacityPercent": -1,
+          "smcVersion": "smcVersion",
+          "nicSpeed": "100 Mbps",
+          "opticalDrive": "opticalDrive",
+          "bootRom": "2020.0.1.0.0 (iBridge: 21.16.365.0.0,0)",
+          "bleCapable": false,
+          "supportsIosAppInstalls": false,
+          "appleSilicon": false,
+          "extensionAttributes": []
+        },
+        "certificates": null,
+        "attachments": null,
+        "packageReceipts": null,
+        "fonts": null,
+        "security": {
+          "sipStatus": "ENABLED",
+          "gatekeeperStatus": "APP_STORE_AND_IDENTIFIED_DEVELOPERS",
+          "xprotectVersion": "2194",
+          "autoLoginDisabled": true,
+          "remoteDesktopEnabled": false,
+          "activationLockEnabled": false,
+          "secureBootLevel": "UNKNOWN",
+          "externalBootLevel": "UNKNOWN",
+          "bootstrapTokenAllowed": null,
+          "bootstrapTokenEscrowedStatus": "NOT_ESCROWED",
+          "recoveryLockEnabled": false,
+          "firewallEnabled": false
+        },
+        "operatingSystem": {
+          "name": "macOS",
+          "version": "14.0",
+          "build": "23A344",
+          "supplementalBuildVersion": "ver",
+          "rapidSecurityResponse": "rapidSecurityResponse",
+          "activeDirectoryStatus": "Not Bound",
+          "fileVault2Status": "NOT_ENCRYPTED",
+          "softwareUpdateDeviceId": "id",
+          "extensionAttributes": []
+        },
+        "licensedSoftware": null,
+        "softwareUpdates": null,
+        "groupMemberships": null,
+        "extensionAttributes": null,
+        "contentCaching": null,
+        "ibeacons": null
+      }
+    },
+    {
+      "message": {
+        "id": "7",
+        "udid": "C98A7EEF-0760-5E92-B30F-FE1FEB2DE14C",
+        "general": {
+          "name": "acme-Z2GM1WVF6G",
+          "lastIpAddress": "81.2.69.144",
+          "lastReportedIp": "192.168.1.8",
+          "jamfBinaryVersion": "11.5.1-t1716233166",
+          "platform": "Mac",
+          "barcode1": "barcode1",
+          "barcode2": "barcode2",
+          "assetTag": "assetTag",
+          "remoteManagement": {
+            "managed": true,
+            "managementUsername": "JohnDoe"
+          },
+          "supervised": false,
+          "mdmCapable": {
+            "capable": false,
+            "capableUsers": []
+          },
+          "reportDate": "2024-06-19T15:54:46.34Z",
+          "lastContactTime": "2024-06-19T13:29:38.763Z",
+          "lastCloudBackupDate": "2024-06-19T08:43:09.621Z",
+          "lastEnrolledDate": "2024-02-22T14:22:02.503Z",
+          "mdmProfileExpiration": "2024-06-19T08:43:09.621Z",
+          "initialEntryDate": "2024-06-19",
+          "distributionPoint": "distributionPoint",
+          "site": {
+            "id": "-1",
+            "name": "None"
+          },
+          "itunesStoreAccountActive": false,
+          "enrolledViaAutomatedDeviceEnrollment": false,
+          "userApprovedMdm": false,
+          "enrollmentMethod": "enrollmentMethod",
+          "declarativeDeviceManagementEnabled": false,
+          "managementId": "645c2f0c-1cbe-4045-847a-858836bc5726",
+          "extensionAttributes": []
+        },
+        "diskEncryption": {
+          "individualRecoveryKeyValidityStatus": "UNKNOWN",
+          "institutionalRecoveryKeyPresent": false,
+          "diskEncryptionConfigurationName": "UNKNOWN",
+          "fileVault2EligibilityMessage": "fileVault2EligibilityMessage",
+          "fileVault2EnabledUserNames": [
+            "john.appleseed"
+          ],
+          "bootPartitionEncryptionDetails": null
+        },
+        "localUserAccounts": null,
+        "purchasing": null,
+        "printers": null,
+        "storage": null,
+        "applications": null,
+        "userAndLocation": {
+          "username": "harold.stout",
+          "realname": "Harold Stout",
+          "email": "harold.stout@acme.demo",
+          "position": "eng",
+          "phone": "+3112345678",
+          "departmentId": "1",
+          "buildingId": "1",
+          "room": "2",
+          "extensionAttributes": []
+        },
+        "configurationProfiles": null,
+        "services": null,
+        "plugins": null,
+        "hardware": {
+          "make": "Apple",
+          "model": "model",
+          "modelIdentifier": "modelIdentifier",
+          "serialNumber": "Z2GM1WVF6G",
+          "processorSpeedMhz": 0,
+          "processorCount": 0,
+          "coreCount": 4,
+          "processorType": "Apple M1 (Virtual)",
+          "processorArchitecture": "arm64",
+          "busSpeedMhz": 0,
+          "cacheSizeKilobytes": 0,
+          "networkAdapterType": "Ethernet",
+          "macAddress": "82:C7:01:87:C6:A6",
+          "altNetworkAdapterType": "Ethernet",
+          "altMacAddress": "BE:C3:5F:7D:9B:8C",
+          "totalRamMegabytes": 6144,
+          "openRamSlots": 0,
+          "batteryCapacityPercent": -1,
+          "smcVersion": "smcVersion",
+          "nicSpeed": "n/a",
+          "opticalDrive": "opticalDrive",
+          "bootRom": "10151.81.1",
+          "bleCapable": false,
+          "supportsIosAppInstalls": false,
+          "appleSilicon": false,
+          "extensionAttributes": []
+        },
+        "certificates": null,
+        "attachments": null,
+        "packageReceipts": null,
+        "fonts": null,
+        "security": {
+          "sipStatus": "ENABLED",
+          "gatekeeperStatus": "APP_STORE_AND_IDENTIFIED_DEVELOPERS",
+          "xprotectVersion": "2195",
+          "autoLoginDisabled": true,
+          "remoteDesktopEnabled": false,
+          "activationLockEnabled": false,
+          "secureBootLevel": "UNKNOWN",
+          "externalBootLevel": "UNKNOWN",
+          "bootstrapTokenAllowed": null,
+          "bootstrapTokenEscrowedStatus": "NOT_ESCROWED",
+          "recoveryLockEnabled": false,
+          "firewallEnabled": false
+        },
+        "operatingSystem": {
+          "name": "macOS",
+          "version": "14.3.1",
+          "build": "23D60",
+          "supplementalBuildVersion": "ver",
+          "rapidSecurityResponse": "rapidSecurityResponse",
+          "activeDirectoryStatus": "Not Bound",
+          "fileVault2Status": "NOT_APPLICABLE",
+          "softwareUpdateDeviceId": "id",
+          "extensionAttributes": []
+        },
+        "licensedSoftware": null,
+        "softwareUpdates": null,
+        "groupMemberships": null,
+        "extensionAttributes": null,
+        "contentCaching": null,
+        "ibeacons": null
+      }
+    },
+    {
+      "message": {
+        "id": "6",
+        "udid": "D6DD5611-B15A-5AA1-B498-52A4CB17D18D",
+        "general": {
+          "name": "acme-Z7PYLKD55T",
+          "lastIpAddress": "67.43.156.0",
+          "lastReportedIp": "192.168.64.204",
+          "jamfBinaryVersion": "11.4.2-t1713554080",
+          "platform": "Mac",
+          "barcode1": "barcode1",
+          "barcode2": "barcode2",
+          "assetTag": "assetTag",
+          "remoteManagement": {
+            "managed": true,
+            "managementUsername": "JohnDoe"
+          },
+          "supervised": false,
+          "mdmCapable": {
+            "capable": false,
+            "capableUsers": []
+          },
+          "reportDate": "2024-06-19T15:54:43.956Z",
+          "lastContactTime": "2024-05-31T17:53:40.442Z",
+          "lastCloudBackupDate": "2024-06-19T08:43:09.621Z",
+          "lastEnrolledDate": "2024-02-16T16:14:11.191Z",
+          "mdmProfileExpiration": "2024-06-19T08:43:09.621Z",
+          "initialEntryDate": "2024-06-19",
+          "distributionPoint": "distributionPoint",
+          "site": {
+            "id": "-1",
+            "name": "None"
+          },
+          "itunesStoreAccountActive": false,
+          "enrolledViaAutomatedDeviceEnrollment": false,
+          "userApprovedMdm": false,
+          "enrollmentMethod": "enrollmentMethod",
+          "declarativeDeviceManagementEnabled": false,
+          "managementId": "b7328fa2-c933-488d-8639-0b8f9e5ba5ba",
+          "extensionAttributes": []
+        },
+        "diskEncryption": {
+          "individualRecoveryKeyValidityStatus": "UNKNOWN",
+          "institutionalRecoveryKeyPresent": false,
+          "diskEncryptionConfigurationName": "UNKNOWN",
+          "fileVault2EligibilityMessage": "fileVault2EligibilityMessage",
+          "fileVault2EnabledUserNames": [
+            "overview"
+          ],
+          "bootPartitionEncryptionDetails": null
+        },
+        "localUserAccounts": null,
+        "purchasing": null,
+        "printers": null,
+        "storage": null,
+        "applications": null,
+        "userAndLocation": {
+          "username": "jack.lenardo",
+          "realname": "Jack Lenardo",
+          "email": "jack.lenardo@acme.demo",
+          "position": "eng",
+          "phone": "+3112345678",
+          "departmentId": "1",
+          "buildingId": "1",
+          "room": "2",
+          "extensionAttributes": []
+        },
+        "configurationProfiles": null,
+        "services": null,
+        "plugins": null,
+        "hardware": {
+          "make": "Apple",
+          "model": "model",
+          "modelIdentifier": "modelIdentifier",
+          "serialNumber": "Z7PYLKD55T",
+          "processorSpeedMhz": 0,
+          "processorCount": 0,
+          "coreCount": 6,
+          "processorType": "Apple M1 Pro (Virtual)",
+          "processorArchitecture": "arm64",
+          "busSpeedMhz": 0,
+          "cacheSizeKilobytes": 0,
+          "networkAdapterType": "Ethernet",
+          "macAddress": "0E:53:B5:D1:BC:97",
+          "altNetworkAdapterType": "Ethernet",
+          "altMacAddress": "12:A1:C9:8B:58:1D",
+          "totalRamMegabytes": 6144,
+          "openRamSlots": 0,
+          "batteryCapacityPercent": -1,
+          "smcVersion": "smcVersion",
+          "nicSpeed": "n/a",
+          "opticalDrive": "opticalDrive",
+          "bootRom": "10151.81.1",
+          "bleCapable": false,
+          "supportsIosAppInstalls": false,
+          "appleSilicon": false,
+          "extensionAttributes": []
+        },
+        "certificates": null,
+        "attachments": null,
+        "packageReceipts": null,
+        "fonts": null,
+        "security": {
+          "sipStatus": "ENABLED",
+          "gatekeeperStatus": "APP_STORE_AND_IDENTIFIED_DEVELOPERS",
+          "xprotectVersion": "2191",
+          "autoLoginDisabled": true,
+          "remoteDesktopEnabled": false,
+          "activationLockEnabled": false,
+          "secureBootLevel": "UNKNOWN",
+          "externalBootLevel": "UNKNOWN",
+          "bootstrapTokenAllowed": null,
+          "bootstrapTokenEscrowedStatus": "NOT_ESCROWED",
+          "recoveryLockEnabled": false,
+          "firewallEnabled": false
+        },
+        "operatingSystem": {
+          "name": "macOS",
+          "version": "14.3.1",
+          "build": "23D60",
+          "supplementalBuildVersion": "ver",
+          "rapidSecurityResponse": "rapidSecurityResponse",
+          "activeDirectoryStatus": "Not Bound",
+          "fileVault2Status": "NOT_APPLICABLE",
+          "softwareUpdateDeviceId": "id",
+          "extensionAttributes": []
+        },
+        "licensedSoftware": null,
+        "softwareUpdates": null,
+        "groupMemberships": null,
+        "extensionAttributes": null,
+        "contentCaching": null,
+        "ibeacons": null
+      }
+    },
+    {
+      "message": {
+        "id": "2",
+        "udid": "34B7826F-D421-58EA-BFDF-52A4045E1296",
+        "general": {
+          "name": "acme-ZDDJY2D4DH",
+          "lastIpAddress": "81.2.69.144",
+          "lastReportedIp": "192.168.1.36",
+          "jamfBinaryVersion": "11.5.1-t1716233166",
+          "platform": "Mac",
+          "barcode1": "barcode1",
+          "barcode2": "barcode2",
+          "assetTag": "assetTag",
+          "remoteManagement": {
+            "managed": true,
+            "managementUsername": "JohnDoe"
+          },
+          "supervised": false,
+          "mdmCapable": {
+            "capable": false,
+            "capableUsers": []
+          },
+          "reportDate": "2024-06-19T15:54:34.353Z",
+          "lastContactTime": "2024-06-19T08:43:09.621Z",
+          "lastCloudBackupDate": "2024-06-19T08:43:09.621Z",
+          "lastEnrolledDate": "2024-02-19T17:13:04.35Z",
+          "mdmProfileExpiration": "2024-06-19T08:43:09.621Z",
+          "initialEntryDate": "2024-06-19",
+          "distributionPoint": "distributionPoint",
+          "site": {
+            "id": "-1",
+            "name": "None"
+          },
+          "itunesStoreAccountActive": false,
+          "enrolledViaAutomatedDeviceEnrollment": false,
+          "userApprovedMdm": false,
+          "enrollmentMethod": "enrollmentMethod",
+          "declarativeDeviceManagementEnabled": false,
+          "managementId": "a6f4e21b-7ae4-4646-852e-e7c03749c8a2",
+          "extensionAttributes": []
+        },
+        "diskEncryption": {
+          "individualRecoveryKeyValidityStatus": "UNKNOWN",
+          "institutionalRecoveryKeyPresent": false,
+          "diskEncryptionConfigurationName": "UNKNOWN",
+          "fileVault2EligibilityMessage": "fileVault2EligibilityMessage",
+          "fileVault2EnabledUserNames": [
+            "john.appleseed"
+          ],
+          "bootPartitionEncryptionDetails": null
+        },
+        "localUserAccounts": null,
+        "purchasing": null,
+        "printers": null,
+        "storage": null,
+        "applications": null,
+        "userAndLocation": {
+          "username": "patrick.black",
+          "realname": "Patrick Black",
+          "email": "patrick.black@acme.demo",
+          "position": "eng",
+          "phone": "+3112345678",
+          "departmentId": "1",
+          "buildingId": "1",
+          "room": "2",
+          "extensionAttributes": []
+        },
+        "configurationProfiles": null,
+        "services": null,
+        "plugins": null,
+        "hardware": {
+          "make": "Apple",
+          "model": "model",
+          "modelIdentifier": "modelIdentifier",
+          "serialNumber": "ZDDJY2D4DH",
+          "processorSpeedMhz": 0,
+          "processorCount": 0,
+          "coreCount": 4,
+          "processorType": "Apple M1 (Virtual)",
+          "processorArchitecture": "arm64",
+          "busSpeedMhz": 0,
+          "cacheSizeKilobytes": 0,
+          "networkAdapterType": "Ethernet",
+          "macAddress": "62:5B:3F:4D:44:A8",
+          "altNetworkAdapterType": "Ethernet",
+          "altMacAddress": "0A:2E:D4:8B:5A:82",
+          "totalRamMegabytes": 6144,
+          "openRamSlots": 0,
+          "batteryCapacityPercent": -1,
+          "smcVersion": "smcVersion",
+          "nicSpeed": "n/a",
+          "opticalDrive": "opticalDrive",
+          "bootRom": "10151.81.1",
+          "bleCapable": false,
+          "supportsIosAppInstalls": false,
+          "appleSilicon": false,
+          "extensionAttributes": []
+        },
+        "certificates": null,
+        "attachments": null,
+        "packageReceipts": null,
+        "fonts": null,
+        "security": {
+          "sipStatus": "ENABLED",
+          "gatekeeperStatus": "APP_STORE_AND_IDENTIFIED_DEVELOPERS",
+          "xprotectVersion": "2195",
+          "autoLoginDisabled": true,
+          "remoteDesktopEnabled": false,
+          "activationLockEnabled": false,
+          "secureBootLevel": "UNKNOWN",
+          "externalBootLevel": "UNKNOWN",
+          "bootstrapTokenAllowed": null,
+          "bootstrapTokenEscrowedStatus": "NOT_ESCROWED",
+          "recoveryLockEnabled": false,
+          "firewallEnabled": false
+        },
+        "operatingSystem": {
+          "name": "macOS",
+          "version": "14.3.1",
+          "build": "23D60",
+          "supplementalBuildVersion": "ver",
+          "rapidSecurityResponse": "rapidSecurityResponse",
+          "activeDirectoryStatus": "Not Bound",
+          "fileVault2Status": "NOT_APPLICABLE",
+          "softwareUpdateDeviceId": "id",
+          "extensionAttributes": []
+        },
+        "licensedSoftware": null,
+        "softwareUpdates": null,
+        "groupMemberships": null,
+        "extensionAttributes": null,
+        "contentCaching": null,
+        "ibeacons": null
+      }
+    },
+    {
+      "message": {
+        "id": "1",
+        "udid": "7ACCA1BD-D711-556A-BE13-12BEF324F103",
+        "general": {
+          "name": "acme-ZF5J45R2FM",
+          "lastIpAddress": "81.2.69.144",
+          "lastReportedIp": "192.168.1.14",
+          "jamfBinaryVersion": "11.5.1-t1716233166",
+          "platform": "Mac",
+          "barcode1": "barcode1",
+          "barcode2": "barcode2",
+          "assetTag": "assetTag",
+          "remoteManagement": {
+            "managed": true,
+            "managementUsername": "JohnDoe"
+          },
+          "supervised": false,
+          "mdmCapable": {
+            "capable": false,
+            "capableUsers": []
+          },
+          "reportDate": "2024-06-19T15:54:33.186Z",
+          "lastContactTime": "2024-06-19T13:43:52.596Z",
+          "lastCloudBackupDate": "2024-06-19T08:43:09.621Z",
+          "lastEnrolledDate": "2024-02-22T20:28:05.284Z",
+          "mdmProfileExpiration": "2024-06-19T08:43:09.621Z",
+          "initialEntryDate": "2024-06-19",
+          "distributionPoint": "distributionPoint",
+          "site": {
+            "id": "-1",
+            "name": "None"
+          },
+          "itunesStoreAccountActive": false,
+          "enrolledViaAutomatedDeviceEnrollment": false,
+          "userApprovedMdm": false,
+          "enrollmentMethod": "enrollmentMethod",
+          "declarativeDeviceManagementEnabled": false,
+          "managementId": "b0f9ec75-9590-4079-b1f2-eea546bad9c4",
+          "extensionAttributes": []
+        },
+        "diskEncryption": {
+          "individualRecoveryKeyValidityStatus": "UNKNOWN",
+          "institutionalRecoveryKeyPresent": false,
+          "diskEncryptionConfigurationName": "UNKNOWN",
+          "fileVault2EligibilityMessage": "fileVault2EligibilityMessage",
+          "fileVault2EnabledUserNames": [
+            "john.appleseed"
+          ],
+          "bootPartitionEncryptionDetails": null
+        },
+        "localUserAccounts": null,
+        "purchasing": null,
+        "printers": null,
+        "storage": null,
+        "applications": null,
+        "userAndLocation": {
+          "username": "travis.jones",
+          "realname": "Travis Jones",
+          "email": "travis.jones@acme.demo",
+          "position": "eng",
+          "phone": "+3112345678",
+          "departmentId": "1",
+          "buildingId": "1",
+          "room": "2",
+          "extensionAttributes": []
+        },
+        "configurationProfiles": null,
+        "services": null,
+        "plugins": null,
+        "hardware": {
+          "make": "Apple",
+          "model": "model",
+          "modelIdentifier": "modelIdentifier",
+          "serialNumber": "ZF5J45R2FM",
+          "processorSpeedMhz": 0,
+          "processorCount": 0,
+          "coreCount": 4,
+          "processorType": "Apple M1 (Virtual)",
+          "processorArchitecture": "arm64",
+          "busSpeedMhz": 0,
+          "cacheSizeKilobytes": 0,
+          "networkAdapterType": "Ethernet",
+          "macAddress": "EA:91:E4:CE:82:EC",
+          "altNetworkAdapterType": "Ethernet",
+          "altMacAddress": "16:3A:34:7F:78:E8",
+          "totalRamMegabytes": 6144,
+          "openRamSlots": 0,
+          "batteryCapacityPercent": -1,
+          "smcVersion": "smcVersion",
+          "nicSpeed": "n/a",
+          "opticalDrive": "opticalDrive",
+          "bootRom": "10151.81.1",
+          "bleCapable": false,
+          "supportsIosAppInstalls": false,
+          "appleSilicon": false,
+          "extensionAttributes": []
+        },
+        "certificates": null,
+        "attachments": null,
+        "packageReceipts": null,
+        "fonts": null,
+        "security": {
+          "sipStatus": "ENABLED",
+          "gatekeeperStatus": "APP_STORE_AND_IDENTIFIED_DEVELOPERS",
+          "xprotectVersion": "2195",
+          "autoLoginDisabled": true,
+          "remoteDesktopEnabled": false,
+          "activationLockEnabled": false,
+          "secureBootLevel": "UNKNOWN",
+          "externalBootLevel": "UNKNOWN",
+          "bootstrapTokenAllowed": null,
+          "bootstrapTokenEscrowedStatus": "NOT_ESCROWED",
+          "recoveryLockEnabled": false,
+          "firewallEnabled": false
+        },
+        "operatingSystem": {
+          "name": "macOS",
+          "version": "14.3.1",
+          "build": "23D60",
+          "supplementalBuildVersion": "ver",
+          "rapidSecurityResponse": "rapidSecurityResponse",
+          "activeDirectoryStatus": "Not Bound",
+          "fileVault2Status": "NOT_APPLICABLE",
+          "softwareUpdateDeviceId": "id",
+          "extensionAttributes": []
+        },
+        "licensedSoftware": null,
+        "softwareUpdates": null,
+        "groupMemberships": null,
+        "extensionAttributes": null,
+        "contentCaching": null,
+        "ibeacons": null
+      }
+    },
+    {
+      "message": {
+        "id": "5",
+        "udid": "3BC5C220-FDC5-529E-AAF3-63D22DB73470",
+        "general": {
+          "name": "acme-ZKQFJTX1JM",
+          "lastIpAddress": "81.2.69.144",
+          "lastReportedIp": "192.168.1.60",
+          "jamfBinaryVersion": "11.5.1-t1716233166",
+          "platform": "Mac",
+          "barcode1": "barcode1",
+          "barcode2": "barcode2",
+          "assetTag": "assetTag",
+          "remoteManagement": {
+            "managed": true,
+            "managementUsername": "JohnDoe"
+          },
+          "supervised": false,
+          "mdmCapable": {
+            "capable": false,
+            "capableUsers": []
+          },
+          "reportDate": "2024-06-19T15:54:41.981Z",
+          "lastContactTime": "2024-06-19T15:34:06.286Z",
+          "lastCloudBackupDate": "2024-06-19T08:43:09.621Z",
+          "lastEnrolledDate": "2023-10-11T16:19:46.722Z",
+          "mdmProfileExpiration": "2024-06-19T08:43:09.621Z",
+          "initialEntryDate": "2024-06-19",
+          "distributionPoint": "distributionPoint",
+          "site": {
+            "id": "-1",
+            "name": "None"
+          },
+          "itunesStoreAccountActive": false,
+          "enrolledViaAutomatedDeviceEnrollment": false,
+          "userApprovedMdm": false,
+          "enrollmentMethod": "enrollmentMethod",
+          "declarativeDeviceManagementEnabled": false,
+          "managementId": "f091760a-04aa-4d61-9d63-377b6a8e43b9",
+          "extensionAttributes": []
+        },
+        "diskEncryption": {
+          "individualRecoveryKeyValidityStatus": "UNKNOWN",
+          "institutionalRecoveryKeyPresent": false,
+          "diskEncryptionConfigurationName": "UNKNOWN",
+          "fileVault2EligibilityMessage": "fileVault2EligibilityMessage",
+          "fileVault2EnabledUserNames": [
+            "local_admin"
+          ],
+          "bootPartitionEncryptionDetails": null
+        },
+        "localUserAccounts": null,
+        "purchasing": null,
+        "printers": null,
+        "storage": null,
+        "applications": null,
+        "userAndLocation": {
+          "username": "harold.stout",
+          "realname": "Harold Stout",
+          "email": "harold.stout@acme.demo",
+          "position": "eng",
+          "phone": "+3112345678",
+          "departmentId": "1",
+          "buildingId": "1",
+          "room": "2",
+          "extensionAttributes": []
+        },
+        "configurationProfiles": null,
+        "services": null,
+        "plugins": null,
+        "hardware": {
+          "make": "Apple",
+          "model": "model",
+          "modelIdentifier": "modelIdentifier",
+          "serialNumber": "ZKQFJTX1JM",
+          "processorSpeedMhz": 0,
+          "processorCount": 0,
+          "coreCount": 4,
+          "processorType": "Apple M1 (Virtual)",
+          "processorArchitecture": "arm64",
+          "busSpeedMhz": 0,
+          "cacheSizeKilobytes": 0,
+          "networkAdapterType": "Ethernet",
+          "macAddress": "36:09:D7:6E:19:1F",
+          "altNetworkAdapterType": "Ethernet",
+          "altMacAddress": "F2:1B:A0:58:99:19",
+          "totalRamMegabytes": 6144,
+          "openRamSlots": 0,
+          "batteryCapacityPercent": -1,
+          "smcVersion": "smcVersion",
+          "nicSpeed": "n/a",
+          "opticalDrive": "opticalDrive",
+          "bootRom": "8422.100.650",
+          "bleCapable": false,
+          "supportsIosAppInstalls": false,
+          "appleSilicon": false,
+          "extensionAttributes": []
+        },
+        "certificates": null,
+        "attachments": null,
+        "packageReceipts": null,
+        "fonts": null,
+        "security": {
+          "sipStatus": "ENABLED",
+          "gatekeeperStatus": "APP_STORE_AND_IDENTIFIED_DEVELOPERS",
+          "xprotectVersion": "2195",
+          "autoLoginDisabled": true,
+          "remoteDesktopEnabled": false,
+          "activationLockEnabled": false,
+          "secureBootLevel": "UNKNOWN",
+          "externalBootLevel": "UNKNOWN",
+          "bootstrapTokenAllowed": null,
+          "bootstrapTokenEscrowedStatus": "NOT_ESCROWED",
+          "recoveryLockEnabled": false,
+          "firewallEnabled": false
+        },
+        "operatingSystem": {
+          "name": "macOS",
+          "version": "13.3.1",
+          "build": "22E261",
+          "supplementalBuildVersion": "ver",
+          "rapidSecurityResponse": "rapidSecurityResponse",
+          "activeDirectoryStatus": "Not Bound",
+          "fileVault2Status": "NOT_APPLICABLE",
+          "softwareUpdateDeviceId": "id",
+          "extensionAttributes": []
+        },
+        "licensedSoftware": null,
+        "softwareUpdates": null,
+        "groupMemberships": null,
+        "extensionAttributes": null,
+        "contentCaching": null,
+        "ibeacons": null
+      }
+    },
+    {
+      "message": {
+        "id": "8",
+        "udid": "819AE2FA-E066-55DC-A959-95FE150AFAA8",
+        "general": {
+          "name": "acme-ZNK5NDTT27",
+          "lastIpAddress": "81.2.69.144",
+          "lastReportedIp": "192.168.1.85",
+          "jamfBinaryVersion": "11.5.1-t1716233166",
+          "platform": "Mac",
+          "barcode1": "barcode1",
+          "barcode2": "barcode2",
+          "assetTag": "assetTag",
+          "remoteManagement": {
+            "managed": true,
+            "managementUsername": "JohnDoe"
+          },
+          "supervised": false,
+          "mdmCapable": {
+            "capable": false,
+            "capableUsers": []
+          },
+          "reportDate": "2024-06-19T15:54:47.471Z",
+          "lastContactTime": "2024-06-19T08:36:20.586Z",
+          "lastCloudBackupDate": "2024-06-19T08:43:09.621Z",
+          "lastEnrolledDate": "2024-02-20T08:25:03.838Z",
+          "mdmProfileExpiration": "2024-06-19T08:43:09.621Z",
+          "initialEntryDate": "2024-06-19",
+          "distributionPoint": "distributionPoint",
+          "site": {
+            "id": "-1",
+            "name": "None"
+          },
+          "itunesStoreAccountActive": false,
+          "enrolledViaAutomatedDeviceEnrollment": false,
+          "userApprovedMdm": false,
+          "enrollmentMethod": "enrollmentMethod",
+          "declarativeDeviceManagementEnabled": false,
+          "managementId": "4a9991e7-dd16-4ba5-bf42-8b7744f5ed84",
+          "extensionAttributes": []
+        },
+        "diskEncryption": {
+          "individualRecoveryKeyValidityStatus": "UNKNOWN",
+          "institutionalRecoveryKeyPresent": false,
+          "diskEncryptionConfigurationName": "UNKNOWN",
+          "fileVault2EligibilityMessage": "fileVault2EligibilityMessage",
+          "fileVault2EnabledUserNames": [
+            "john.appleseed"
+          ],
+          "bootPartitionEncryptionDetails": null
+        },
+        "localUserAccounts": null,
+        "purchasing": null,
+        "printers": null,
+        "storage": null,
+        "applications": null,
+        "userAndLocation": {
+          "username": "andria.thompson",
+          "realname": "Andria Thompson",
+          "email": "andria.thompson@acme.demo",
+          "position": "eng",
+          "phone": "+3112345678",
+          "departmentId": "1",
+          "buildingId": "1",
+          "room": "2",
+          "extensionAttributes": []
+        },
+        "configurationProfiles": null,
+        "services": null,
+        "plugins": null,
+        "hardware": {
+          "make": "Apple",
+          "model": "model",
+          "modelIdentifier": "modelIdentifier",
+          "serialNumber": "ZNK5NDTT27",
+          "processorSpeedMhz": 0,
+          "processorCount": 0,
+          "coreCount": 4,
+          "processorType": "Apple M1 (Virtual)",
+          "processorArchitecture": "arm64",
+          "busSpeedMhz": 0,
+          "cacheSizeKilobytes": 0,
+          "networkAdapterType": "Ethernet",
+          "macAddress": "1A:47:C2:09:41:0D",
+          "altNetworkAdapterType": "Ethernet",
+          "altMacAddress": "72:CF:8A:DE:26:6E",
+          "totalRamMegabytes": 6144,
+          "openRamSlots": 0,
+          "batteryCapacityPercent": -1,
+          "smcVersion": "smcVersion",
+          "nicSpeed": "n/a",
+          "opticalDrive": "opticalDrive",
+          "bootRom": "10151.81.1",
+          "bleCapable": false,
+          "supportsIosAppInstalls": false,
+          "appleSilicon": false,
+          "extensionAttributes": []
+        },
+        "certificates": null,
+        "attachments": null,
+        "packageReceipts": null,
+        "fonts": null,
+        "security": {
+          "sipStatus": "ENABLED",
+          "gatekeeperStatus": "APP_STORE_AND_IDENTIFIED_DEVELOPERS",
+          "xprotectVersion": "2195",
+          "autoLoginDisabled": true,
+          "remoteDesktopEnabled": false,
+          "activationLockEnabled": false,
+          "secureBootLevel": "UNKNOWN",
+          "externalBootLevel": "UNKNOWN",
+          "bootstrapTokenAllowed": null,
+          "bootstrapTokenEscrowedStatus": "NOT_ESCROWED",
+          "recoveryLockEnabled": false,
+          "firewallEnabled": false
+        },
+        "operatingSystem": {
+          "name": "macOS",
+          "version": "14.3.1",
+          "build": "23D60",
+          "supplementalBuildVersion": "ver",
+          "rapidSecurityResponse": "rapidSecurityResponse",
+          "activeDirectoryStatus": "Not Bound",
+          "fileVault2Status": "NOT_APPLICABLE",
+          "softwareUpdateDeviceId": "id",
+          "extensionAttributes": []
+        },
+        "licensedSoftware": null,
+        "softwareUpdates": null,
+        "groupMemberships": null,
+        "extensionAttributes": null,
+        "contentCaching": null,
+        "ibeacons": null
+      }
+    },
+    {
+      "message": {
+        "udid": "D6DD5611-B15A-5AA1-B498-52A4CB17D18D",
+        "general": null,
+        "diskEncryption": null,
+        "localUserAccounts": null,
+        "purchasing": {
+          "purchased": true,
+          "leased": false,
+          "poNumber": "21",
+          "lifeExpectancy": 0,
+          "purchasePrice": 100,
+          "purchasingAccount": "acme-purchasingAccount",
+          "purchasingContact": "acme-purchasingContact",
+          "appleCareId": "acme-appleCareId",
+          "vendor": "acme-vendor",
+          "leaseDate": "2024-06-19T15:54:37.692Z",
+          "poDate": "2024-06-19T15:54:37.692Z",
+          "warrantyDate": "2024-06-19T15:54:37.692Z",
+          "extensionAttributes": []
+        },
+        "printers": null,
+        "storage": null,
+        "applications": [
+          {
+            "name": "Slack.app",
+            "path": "/Applications/Slack.app",
+            "version": "4.38.125",
+            "macAppStore": false,
+            "sizeMegabytes": 0,
+            "bundleId": "acme-bundleId",
+            "updateAvailable": false,
+            "externalVersionId": "0"
+          },
+          {
+            "name": "Siri.app",
+            "path": "/System/Applications/Siri.app",
+            "version": "1.0",
+            "macAppStore": false,
+            "sizeMegabytes": 0,
+            "bundleId": "acme-bundleId",
+            "updateAvailable": false,
+            "externalVersionId": "0"
+          }
+        ],
+        "userAndLocation": null,
+        "configurationProfiles": null,
+        "services": null,
+        "plugins": [],
+        "hardware": null,
+        "certificates": null,
+        "attachments": null,
+        "packageReceipts": {
+          "installedByJamfPro": [],
+          "installedByInstallerSwu": [],
+          "cached": []
+        },
+        "fonts": [],
+        "security": null,
+        "operatingSystem": null,
+        "licensedSoftware": null,
+        "softwareUpdates": [
+          {
+            "name": "macOS Sonoma 14.4.1",
+            "packageName": "macOS Sonoma 14.4.1-23E224",
+            "version": "14.4.1"
+          }
+        ],
+        "groupMemberships": [
+          {
+            "groupId": "1",
+            "groupName": "All Managed Clients",
+            "smartGroup": true
+          },
+          {
+            "groupId": "4",
+            "groupName": "Computers with updates",
+            "smartGroup": true
+          }
+        ],
+        "extensionAttributes": [],
+        "contentCaching": null,
+        "ibeacons": null
+      }
+    },
     {
       "message": {
         "id": "4",
@@ -143,50 +1227,46 @@
       }
     },
     {
-      "message":{
-        "id":"3",
-        "udid":"5982CE36-4526-580B-B4B9-ECC6782535BC",
-        "general":{
-          "name":"acme-C07DM3AZQ6NV",
-          "lastReportedIp":"89.160.20.156",
-          "lastIpAddress":"89.160.20.156",
-          "jamfBinaryVersion":"11.4.1-t1712591696",
-          "platform":"Mac",
-          "barcode1":"null",
-          "remoteManagement":{
-            "managed":true
+      "message": {
+        "id": "3",
+        "udid": "5982CE36-4526-580B-B4B9-ECC6782535BC",
+        "general": {
+          "name": "acme-C07DM3AZQ6NV",
+          "lastReportedIp": "89.160.20.156",
+          "lastIpAddress": "89.160.20.156",
+          "jamfBinaryVersion": "11.4.1-t1712591696",
+          "platform": "Mac",
+          "barcode1": "null",
+          "remoteManagement": {
+            "managed": true
           },
-          "supervised":false,
-          "mdmCapable":{
-            "capable":false,
-            "capableUsers":[
-              
-            ]
+          "supervised": false,
+          "mdmCapable": {
+            "capable": false,
+            "capableUsers": []
           },
-          "reportDate":"2024-06-19T15:54:37.692Z",
-          "lastContactTime":"2024-04-18T14:26:51.514Z",
-          "lastEnrolledDate":"2023-02-22T10:46:17.199Z",
-          "initialEntryDate":"2024-06-19",
-          "site":{
-            "id":"-1",
-            "name":"None"
+          "reportDate": "2024-06-19T15:54:37.692Z",
+          "lastContactTime": "2024-04-18T14:26:51.514Z",
+          "lastEnrolledDate": "2023-02-22T10:46:17.199Z",
+          "initialEntryDate": "2024-06-19",
+          "site": {
+            "id": "-1",
+            "name": "None"
           },
-          "itunesStoreAccountActive":false,
-          "enrolledViaAutomatedDeviceEnrollment":false,
-          "userApprovedMdm":false,
-          "declarativeDeviceManagementEnabled":false,
-          "managementId":"1a59c510-b3a9-41cb-8afa-3d4187ac60d0",
-          "extensionAttributes":[
-            
-          ]
+          "itunesStoreAccountActive": false,
+          "enrolledViaAutomatedDeviceEnrollment": false,
+          "userApprovedMdm": false,
+          "declarativeDeviceManagementEnabled": false,
+          "managementId": "1a59c510-b3a9-41cb-8afa-3d4187ac60d0",
+          "extensionAttributes": []
         },
-        "diskEncryption":null,
-        "localUserAccounts":null,
-        "purchasing":null,
-        "printers":null,
-        "storage":null,
-        "applications":null,
-        "userAndLocation":null,
+        "diskEncryption": null,
+        "localUserAccounts": null,
+        "purchasing": null,
+        "printers": null,
+        "storage": null,
+        "applications": null,
+        "userAndLocation": null,
         "configurationProfiles": [
           {
             "id": "",
@@ -196,22 +1276,35 @@
             "displayName": "John",
             "profileIdentifier": ""
           }
-      ],
-        "services":null,
-        "plugins":null,
-        "hardware":null,
-        "certificates":null,
-        "attachments":null,
-        "packageReceipts":null,
-        "fonts":null,
-        "security":null,
-        "operatingSystem":null,
-        "licensedSoftware":null,
-        "softwareUpdates":null,
-        "groupMemberships":null,
-        "extensionAttributes":null,
-        "contentCaching":null,
-        "ibeacons":null
+        ],
+        "services": null,
+        "plugins": null,
+        "hardware": null,
+        "certificates": null,
+        "attachments": null,
+        "packageReceipts": null,
+        "fonts": null,
+        "security": {
+          "sipStatus": "ENABLED",
+          "gatekeeperStatus": "APP_STORE_AND_IDENTIFIED_DEVELOPERS",
+          "xprotectVersion": "2191",
+          "autoLoginDisabled": true,
+          "remoteDesktopEnabled": false,
+          "activationLockEnabled": false,
+          "secureBootLevel": "UNKNOWN",
+          "externalBootLevel": "UNKNOWN",
+          "bootstrapTokenAllowed": null,
+          "bootstrapTokenEscrowedStatus": "NOT_ESCROWED",
+          "recoveryLockEnabled": false,
+          "firewallEnabled": false
+        },
+        "operatingSystem": null,
+        "licensedSoftware": null,
+        "softwareUpdates": null,
+        "groupMemberships": null,
+        "extensionAttributes": null,
+        "contentCaching": null,
+        "ibeacons": null
       }
     }
   ]

@@ -54,6 +54,26 @@
               type: keyword
             - name: gatekeeper_status
               type: keyword
+            - name: activation_lock_enabled
+              type: boolean
+            - name: auto_login_disabled
+              type: boolean
+            - name: bootstrap_token_allowed
+              type: boolean
+            - name: bootstrap_token_escrowed_status
+              type: keyword
+            - name: external_boot_level
+              type: keyword
+            - name: firewall_enabled
+              type: boolean
+            - name: recovery_lock_enabled
+              type: boolean
+            - name: remote_desktop_enabled
+              type: boolean
+            - name: secure_boot_level
+              type: keyword
+            - name: xprotect_version
+              type: keyword
         - name: package_receipts
           type: group
           fields:
