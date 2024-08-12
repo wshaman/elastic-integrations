@@ -1,3 +1,20 @@
+- name: client.geo
+  type: group
+  fields:
+    - name: city_name
+      type: keyword
+    - name: continent_name
+      type: keyword
+    - name: country_iso_code
+      type: keyword
+    - name: country_name
+      type: keyword
+    - name: region_iso_code
+      type: keyword
+    - name: region_name
+      type: keyword
+    - name: location
+      type: geo_point
 - name: jamf_pro
   type: group
   fields:

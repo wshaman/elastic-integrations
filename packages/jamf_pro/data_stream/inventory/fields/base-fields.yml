@@ -12,7 +12,9 @@
   description: Event timestamp.
 - name: input.type
   type: keyword
-  description: Input type
+  description: Input
+- name: tags
+  external: ecs
 - name: ecs.version
   type: keyword
 - name: event.dataset

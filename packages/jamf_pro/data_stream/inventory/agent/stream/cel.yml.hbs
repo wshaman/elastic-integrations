@@ -49,15 +49,21 @@ program: |
         }
       :
         state.with({
-          "events": body.results.map(e, {
-              "message": e,
-          }),
+          "events": body.results.map(e, e.with(
+            has(state.preserve_original_event) && state.preserve_original_event ?
+              { "original": e.encode_json() }
+            :
+              {}
+          )),
           "want_more": (int(state.?cursor.?page.orValue(int(0))) + 1) * int(state.page_size) < int(body.totalCount),
           "cursor": {"page": int(state.?cursor.?page.orValue(int(0))) + 1},
         })
     )
   )
 state:
+  {{#if preserve_original_event }}
+  preserve_original_event: {{preserve_original_event}}
+  {{/if}}
   page_size: {{page_size}}
   sections: [
   {{#if enable_section_general }} "GENERAL", {{/if}}
@@ -85,5 +91,3 @@ state:
   {{#if enable_section_content_caching }} "CONTENT_CACHING", {{/if}}
   {{#if enable_section_group_membership }} "GROUP_MEMBERSHIP", {{/if}}
   ]
-
-

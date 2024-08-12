@@ -49,9 +49,11 @@ processors:
         ctx.jamf_pro.inventory = keysToSnakeCase(ctx.jamf_pro.inventory);
       }
 
+
+
 - geoip:
     field: jamf_pro.inventory.general.last_ip_address
-    target_field: jamf_pro.inventory.general.last_ip_address_geo
+    target_field: client.geo
     ignore_missing: true
 - set:
     field: ecs.version
