@@ -14,6 +14,7 @@ processors:
     type: string
     if: "ctx.json.event?.management_id != null && !(ctx.json.event?.management_id  instanceof String)"
 
+
 - rename:
     field: json
     target_field: jamf_pro.events
@@ -98,7 +99,7 @@ processors:
 - set:
     if: "ctx.jamf_pro.events.event?.reported_ip_address != null && ctx.jamf_pro.events.event?.reported_ip_address != ''"
     field: _tmp.ip
-    value: '{{{jamf_pro.events.event?.reported_ip_address}}}'
+    value: '{{{jamf_pro.events.event.reported_ip_address}}}'
     ignore_empty_value: true
 ##############
 #  User src  #
