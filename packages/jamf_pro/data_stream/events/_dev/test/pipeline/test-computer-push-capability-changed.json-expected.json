@@ -28,40 +28,40 @@
                 "events": {
                     "event": {
                         "alternate_mac_address": "be:aa:e5:54:94:db",
-                        "building": "1S8NPV",
-                        "department": "XDO4C5",
-                        "device_name": "VPNYC",
-                        "email_address": "kghrqq@email.com",
+                        "building": "GHVCLE",
+                        "department": "MQADBP",
+                        "device_name": "BC6J0",
+                        "email_address": "xftowe@email.com",
                         "ip_address": "89.160.20.156",
-                        "jss_id": "1500747557",
+                        "jss_id": 791,
                         "mac_address": "be:aa:e5:54:94:db",
-                        "management_id": "6319330669",
-                        "model": "LJ68RT",
-                        "os_build": "26.6913",
-                        "os_version": "92.5786",
-                        "phone": "2183546",
-                        "position": "B64JIO",
-                        "real_name": "CPK79",
+                        "management_id": "6537981568",
+                        "model": "3LJRY6",
+                        "os_build": "64.5827",
+                        "os_version": "27.2234",
+                        "phone": "9070682",
+                        "position": "6BGB8L",
+                        "real_name": "PDAE3",
                         "reported_ip_address": "89.160.20.156",
-                        "room": "HQC6S9",
-                        "serial_number": "7967177",
-                        "udid": "7265694772",
-                        "user_directory_id": "0389771137",
+                        "room": "NDTEOV",
+                        "serial_number": "8990004",
+                        "udid": "5628491469",
+                        "user_directory_id": "0375883884",
                         "username": "John Doe"
                     },
                     "webhook": {
                         "event_timestamp": "2024-09-04T09:57:52.001Z",
-                        "id": "8131946016",
-                        "name": "PU17M",
-                        "webhook_event": "ComputerAdded"
+                        "id": 267,
+                        "name": "SD8KA",
+                        "webhook_event": "ComputerPushCapabilityChanged"
                     }
                 }
             },
             "os": {
-                "version": "92.5786"
+                "version": "27.2234"
             },
             "user": {
-                "email": "kghrqq@email.com"
+                "email": "xftowe@email.com"
             }
         }
     ]
