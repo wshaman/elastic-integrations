@@ -5,19 +5,24 @@ processors:
     field: ecs.version
     value: '8.11.0'
 
-- json:
-    field: message
-    target_field: json
-
-- convert:
-    field: json.event.management_id
-    type: string
-    if: "ctx.json.event?.management_id != null && !(ctx.json.event?.management_id  instanceof String)"
-
 - rename:
     field: json
     target_field: jamf_pro.events
     if: ctx.json != null
+
+# - rename:
+#     field: event
+#     target_field: jamf_pro.events.event
+
+# - rename:
+#     field: webhook
+#     target_field: jamf_pro.events.webhook
+
+- convert:
+    field: jamf_pro.events.event.management_id
+    type: string
+    if: "ctx.jamf_pro.events.event?.management_id != null && !(ctx.jamf_pro.events.event?.management_id  instanceof String)"
+
 
 - rename:
     field: jamf_pro.events.event.computer
@@ -166,4 +171,3 @@ on_failure:
     field: error.message
     value: 'Processor {{{_ingest.on_failure_processor_type}}} with tag {{{_ingest.on_failure_processor_tag}}} in pipeline {{{_ingest.on_failure_pipeline}}} failed with message: {{{_ingest.on_failure_message}}}'
   
-

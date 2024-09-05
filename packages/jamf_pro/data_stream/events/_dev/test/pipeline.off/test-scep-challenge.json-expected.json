@@ -1,0 +1,57 @@
+{
+    "expected": [
+        {
+            "ecs": {
+                "version": "8.11.0"
+            },
+            "error": {
+                "message": [
+                    "Processor conditional with tag  in pipeline default-1725525741251207328 failed with message: cannot access method/field [events] from a null def reference"
+                ]
+            },
+            "event": {
+                "kind": "pipeline_error",
+                "payload_identifier": "S5CT5G",
+                "payload_types": "Q1YGBC",
+                "scep_server_url": "QY7OFL",
+                "target_device": {
+                    "bluetooth_mac_address": "be:aa:e5:54:94:db",
+                    "device_name": "PE36Z",
+                    "icci_id": "5680527308",
+                    "imei": "12TE20",
+                    "model": "GC87D1",
+                    "model_display": "ITS2DI",
+                    "os_build": "86.1224",
+                    "os_version": "34.0283",
+                    "product": "GQBGCY",
+                    "room": "O0LA6V",
+                    "serial_number": "9331940",
+                    "udid": "2463306102",
+                    "user_directory_id": "0027952070",
+                    "version": "IGMBQM",
+                    "wifi_mac_address": "be:aa:e5:54:94:db"
+                },
+                "target_user": {
+                    "building_id": 850,
+                    "department_id": 842,
+                    "dn": "LA698Y",
+                    "email": "jzlkgz@email.com",
+                    "password": "NYSV2E",
+                    "phone": "6077039",
+                    "position": "XJK8UK",
+                    "realname": "T80C0",
+                    "room": "N0RMO6",
+                    "uid": "3918732742",
+                    "username": "John Doe",
+                    "uuid": "9900279622"
+                }
+            },
+            "webhook": {
+                "event_timestamp": 1725443872001,
+                "id": 613,
+                "name": "ZI80M",
+                "webhook_event": "SCEPChallenge"
+            }
+        }
+    ]
+}
